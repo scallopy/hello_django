@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+{% extends "cadmin/base.html" %}
+
+{% block content %}
+
+<div class="logout">
+	<p>You are successfully logged out. <a href="{% url 'blog_login'%}">Click here</a> to login again.</p>
+</div>
+
+{% endblock %}
+
+</body>
+</html>

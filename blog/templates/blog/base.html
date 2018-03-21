@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Autoelectronics Electra{% endblock %}</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'blog/css/reset.css' %}">
+	<link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+	<script src="{% static 'blog/js/jquery.js' %}"></script>
+</head>
+<body>
+
+	<div class="navbar">
+		<div class="section-inner clearfix">
+			<nav>
+				<a href="/">Autoelectronics Electra</a>
+				<a href="#">Blog</a>
+				<a href="#">Contact</a>
+				<a href="#">Career</a>
+			</nav>
+		</div>
+		<div>
+			<img src="{% static 'blog/images/LogoELECTRA.png' %}" / >
+		</div>
+		<div>
+			<img src="{% static 'blog/images/01.png' %}" / >
+		</div>
+	</div>
+	
+	{% block content %}
+	
+	{% endblock %}
+	
+	{% block footer %}
+	
+	<div class="footer">
+		<div class="section-inner clearfix">
+			<hr>
+			<p style="color:red;"><b>&copy;Scallopy; </b> 	email: scallopy@abv.bg </p>
+	</div>
+	
+	{% endblock %}
+</body>
+</html>
+			

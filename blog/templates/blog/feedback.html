@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:#90EE90;">
+
+	{% extends "base.html" %}
+	
+	{% block title %}
+		Feedback - {{block.super}}
+	{% endblock %}
+	
+	{% block content %}
+	
+		<div class="content">
+			<div class="section-inner clearfix">
+			
+				<h3>Submit Your feedback</h3>
+				
+				{{form.non_field_errors}}
+				
+				<form action="" method="post">
+					{% csrf_token %}
+					<table>
+						{% for field in form %}
+							<tr>
+								<td>{{field.label_tag}}</td>
+								<td>
+									{{field.errors}}
+									{{field}}
+								</td>
+								<td>
+									{% if field.help_text %}
+									{{field.help_text}}
+									{% endif %}
+								</td>
+							</td>
+						</tr>
+					{% endfor %}
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Submit"></td>
+						</tr>
+					</table>		
+				</form>
+				
+			</div>
+		</div>
+		
+	{% endblock %}
+	
+</body>
+</html>
+	

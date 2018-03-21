@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:#FFDAB9;">
+	{% extends "blog/base.html" %}
+	
+	{% block title %}
+		{{tag|title}} - {{block.super}}
+	{% endblock %}
+	
+	{% block content %}
+	
+		<div class="content">
+			<div class="section-inner clearfix">
+			
+			<h4>All the posts tagged with - {{tag.name}}</h4>
+
+		{% for post in posts %}
+			<h3>
+				<a href="{{post.get_absolute_url}}">{{post.title|capfirst}}</a>
+			</h3>
+			<p>
+				{% include 'blog/post_info.html' %}
+			</p>
+		{% empty %}
+			<p>There are not posts tagged with {{tag}}</p>
+		{% endfor %}
+
+            </div>
+		</div>
+		<div class="pagination">
+			<div class="section-inner clearfix">
+				<p>
+					{% if posts.has_previous %}
+						<a href="?page={{posts.previous_page_number}}"&lt; Prev</a> |
+					{% endif %}
+						
+					{% if posts.has_next %}
+						<a href="?page={{posts.next_page_number}}">Next &gt;</a>
+					{% endif %}
+						
+					<span>Page {{posts.number}} of {{posts.paginator.num_pages}}</span>
+				</p>
+			</div>
+		</div>
+
+	{% endblock %}
+</body>
+</html>
+			
