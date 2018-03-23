@@ -11,7 +11,7 @@
 	{% block main %}
 
 		<div class="main">
-			<p>&#187; <a href="">All Posts</a> &#187; Post Update</p>
+			<p>&#187; <a href="{% url 'post_list' %}">All Posts</a> &#187; Post Update</p>
 		
 			<h3>Post Update</h3>
 		
@@ -22,15 +22,57 @@
 				{% endfor %}
 			</ul>
 			{% endif %}
+			
+			<p>
+				{{ form.non_field_errors }}
+			</p>
 		
 			<form action="" method="post">
 				{% csrf_token %}
+				{{form.media}}
 				<table>
-					{{form.as_table}}
-					<tr>
-						<td></td>
-						<td><input type="submit" value="Update Post"></td>
-					</tr>
+					 <tr>
+                    <td>{{ form.title.label_tag }}</td>
+                    <td>
+                        {{ form.title.errors }}
+                        {{ form.title }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>{{ form.content.label_tag }}</td>
+                    <td>
+                        {{ form.content.errors }}
+                        {{ form.content }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>{{ form.category.label_tag }}</td>
+                    <td>
+                        {{ form.category.errors }}
+                        {{ form.category }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>{{ form.tags.label_tag }}</td>
+                    <td>
+                        {{ form.tags.errors }}
+                        {{ form.tags }}
+                    </td>
+                </tr>
+                {#  Show authors only if logged in user is a superuser  #}
+                {% if request.user.is_superuser %}
+                    <tr>
+                        <td>{{ form.author.label_tag }}</td>
+                        <td>
+                            {{ form.author.errors }}
+                            {{ form.author }}
+                        </td>
+                    </tr>
+                {% endif %}
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Update Post"></td>
+                </tr>
 				</table>
 			</form>
 		</div>

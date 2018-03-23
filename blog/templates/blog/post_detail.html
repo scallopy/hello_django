@@ -11,13 +11,13 @@
 	<div class="content">
 		<div class="section-inner clearfix">
 		
-			<h1>{{ post.title|capfirst }}</h1>
+			<h1>{{post.title|capfirst}}</h1>
 			<p class="post-info">
 				{% include 'blog/post_info.html' %}
 				| <span><a href="{% url 'post_update' post.id %}">Edit</a></span>
 			</p>
 			<p>
-				{{ post.content }}
+				{{post.content|safe}}
 			</p>
 		
 		</div>
