@@ -10,6 +10,9 @@ from django_project import helpers
 from django.core.mail import send_mail
 from django.contrib.auth.models import User
 from django.conf import settings
+from django.contrib.auth.forms import (
+    AuthenticationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm,
+)
 
 
 # Create your views here.
@@ -99,9 +102,13 @@ def home(request):
 
 def login(request, **kwargs):
     if request.user.is_authenticated():
-        return redirect('/cadmin/')
+        return redirect('about')
     else:
         return auth_views.login(request, **kwargs)
+		
+def logout(request):
+    auth.logout(request)
+    return render(request, 'cadmin/logout.html')
 
 
 def register(request):
@@ -396,7 +403,7 @@ def account_info(request):
     return render(request, 'cadmin/account_info.html')
 
 
-        
+ 
         
     
     

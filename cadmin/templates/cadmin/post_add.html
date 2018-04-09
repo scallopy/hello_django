@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+{% extends "cadmin/base_admin.html" %}
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+{% load i18n %}
 <body style="background-color:#90EE90;">
 
-	{% extends "cadmin/base_admin.html" %}
 	
 	{% block title %}
 		Add New Post - {{block.super}}
@@ -12,9 +15,9 @@
 	
 	<div class="main">
 	
-		<p>&#187; <a href="{% url 'post_list' %}">All Posts</a> &#187; Add Post</p>
+		<p>&#187; <a href="{% url 'post_list' %}">{% trans "All Posts"%}</a> &#187; Add Post</p>
 		
-		<h3>Add Post</h3>
+		<h3>{% trans "Add Post: "%}</h3>
 		
 		{% if messages %}
 		<ul class="messages">
@@ -32,8 +35,9 @@
 			{% csrf_token %}
 			{{form.media}}
 			<table>
+			<div>
 				<tr>
-					<td>{{form.title.label_tag}}</td>
+					<th>{{form.title.label_tag}}</th>
 					<td>
 						{{form.title.errors}}
 						{{form.title}}
@@ -75,6 +79,7 @@
 					<td></td>
 					<td><input type="submit" value="Add Post"></td>
 				</tr>
+			</div>
 			</table>
 		</form>
 		

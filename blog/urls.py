@@ -9,9 +9,10 @@ sitemaps = {
 }
 
 urlpatterns = [
-    url(r'^sitemap\.xml/$', sitemap, {'sitemaps' : sitemaps } , name='sitemap'),
+    url(r'^sitemap\.xml/$', sitemap, {'sitemaps' : sitemaps} , name='sitemap'),
+    url(r'^accounts/profile/$', views.admin_page, name='admin_page'),
     url(r'^about/$', flat_views.flatpage, {'url': '/about/'}, name='about'),
-    url(r'^eula/$', flat_views.flatpage, {'url': '/eula/'}, name='eula'),
+    url(r'^about/us/$', flat_views.flatpage, {'url': '/about/us/'}, name='about_us'),
     url(r'^login/$', views.login, name='blog_login'),
     url(r'^logout/$', views.logout, name='blog_logout'),
     url(r'^admin_page/$', views.admin_page, name='admin_page'),

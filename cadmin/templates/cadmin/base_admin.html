@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+{% extends "cadmin/base.html" %}
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+{% load i18n %}
 <body>
-	{% extends "cadmin/base.html" %}
+	
 	
 	{% block content %}
 	
 		<div class="header">
 			<div class="section-inner clearfix">
-				<h2 class="title"><a href="{% url 'post_list' %}">Autoelectronics Electra - Admin Panel</a></h2>
+				<h2 class="title"><a href="{% url 'post_list' %}">{% trans "Autoelectronics Electra - Admin Panel"%}</a></h2>
 				<div class="user-welcome">
 					<h3>Welcome {{request.user.username}}</h3>
 				</div>
@@ -16,16 +20,15 @@
 		
 		<div class="content">
 			<div class="section-inner">
-				<div class="sidebar">
+				<div class="nav">
 					<ul>
-						<li><a href="{% url 'post_list' %}">Post</a></li>
-						<li><a href="{% url 'category_list' %}">Category</a></li>
-						<li><a href="{% url 'tag_list' %}">Tag</a></li>
-						<li><a href="{% url 'account_info' %}">Account Info</a></li>
-						<li><a href="{% url 'password_change' %}">Change Password</a></li>
-						<li><a target="_blank" href="{{request.scheme}}://{{request.get_host}}">View Site</a></li>
-						<li><a href="{% url 'logout' %}">Logout</a></li>
-						<li></li>
+						<li><a href="{% url 'post_list' %}">{% trans ">Post"%}</a></li>
+						<li><a href="{% url 'category_list' %}">{% trans ">Category"%}</a></li>
+						<li><a href="{% url 'tag_list' %}">{% trans ">Tag"%}</a></li>
+						<li><a href="{% url 'account_info' %}">{% trans ">Account Info"%}</a></li>
+						<li><a href="{% url 'password_change' %}">{% trans ">Change Password"%}</a></li>
+						<li><a target="_blank" href="{{request.scheme}}://{{request.get_host}}">{% trans ">View Site"%}</a></li>
+						<li><a href="{% url 'logout' %}">{% trans ">Logout"%}</a></li>
 					</ul>
 				</div>
 				

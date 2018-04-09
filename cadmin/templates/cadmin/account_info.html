@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html>
-<body>
 {% extends "cadmin/base_admin.html" %}
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+{% load i18n %}
+<body style="background-color:#90EE90;">
+
 
 {% block title %}
-    All Posts - {{ block.super }}
+    {% trans "All Posts" as the_title %} - {{ block.super }}
 {% endblock %}
 
 {% block main %}
 
 	<div class="main">
 	
-	<p>&#187; <a href="{% url 'account_info' %}">Account Info</p>
+	<p>&#187; <a href="{% url 'account_info' %}">{% trans "Account Info"%}</p>
+		<hr>
 	
 		<table>
             <tr>
-                <td>Username: </td>
+                <td>{% trans "Username: "%}</td>
                 <td>{{request.user.username}}</td>
             </tr>
-			
             <tr>
                 <td>Email: </td>
                 <td>
@@ -30,11 +34,11 @@
                 </td>
             </tr>
             <tr>
-                <td>Date Joined: </td>
+                <td>{% trans "Date Joined: "%}</td>
                 <td>{{request.user.date_joined}}</td>
             </tr>
             <tr>
-                <td>Last Login: </td>
+                <td>{% trans "Last Login: "%}</td>
                 <td>{{request.user.last_login}}</td>
             </tr>
         </table>

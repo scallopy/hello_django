@@ -102,7 +102,7 @@ div.section-inner{
 .login {
     font-size: 14px;
     width: 400px;
-    margin: 20px auto;
+    margin: 400px auto;
     border: 1px solid #aba8a8;
     padding: 0px 0px 25px 50px;
 }
@@ -142,6 +142,35 @@ td {
     color: #fff;
 }
 
+.navbar{
+    background-color: #1E90FF;
+    text-align: center;
+}
+
+.navbar a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+.nav ul {
+    list-style-type: disc;
+    padding: 0;
+}
+   
+.nav a:hover {
+    /*background-color: #4a3f3f;*/
+    text-decoration: underline;
+}
+
+
 .sidebar a:hover {
     /*background-color: #4a3f3f;*/
     text-decoration: underline;
@@ -151,25 +180,27 @@ td {
     padding: 0;
     /*display: inline-block;*/
     list-style-type: none;
-    border: 1px solid;
+    border: 2px solid;
     /*background-color: #f7f1f1;*/
-    padding: 14px 9px;
+    padding: 14px 20px;
     color: #fff;
+	border-right: 1px solid #e3e3e3;
 }
 
 .sidebar ul a {
     /*color: #fff;*/
     display: inline-block;
     width: 100%;
-    line-height: 1.5;
+    line-height: 1;
     padding: 10px 0;
 }
 
 .sidebar{
-    position: fixed;
-    width: 210px;
+	float: left;
+    width: 250px;
     height: calc(100% - 113px);
     overflow: auto;
+	margin-left: 0;
     font-size: 16px;
     overflow-x: hidden;
     color: #000;

@@ -1,31 +1,66 @@
 <!DOCTYPE html>
-<html>
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %}Autoelectronics Electra{% endblock %}</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-	{% load static %}
 	<link rel="stylesheet" href="{% static 'blog/css/reset.css' %}">
 	<link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+	<script defer src="{% static 'fonts/fontawesome-free-5.0.9/svg-with-js/js/fontawesome-all.js' %}"></script>
 	<script src="{% static 'blog/js/jquery.js' %}"></script>
 </head>
+{% load i18n %}
 <body>
 
 	<div class="navbar">
-		<div class="section-inner clearfix">
 			<nav>
-				<a href="/">Autoelectronics Electra</a>
-				<a href="#">Blog</a>
-				<a href="#">Contact</a>
-				<a href="#">Career</a>
+				<i class="fas fa-wrench" style="color:#000080"></i>
+				<i class="fas fa-car" style="color:#000080"></i>
+				<i class="fas fa-bus" style="color:#000080"></i>
+				<i class="fas fa-truck" style="color:#000080"></i>
+				<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#000080"></i><a href="tel:+359887720074" style="color:#0000FF"><b><i>0887 72 00 74</b></i></a></button>
+				<a href="/about/">{% trans "Autoelectronics Electra"%}</a>
+				<a href="#">{% trans "Bulgaria, Rousse, Gotse Delchev Blvd 68;"%}</a>
+				<a href="#">{% trans "Bulgaria, Rousse, Vidin Street 17;"%}</a>
+				
+				<span class="fa-layers fa-fw fa-2x" >
+					<a href="/en/about/"><i class="fas fa-sign fa-lg" data-fa-transform="down-2" style="color:#000080"></i>
+					<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3 right-3" style="font-weight:900">EN</a></span></a>
+				</span>
+				<span class="fa-layers fa-fw fa-2x" >
+					<a href="/bg/about/"><i class="fas fa-sign fa-lg" data-fa-transform="down-2" style="color:#000080"></i>
+					<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3 right-3" style="font-weight:900">BG</span></a>
+				</span>
+				<span class="fa-layers fa-fw fa-2x" >
+					<a href="/ru/about/"><i class="fas fa-sign fa-lg" data-fa-transform="down-2" style="color:#000080"></i>
+					<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3 right-3" style="font-weight:900">RU</span></a>
+				</span>
+				<span class="fa-layers fa-fw fa-2x" >
+					<a href="/ro/about/"><i class="fas fa-sign fa-lg" data-fa-transform="down-2" style="color:#000080"></i>
+					<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3 right-3" style="font-weight:900">RO</span></a>
+				</span>
 			</nav>
 		</div>
-		<div>
-			<img src="{% static 'blog/images/LogoELECTRA.png' %}" / >
-		</div>
-		<div>
-			<img src="{% static 'blog/images/01.png' %}" / >
+	</div>
+	<div class="img" style="background-color:#1E90FF; padding-top: 20px">
+		<img src="{% static 'blog/images/LogoELECTRA.png'%}" style="width: 18%; height: auto;"><img src="{% static 'blog/images/01.png'%}" style="width: 82%; height: auto;" / >
+	</div>
+	<br>
+	
+	<div class="navbar">
+		<div class="section-inner clearfix">
+			<nav>
+				<a href="/about/">{% trans "Autoelectronics Electra"%}</a>
+				<a href="/">{% trans "Blog"%}</a>
+				<a href="/about/us/">{% trans "About us:"%}</a>
+				<a href="/cadmin/post/add/">{% trans "Add Post"%}</a>
+				<i class="fas fa-user" style="color:#000080"></i><a href="/login/">{% trans "Log in"%}</a>/<a href="/cadmin/register/">{% trans "Registration"%}</a>
+			</nav>
 		</div>
 	</div>
+		
 	
 	{% block content %}
 	
@@ -36,7 +71,7 @@
 	<div class="footer">
 		<div class="section-inner clearfix">
 			<hr>
-			<p style="color:red;"><b>&copy;Scallopy; </b> 	email: scallopy@abv.bg </p>
+			<p style="background-color:#1E90FF;"><b>&copy;Scallopy; </b> 	email: scallopy@abv.bg </p>
 	</div>
 	
 	{% endblock %}

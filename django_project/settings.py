@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -27,12 +28,15 @@ SECRET_KEY = '4(%wdnkk&mnwgmbrfrm%e*!j*=$qums(y)p93v!fk%xpavcoew'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+MODELTRANSLATION_DEBUG = True
+
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,17 +50,21 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'blog',
     'cadmin',
+    'mptt',
+    'flatpages_i18n',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.common.BrokenLinkEmailsMiddleware',
+    'flatpages_i18n.middleware.FlatpageFallbackMiddleware',
 ]
 
 ROOT_URLCONF = 'django_project.urls'
@@ -72,13 +80,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'django_project.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -113,7 +121,18 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+
 LANGUAGE_CODE = 'en-us'
+from django.utils.translation import ugettext_lazy as _
+LANGUAGES = (
+    ('en', _('English')),
+    ('bg', _('Bulgarian')),
+    ('ru', _('Russian')),
+    ('ro', _('Romanian')),
+)
 
 TIME_ZONE = 'UTC'
 
@@ -122,6 +141,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+DBGETTEXT_PROJECT_OPTIONS = 'django_project.dbgettext_options'
 
 
 # Static files (CSS, JavaScript, Images)

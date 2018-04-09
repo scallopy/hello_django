@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
 <body style="background-color:#1E90FF;">
-{% extends "cadmin/base.html" %}
+{% extends "cadmin/base_admin.html" %}
 
 {% block content %}
 
     <div class="login">
         <h1>Autoelectronics Electra- Login</h1>
 
-        <form method="post" action="">
+        <form method="post" action="" id="login-form">
             {% csrf_token %}
             <table>
                 {{form.as_table}}
                 <tr>
-					<td><input type="hidden" name="next" value="{{next|default:'/cadmin/'}}"></td>
-                    <td><input type="submit"></td>
-                </tr>                
+					<td><input type="hidden" name="next" value="{{next|default:''}}"></td>
+                    <td><button><input type="submit"></button></td>
+                </tr>
+				
+				<tr>
+					<td></td>
+					<td><button><input type="submit" value="Forgotten Password"></button></td>
+				</tr>
+                
             </table>
+			
 
         </form>
-
+		<div class="password-reset-link">
+		
+			<a href="/cadmin/password_reset/">{% trans 'Forgotten your password or username?' %}</a>
+		</div>
     </div>
 
 {% endblock %}

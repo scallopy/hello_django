@@ -1,30 +1,55 @@
 <!DOCTYPE html>
-<html>
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
-	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Autoelectronics Electra :: Admin Panel{% endblock %}</title>
-	{% load static %}
+    <title>{% trans "Autoelectronics Electra :: Admin Panel"%}</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <link rel="stylesheet" href="{% static 'cadmin/css/style.css' %}">
+    <link rel="stylesheet" href="{% block stylesheet %}{% static 'cadmin/css/style.css' %}{% endblock %}">
 	<link rel="stylesheet" href="{% static 'cadmin/css/reset.css' %}">
+	<script defer src="{% static 'fonts/fontawesome-free-5.0.9/svg-with-js/js/fontawesome-all.js' %}"></script>
 </head>
+{% load i18n %}
 <body>
 	<div class="navbar">
-		<div class="section-inner clearfix">
 			<nav>
-				<a href="/">Autoelectronics Electra</a>
-				<a href="#">Blog</a>
-				<a href="#">Contact</a>
-				<a href="#">Career</a>
+				<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#000080"></i><a href="tel:+359887720074" style="color:#0000FF"><b><i>0887 72 00 74</b></i></a>
+				<a href="/about/">{% trans "Autoelectronics Electra"%}</a>
+				<a href="/">{% trans "Blog"%}</a>
+				<a href="/about/us/">{% trans "About us:"%}</a>
+				<a href="/cadmin/post/add/">{% trans "Add Post"%}</a>
+				<i class="fas fa-user" style="color:#000080"></i><a href="/login/">{% trans "Log in"%}</a>/<a href="/cadmin/register/">{% trans "Registration"%}</a>
+				<i class="fab fa-facebook-square" style="color:#0000FF"></i>
+				<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+					<input name="next" type="hidden" value="{{ redirect_to }}" />
+					<select name="language">
+						{% get_current_language as LANGUAGE_CODE %}
+						{% get_available_languages as LANGUAGES %}
+						{% get_language_info_list for LANGUAGES as languages %}
+						{% for language in languages %}
+							<option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+								{{ language.name_local }} ({{ language.code }})
+							</option>
+						{% endfor %}
+					</select>
+					<input type="submit" value="Go" />
+				</form>
 			</nav>
 		</div>
-		<div>
-			<img src="{% static 'blog/images/LogoELECTRA.png' %}" / >
-		</div>
-		
 	</div>
+	
+
+
+                       
+              </div>
+          </li>
+	<div class="img">
+		<img src="{% static 'blog/images/LogoELECTRA.png' %}" / >
+	</div>
+		
+	
 
 	{% block content %}
 	
