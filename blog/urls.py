@@ -10,6 +10,8 @@ sitemaps = {
 
 urlpatterns = [
     url(r'^sitemap\.xml/$', sitemap, {'sitemaps' : sitemaps} , name='sitemap'),
+    url(r'^contact/usg/$', views.contact_usg, name='contact_usg'),
+    url(r'^contact/usv/$', views.contact_usv, name='contact_usv'),
     url(r'^accounts/profile/$', views.admin_page, name='admin_page'),
     url(r'^about/$', flat_views.flatpage, {'url': '/about/'}, name='about'),
     url(r'^about/us/$', flat_views.flatpage, {'url': '/about/us/'}, name='about_us'),

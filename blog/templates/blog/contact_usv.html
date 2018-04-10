@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends "blog/base.html" %}
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+{% load i18n %}
+<body style="background-color:#90EE90;">
+{% block title %}
+    {% trans "Contact us:" as the_title %} - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+
+	<div class="content">
+		<div class="section-inner clearfix">
+	
+			<p>&#187; <a href="{% url 'contact_usg' %}">{% trans "Contact us:"%}</p>
+			<hr>
+			<address>
+			<p>{% trans "Autoelectronics Electra"%}</p>
+
+			<p>{% trans "Bulgaria, Rousse"%}</p>
+			<p>{% trans "Vidin Street 17"%}</p>
+			
+			<p><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a href="tel:+35982861486" style="color:#0000FF"><b><i>082 / 86 14 86</i></b></p>
+			<p><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a href="tel:+359887720074" style="color:#0000FF"><b><i>0887 72 00 74</i></b></p>
+			<p><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a href="tel:+359888590051" style="color:#0000FF"><b><i>0888 59 00 51</i></b></p>
+	
+			<p><i class="fas fa-envelope fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><i>elektra_co@abv.bg</i></a></p>
+			</address>
+			
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.7344068154644!2d25.951818214936132!3d43.84060464831095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ae60c00b8306a5%3A0xe91cd80b86486791!2z0YPQuy4g4oCe0JLQuNC00LjQveKAnCAxNywgNzAxMiDQoNGD0YHQtSDQptC10L3RgtGK0YAsINCg0YPRgdC1!5e0!3m2!1sbg!2sbg!4v1523272146435" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>	</div>
+	</div>
+
+{% endblock %}
+</body>
+</html>

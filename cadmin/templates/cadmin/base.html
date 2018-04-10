@@ -22,19 +22,30 @@
 				<a href="/cadmin/post/add/">{% trans "Add Post"%}</a>
 				<i class="fas fa-user" style="color:#000080"></i><a href="/login/">{% trans "Log in"%}</a>/<a href="/cadmin/register/">{% trans "Registration"%}</a>
 				<i class="fab fa-facebook-square" style="color:#0000FF"></i>
-				<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-					<input name="next" type="hidden" value="{{ redirect_to }}" />
-					<select name="language">
-						{% get_current_language as LANGUAGE_CODE %}
-						{% get_available_languages as LANGUAGES %}
-						{% get_language_info_list for LANGUAGES as languages %}
-						{% for language in languages %}
-							<option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
-								{{ language.name_local }} ({{ language.code }})
-							</option>
-						{% endfor %}
-					</select>
-					<input type="submit" value="Go" />
+				
+				<form action="{% url 'set_language' %}" method="post" style="margin-top: 8px; float: right;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="ro" />
+					<input type="submit" value="RO" style="background-color:#000080; color:#FFFAF0;"/>
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="margin-top: 8px; float: right;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+					<input name="language" type="hidden" value="ru" />
+					<input type="submit" value="RU" style="background-color:#000080; color:#FFFAF0;"/>
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="margin-top: 8px; float: right;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="bg" />
+					<input type="submit" value="BG" style="background-color:#000080; color:#FFFAF0;"/>
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="margin-top: 8px; float: right;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="en" />
+					<input type="submit" value="EN" style="background-color:#000080; color:#FFFAF0;"/>
 				</form>
 			</nav>
 		</div>

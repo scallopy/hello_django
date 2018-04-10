@@ -20,27 +20,40 @@
 				<i class="fas fa-car" style="color:#000080"></i>
 				<i class="fas fa-bus" style="color:#000080"></i>
 				<i class="fas fa-truck" style="color:#000080"></i>
-				<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#000080"></i><a href="tel:+359887720074" style="color:#0000FF"><b><i>0887 72 00 74</b></i></a></button>
+				<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#000080"></i><a href="tel:+359887720074" style="color:#0000FF"><b><i>0887 72 00 74</i></b></a></button>
 				<a href="/about/">{% trans "Autoelectronics Electra"%}</a>
-				<a href="#">{% trans "Bulgaria, Rousse, Gotse Delchev Blvd 68;"%}</a>
-				<a href="#">{% trans "Bulgaria, Rousse, Vidin Street 17;"%}</a>
+				<a href="/contact/usg/">{% trans "Bulgaria, Rousse, Gotse Delchev Blvd 68;"%}</a>
+				<a href="/contact/usv/">{% trans "Bulgaria, Rousse, Vidin Street 17;"%}</a>
 				
-				<span class="fa-layers fa-fw fa-2x" >
-					<a href="/en/about/"><i class="fas fa-sign fa-lg" data-fa-transform="down-2" style="color:#000080"></i>
-					<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3 right-3" style="font-weight:900">EN</a></span></a>
-				</span>
-				<span class="fa-layers fa-fw fa-2x" >
-					<a href="/bg/about/"><i class="fas fa-sign fa-lg" data-fa-transform="down-2" style="color:#000080"></i>
+				<!-- <span class="fa-layers fa-fw fa-2x" >
+					<a href="/"><i class="fas fa-sign fa-lg" data-fa-transform="down-2" style="color:#000080"></i>
 					<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3 right-3" style="font-weight:900">BG</span></a>
-				</span>
-				<span class="fa-layers fa-fw fa-2x" >
-					<a href="/ru/about/"><i class="fas fa-sign fa-lg" data-fa-transform="down-2" style="color:#000080"></i>
-					<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3 right-3" style="font-weight:900">RU</span></a>
-				</span>
-				<span class="fa-layers fa-fw fa-2x" >
-					<a href="/ro/about/"><i class="fas fa-sign fa-lg" data-fa-transform="down-2" style="color:#000080"></i>
-					<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3 right-3" style="font-weight:900">RO</span></a>
-				</span>
+				</span> -->
+				
+				<form action="{% url 'set_language' %}" method="post" style="margin-top: 8px; float: right;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="ro" />
+					<input type="submit" value="RO" style="background-color:#000080; color:#FFFAF0;"/>
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="margin-top: 8px; float: right;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+					<input name="language" type="hidden" value="ru" />
+					<input type="submit" value="RU" style="background-color:#000080; color:#FFFAF0;"/>
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="margin-top: 8px; float: right;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="bg" />
+					<input type="submit" value="BG" style="background-color:#000080; color:#FFFAF0;"/>
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="margin-top: 8px; float: right;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="en" />
+					<input type="submit" value="EN" style="background-color:#000080; color:#FFFAF0;"/>
+				</form>
 			</nav>
 		</div>
 	</div>

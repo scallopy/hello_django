@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-09 08:22+0300\n"
+"POT-Creation-Date: 2018-04-09 23:25+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: .\blog\templates\blog\base.html:24 .\blog\templates\blog\base.html:55
+
+#: .\blog\templates\blog\base.html:24 .\blog\templates\blog\base.html:68
+#: .\blog\templates\blog\contact_usg.html:20
+#: .\blog\templates\blog\contact_usv.html:20
 msgid "Autoelectronics Electra"
 msgstr "Автоелектроника Електра"
 
@@ -29,48 +32,45 @@ msgstr "България, гр. Русе, бул. Гоце Делчев №68"
 msgid "Bulgaria, Rousse, Vidin Street 17;"
 msgstr "България, гр. Русе, ул. Видин №17"
 
-#: .\blog\templates\blog\base.html:56
+#: .\blog\templates\blog\base.html:69
 msgid "Blog"
 msgstr "Блог"
 
-#: .\blog\templates\blog\base.html:57
+#: .\blog\templates\blog\base.html:70
 msgid "About us:"
 msgstr "За нас"
 
-#: .\blog\templates\blog\base.html:58
+#: .\blog\templates\blog\base.html:71
 msgid "Add Post"
 msgstr "Добави публикация"
 
-#: .\blog\templates\blog\base.html:59
+#: .\blog\templates\blog\base.html:72
 msgid "Log in"
 msgstr "Вход"
 
-#: .\blog\templates\blog\base.html:59
+#: .\blog\templates\blog\base.html:72
 msgid "Registration"
 msgstr "Регистрация"
 
-#: .\blog\templates\flatpages\default.html:8
-#, python-format
-msgid ""
-"\n"
-"    %(flatpage.title)s - %(block.super)s\n"
-msgstr ""
+#: .\blog\templates\blog\contact_usg.html:9
+#: .\blog\templates\blog\contact_usg.html:17
+#: .\blog\templates\blog\contact_usv.html:9
+#: .\blog\templates\blog\contact_usv.html:17
+msgid "Contact us:"
+msgstr "За връзка с нас:"
 
-#: .\blog\templates\flatpages\default.html:12
-#, python-format
-msgid ""
-"\n"
-"\n"
-"    <div class=\"content\">\n"
-"        <div class=\"section-inner clearfix\">\n"
-"\n"
-"        <h1>%(flatpage.title)s</h1>\n"
-"\n"
-"        <p>\n"
-"            %(flatpage.content|linebreaks)s\n"
-"        </p>\n"
-"\n"
-"        </div>\n"
-"    </div>\n"
-"\n"
-msgstr ""
+#: .\blog\templates\blog\contact_usg.html:22
+#: .\blog\templates\blog\contact_usv.html:22
+msgid "Bulgaria, Rousse"
+msgstr "България, гр. Русе"
+
+#: .\blog\templates\blog\contact_usg.html:23
+msgid "Gotse Delchev Blvd 68"
+msgstr "бул. Гоце Делчев №68"
+
+#: .\blog\templates\blog\contact_usv.html:23
+msgid "Vidin Street 17"
+msgstr "ул. Видин №17"
+
+#~ msgid "Rousse"
+#~ msgstr "Русе"

@@ -188,6 +188,15 @@ def admin_page(request):
     
     return render(request, 'blog/admin_page.html')
 
+def contact_usg(request):
+    return render(request, 'blog/contact_usg.html')
+
+def contact_usv(request):
+    return render(request, 'blog/contact_usv.html')
+	
+from django.utils.translation import (
+    activate, LANGUAGE_SESSION_KEY, check_for_language, get_language, to_locale,
+)
 
     
     

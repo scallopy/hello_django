@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends "blog/base.html" %}
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+{% load i18n %}
+<body style="background-color:#90EE90;">
+{% block title %}
+    {% trans "Contact us:" as the_title %} - {{block.super}}
+{% endblock %}
+
+{% block content %}
+
+	<div class="content">
+		<div class="section-inner clearfix">
+	
+			<p>&#187; <a href="{% url 'contact_usg' %}">{% trans "Contact us:"%}</p>
+			<hr>
+			<address>
+			<p>{% trans "Autoelectronics Electra"%}</p>
+
+			<p>{% trans "Bulgaria, Rousse"%}</p>
+			<p>{% trans "Gotse Delchev Blvd 68"%}</p>
+			
+			<p><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a href="tel:+35982861486" style="color:#0000FF"><b><i>082 / 86 14 86</i></b></p>
+			<p><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a href="tel:+359887720074" style="color:#0000FF"><b><i>0887 72 00 74</i></b></p>
+			<p><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a href="tel:+359888590051" style="color:#0000FF"><b><i>0888 59 00 51</i></b></p>
+	
+			<p><i class="fas fa-envelope fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><i>elektra_co@abv.bg</i></a></p>
+			</address>
+			
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5757.274405100815!2d25.9676437!3d43.8218842!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ae5e2995afbddd%3A0xe302b0bb238d2862!2zYnVsLiAiR290c2UgRGVsY2hldiIgNjgsIDcwMTYg0LIu0LcuINCX0LDQv9Cw0LQsIFJ1c2U!5e0!3m2!1sen!2sbg!4v1523268182262" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>					
+		</div>
+	</div>
+
+{% endblock %}
+</body>
+</html>
