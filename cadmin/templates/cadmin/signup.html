@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% extends "cadmin/base1.html" %}
+{% load i18n static %}
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static 'cadmin/css/login.css' %}" />
+{{ form.media }}
+{% endblock %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Autoelectronics Electra') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans "Autoelectronics Electra"%}<h1>
+{% endblock %}
+
+{% block bodyclass %}{{ block.super }} login{% endblock %}
+
+{% block usertools %}{% endblock %}
+
+{% block nav-global %}
+
+{% endblock %}
+
+{% block content_title %}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+{% if form.errors and not form.non_field_errors %}
+<p class="errornote">
+{% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}{% trans "Please correct the errors below." %}{% endif %}
+</p>
+{% endif %}
+
+{% if form.non_field_errors %}
+{% for error in form.non_field_errors %}
+<p class="errornote">
+    {{ error }}
+</p>
+{% endfor %}
+{% endif %}
+<button class="tablink" onclick="location.href='/cadmin/login/';">{% trans "Log in"%}</button>
+<button class="tablink" onclick="openPage('Registration', this, 'white')" id="defaultOpen">{% trans "Registration"%}</button>
+<div id="content" class="colM">	
+	
+	<div id="Registration" class="tabcontent">
+		
+		{% if messages %}
+			<ul>
+				{% for message in messages %}
+				<li>{{message}}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		
+		<h1>{% trans "Create account:"%}</h1>
+		
+		<form id="login-form" class="form-row" method="post">
+			{% csrf_token %}
+			<table>
+				{{form.as_p}}
+				<tr>
+					<td></td>
+					<td><input type="submit" name="submit" value='{% trans "Register"%}' /></td>
+				</tr>
+			</table>
+		</form>
+		
+	</div>
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>	
+	
+
+</div>
+
+{% endblock %}
+
+</body>
+</html>

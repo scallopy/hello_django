@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-09 23:25+0300\n"
+"POT-Creation-Date: 2018-04-18 21:34+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: .\cadmin\forms.py:8
+msgid "Enter Username"
+msgstr "Въведете потребителско име"
+
+#: .\cadmin\forms.py:9
+msgid "Enter email address"
+msgstr "Въведете имейл адрес"
+
+#: .\cadmin\forms.py:10
+msgid "Enter password here"
+msgstr "Въведете паролата тук"
+
+#: .\cadmin\forms.py:11
+msgid "Confirm password"
+msgstr "Потвърдете паролата"
+
+#: .\cadmin\forms.py:17
+msgid "Username already exists"
+msgstr "Потребителското име вече съществува"
+
+#: .\cadmin\forms.py:24
+msgid "Email already exists"
+msgstr "Имейл адресът вече съществува"
+
+#: .\cadmin\forms.py:32
+msgid "Password don't match"
+msgstr "Паролата не съвпада"
+
 #: .\cadmin\templates\cadmin\account_info.html:11
-#: .\cadmin\templates\cadmin\post_add.html:18
+#: .\cadmin\templates\cadmin\post_add.html:16
+#: .\cadmin\templates\cadmin\post_list.html:16
+#: .\cadmin\templates\cadmin\post_update.html:15
 msgid "All Posts"
-msgstr ""
+msgstr "Всички публикации"
 
 #: .\cadmin\templates\cadmin\account_info.html:18
+#: .\cadmin\templates\cadmin\base_admin.html:98
 msgid "Account Info"
 msgstr "Информация за акаунта"
 
@@ -39,83 +70,412 @@ msgstr "Дата на присъединяване: "
 msgid "Last Login: "
 msgstr "Последно влизане: "
 
+#: .\cadmin\templates\cadmin\activated.html:9
+msgid "Create Account"
+msgstr "Създаване на акаунт"
+
+#: .\cadmin\templates\cadmin\activated.html:15
+msgid "Account activated! Please"
+msgstr "Вашият акаунт е активиран! Моля"
+
+#: .\cadmin\templates\cadmin\activated.html:15
+msgid "login"
+msgstr "влезте"
+
+#: .\cadmin\templates\cadmin\admin_page.html:17
+#: .\cadmin\templates\cadmin\base_admin.html:87
+msgid "Welcome"
+msgstr "Привет"
+
+#: .\cadmin\templates\cadmin\admin_page.html:19
+msgid "User Details:"
+msgstr "Данни на потребителя"
+
+#: .\cadmin\templates\cadmin\admin_page.html:22
+msgid "Email"
+msgstr "Въведи email"
+
+#: .\cadmin\templates\cadmin\admin_page.html:23
+msgid "SuperUser"
+msgstr "Супер потребител"
+
+#: .\cadmin\templates\cadmin\admin_page.html:24
+msgid "Staff"
+msgstr "Състав"
+
+#: .\cadmin\templates\cadmin\admin_page.html:25
+msgid "Date Joined"
+msgstr "Дата на присъединяване: "
+
+#: .\cadmin\templates\cadmin\admin_page.html:26
+msgid "Last Login"
+msgstr "Последно влизане:"
+
+#: .\cadmin\templates\cadmin\admin_page.html:29
+#: .\cadmin\templates\cadmin\base_admin.html:101
+msgid "Logout"
+msgstr "Изход"
+
 #: .\cadmin\templates\cadmin\base.html:8
+#: .\cadmin\templates\cadmin\base_admin.html:8
 msgid "Autoelectronics Electra :: Admin Panel"
 msgstr "Автоелектроника Електра :: Админ Панел"
 
-#: .\cadmin\templates\cadmin\base.html:19
+#: .\cadmin\templates\cadmin\base.html:27
+#: .\cadmin\templates\cadmin\base_admin.html:28
+msgid "How to find us"
+msgstr ""
+
+#: .\cadmin\templates\cadmin\base.html:30
+#: .\cadmin\templates\cadmin\base_admin.html:31
+msgid "Bulgaria, Rousse,<br> Gotse Delchev Blvd 68"
+msgstr "България, гр. Русе, бул. Гоце Делчев №68"
+
+#: .\cadmin\templates\cadmin\base.html:31
+#: .\cadmin\templates\cadmin\base_admin.html:32
+msgid "Bulgaria, Rousse,<br> Vidin Street 17"
+msgstr "България, гр. Русе, ул. Видин №17"
+
+#: .\cadmin\templates\cadmin\base.html:37
+#: .\cadmin\templates\cadmin\base_admin.html:38
+msgid "Notice:"
+msgstr "Известия:"
+
+#: .\cadmin\templates\cadmin\base.html:40
+#: .\cadmin\templates\cadmin\base.html:91
+#: .\cadmin\templates\cadmin\base.html:122
+#: .\cadmin\templates\cadmin\base_admin.html:41
+#: .\cadmin\templates\cadmin\login.html:8
+#: .\cadmin\templates\cadmin\login.html:11
+#: .\cadmin\templates\cadmin\signup.html:8
+#: .\cadmin\templates\cadmin\signup.html:11
 msgid "Autoelectronics Electra"
 msgstr "Автоелектроника Електра"
 
-#: .\cadmin\templates\cadmin\base.html:20
+#: .\cadmin\templates\cadmin\base.html:41
+#: .\cadmin\templates\cadmin\base_admin.html:42
+msgid "GPS Systems"
+msgstr "GPS системи"
+
+#: .\cadmin\templates\cadmin\base.html:42
+#: .\cadmin\templates\cadmin\base_admin.html:43
+msgid "CCTV"
+msgstr "Видеонаблюдение"
+
+#: .\cadmin\templates\cadmin\base.html:43
+#: .\cadmin\templates\cadmin\base_admin.html:44
+msgid "Security Systems"
+msgstr "Охранителни системи"
+
+#: .\cadmin\templates\cadmin\base.html:93
+msgid "Autoelectronics repairs"
+msgstr "Ремонт на автоелектроника"
+
+#: .\cadmin\templates\cadmin\base.html:99
+msgid "Search for:"
+msgstr "Търсене за:"
+
+#: .\cadmin\templates\cadmin\base.html:100
+msgid "Search..."
+msgstr "Търси..."
+
+#: .\cadmin\templates\cadmin\base.html:102
+msgid "Search"
+msgstr "Търси"
+
+#: .\cadmin\templates\cadmin\base.html:116
+msgid "Menu"
+msgstr "Меню"
+
+#: .\cadmin\templates\cadmin\base.html:123
 msgid "Blog"
 msgstr "Блог"
 
-#: .\cadmin\templates\cadmin\base.html:21
+#: .\cadmin\templates\cadmin\base.html:124
 msgid "About us:"
 msgstr "За нас:"
 
-#: .\cadmin\templates\cadmin\base.html:22
+#: .\cadmin\templates\cadmin\base.html:125
+#: .\cadmin\templates\cadmin\post_add.html:16
+#: .\cadmin\templates\cadmin\post_add.html:78
+#: .\cadmin\templates\cadmin\post_list.html:18
 msgid "Add Post"
 msgstr "Добави публикация"
 
-#: .\cadmin\templates\cadmin\base.html:23
+#: .\cadmin\templates\cadmin\base.html:126
+msgid "Feedback"
+msgstr "Отзиви"
+
+#: .\cadmin\templates\cadmin\base.html:128
+#: .\cadmin\templates\cadmin\login.html:40
+#: .\cadmin\templates\cadmin\login.html:75
+#: .\cadmin\templates\cadmin\signup.html:40
 #: .\cadmin\templates\registration\login.html:62
 msgid "Log in"
 msgstr "Вход"
 
-#: .\cadmin\templates\cadmin\base.html:23
+#: .\cadmin\templates\cadmin\base.html:130
+#: .\cadmin\templates\cadmin\login.html:41
+#: .\cadmin\templates\cadmin\signup.html:41
 msgid "Registration"
 msgstr "Регистрация"
 
-#: .\cadmin\templates\cadmin\base_admin.html:14
+#: .\cadmin\templates\cadmin\base1.html:30
+msgid "Welcome,"
+msgstr "Привет"
+
+#: .\cadmin\templates\cadmin\base1.html:35
+msgid "View site"
+msgstr "Към Сайта"
+
+#: .\cadmin\templates\cadmin\base1.html:40
+msgid "Documentation"
+msgstr "Документация"
+
+#: .\cadmin\templates\cadmin\base1.html:44
+msgid "Change password"
+msgstr "Смяна на парола"
+
+#: .\cadmin\templates\cadmin\base1.html:46
+msgid "Log out"
+msgstr "ИЗход"
+
+#: .\cadmin\templates\cadmin\base1.html:56
+msgid "Home"
+msgstr "Начало"
+
+#: .\cadmin\templates\cadmin\base_admin.html:85
 msgid "Autoelectronics Electra - Admin Panel"
 msgstr "Автоелектроника Електра - Админ Панел"
 
-#: .\cadmin\templates\cadmin\base_admin.html:25
-msgid ">Post"
-msgstr ">Публикация"
+#: .\cadmin\templates\cadmin\base_admin.html:95
+msgid "Posts"
+msgstr "Публикации"
 
-#: .\cadmin\templates\cadmin\base_admin.html:26
-msgid ">Category"
-msgstr ">Категория"
+#: .\cadmin\templates\cadmin\base_admin.html:96
+msgid "Categories"
+msgstr "Категории"
 
-#: .\cadmin\templates\cadmin\base_admin.html:27
-msgid ">Tag"
-msgstr ">Таг"
+#: .\cadmin\templates\cadmin\base_admin.html:97
+msgid "Tags"
+msgstr "Тагове"
 
-#: .\cadmin\templates\cadmin\base_admin.html:28
-msgid ">Account Info"
-msgstr ">Информация за акаунта"
+#: .\cadmin\templates\cadmin\base_admin.html:99
+#: .\cadmin\templates\cadmin\password_change.html:17
+#: .\cadmin\templates\cadmin\password_change.html:19
+msgid "Change Password"
+msgstr "Смяна на парола"
 
-#: .\cadmin\templates\cadmin\base_admin.html:29
-msgid ">Change Password"
-msgstr ">Смяня ня парола"
+#: .\cadmin\templates\cadmin\base_admin.html:100
+msgid "View Site"
+msgstr "Към Сайта"
 
-#: .\cadmin\templates\cadmin\base_admin.html:30
-msgid ">View Site"
-msgstr ">Към Сайта"
+#: .\cadmin\templates\cadmin\category_add.html:16
+#: .\cadmin\templates\cadmin\category_list.html:9
+#: .\cadmin\templates\cadmin\category_list.html:16
+#: .\cadmin\templates\cadmin\category_update.html:16
+msgid "All Categories"
+msgstr "Всички категории"
 
-#: .\cadmin\templates\cadmin\base_admin.html:31
-msgid ">Logout"
-msgstr ">Изход"
+#: .\cadmin\templates\cadmin\category_add.html:16
+#: .\cadmin\templates\cadmin\category_add.html:18
+#: .\cadmin\templates\cadmin\category_add.html:58
+#: .\cadmin\templates\cadmin\category_list.html:18
+msgid "Add Category"
+msgstr "Добави Категория"
 
-#: .\cadmin\templates\cadmin\login.html:31
-#: .\cadmin\templates\registration\login.html:58
-msgid "Forgotten your password or username?"
+#: .\cadmin\templates\cadmin\category_list.html:26
+msgid "Total Categories:"
+msgstr "Всички категории:"
+
+#: .\cadmin\templates\cadmin\category_list.html:32
+#: .\cadmin\templates\cadmin\tag_list.html:32
+msgid "Name"
+msgstr "Име"
+
+#: .\cadmin\templates\cadmin\category_list.html:33
+#: .\cadmin\templates\cadmin\tag_list.html:33
+msgid "Slug"
 msgstr ""
 
-#: .\cadmin\templates\cadmin\post_add.html:20
-msgid "Add Post: "
-msgstr "Добави публикация"
+#: .\cadmin\templates\cadmin\category_list.html:34
+#: .\cadmin\templates\cadmin\post_list.html:36
+#: .\cadmin\templates\cadmin\tag_list.html:34
+msgid "Author"
+msgstr "Автор"
 
+#: .\cadmin\templates\cadmin\category_list.html:35
+#: .\cadmin\templates\cadmin\post_list.html:39
+#: .\cadmin\templates\cadmin\tag_list.html:35
+msgid "Action"
+msgstr "Действие"
+
+#: .\cadmin\templates\cadmin\category_list.html:44
+#: .\cadmin\templates\cadmin\post_list.html:52
+#: .\cadmin\templates\cadmin\tag_list.html:44
+msgid "Edit"
+msgstr "Редактирай"
+
+#: .\cadmin\templates\cadmin\category_list.html:45
+#: .\cadmin\templates\cadmin\post_list.html:53
+#: .\cadmin\templates\cadmin\tag_list.html:45
+msgid "Delete"
+msgstr "Изтрий"
+
+#: .\cadmin\templates\cadmin\category_list.html:54
+msgid "No Categories"
+msgstr "Няма категории"
+
+#: .\cadmin\templates\cadmin\category_list.html:64
+#: .\cadmin\templates\cadmin\post_list.html:72
+#: .\cadmin\templates\cadmin\tag_list.html:64
+msgid "Prev"
+msgstr "Предишна"
+
+#: .\cadmin\templates\cadmin\category_list.html:67
+#: .\cadmin\templates\cadmin\post_list.html:75
+#: .\cadmin\templates\cadmin\tag_list.html:67
+msgid "Page"
+msgstr "Страница"
+
+#: .\cadmin\templates\cadmin\category_list.html:67
+#: .\cadmin\templates\cadmin\post_list.html:75
+#: .\cadmin\templates\cadmin\tag_list.html:67
+msgid "of"
+msgstr "от"
+
+#: .\cadmin\templates\cadmin\category_list.html:70
+#: .\cadmin\templates\cadmin\post_list.html:78
+#: .\cadmin\templates\cadmin\tag_list.html:70
+msgid "Next"
+msgstr "Следваща"
+
+#: .\cadmin\templates\cadmin\category_update.html:16
+#: .\cadmin\templates\cadmin\category_update.html:18
+#: .\cadmin\templates\cadmin\category_update.html:59
+msgid "Update Category"
+msgstr "Редактиране на категория"
+
+#: .\cadmin\templates\cadmin\login.html:29
+#: .\cadmin\templates\cadmin\signup.html:29
 #: .\cadmin\templates\registration\login.html:21
 msgid "Please correct the error below."
 msgstr "Моля, коригирайте грешката по-долу"
 
+#: .\cadmin\templates\cadmin\login.html:29
+#: .\cadmin\templates\cadmin\signup.html:29
 #: .\cadmin\templates\registration\login.html:21
 msgid "Please correct the errors below."
 msgstr "Моля, коригирайте грешката по-долу"
+
+#: .\cadmin\templates\cadmin\login.html:56
+#, fuzzy
+#| msgid "Username: "
+msgid "Username:"
+msgstr "Потребителско име:"
+
+#: .\cadmin\templates\cadmin\login.html:59
+msgid "Enter Username:"
+msgstr "Въведи потребителско име:"
+
+#: .\cadmin\templates\cadmin\login.html:63
+msgid "Password:"
+msgstr "Парола:"
+
+#: .\cadmin\templates\cadmin\login.html:66
+msgid "Enter Password:"
+msgstr "Въведи парола:"
+
+#: .\cadmin\templates\cadmin\login.html:70
+msgid "Forgot password?"
+msgstr "Забравена парола?"
+
+#: .\cadmin\templates\cadmin\logout.html:11
+msgid "You are successfully logged out."
+msgstr "Вуе излязохте успешно."
+
+#: .\cadmin\templates\cadmin\logout.html:11
+msgid "Click here"
+msgstr "Кликнете тук"
+
+#: .\cadmin\templates\cadmin\logout.html:11
+msgid "to login again."
+msgstr "за да влезете отново"
+
+#: .\cadmin\templates\cadmin\password_change.html:10
+#: .\cadmin\templates\cadmin\password_change_done.html:10
+msgid "Password Change"
+msgstr "Смяна на парола"
+
+#: .\cadmin\templates\cadmin\password_change.html:27
+msgid "Submit"
+msgstr "Изпращане"
+
+#: .\cadmin\templates\cadmin\password_change_done.html:17
+msgid "Password Changed"
+msgstr "Паролата е сменена"
+
+#: .\cadmin\templates\cadmin\post_add.html:18
+msgid "Add Post: "
+msgstr "Добави публикация"
+
+#: .\cadmin\templates\cadmin\post_list.html:26
+msgid "Total Posts"
+msgstr "Всички публикации"
+
+#: .\cadmin\templates\cadmin\post_list.html:33
+msgid "Title"
+msgstr "Заглавие"
+
+#: .\cadmin\templates\cadmin\post_list.html:34
+msgid "Category"
+msgstr "Категория"
+
+#: .\cadmin\templates\cadmin\post_list.html:38
+msgid "Date"
+msgstr "Дата"
+
+#: .\cadmin\templates\cadmin\post_update.html:15
+#: .\cadmin\templates\cadmin\post_update.html:17
+msgid "Post Update"
+msgstr "Редактиране на публикация"
+
+#: .\cadmin\templates\cadmin\post_update.html:75
+msgid "Update Post"
+msgstr "Редактиране на публикация"
+
+#: .\cadmin\templates\cadmin\signup.html:54
+msgid "Create account:"
+msgstr "Създаване на профил:"
+
+#: .\cadmin\templates\cadmin\signup.html:62
+msgid "Register"
+msgstr "Регистрирай ме"
+
+#: .\cadmin\templates\cadmin\tag_add.html:9
+msgid "Add New Tag"
+msgstr "Добави нов таг"
+
+#: .\cadmin\templates\cadmin\tag_add.html:16
+#: .\cadmin\templates\cadmin\tag_list.html:9
+#: .\cadmin\templates\cadmin\tag_list.html:16
+#: .\cadmin\templates\cadmin\tag_update.html:16
+msgid "All Tags"
+msgstr "Всички тагове"
+
+#: .\cadmin\templates\cadmin\tag_add.html:16
+#: .\cadmin\templates\cadmin\tag_add.html:18
+#: .\cadmin\templates\cadmin\tag_add.html:59
+#: .\cadmin\templates\cadmin\tag_list.html:18
+msgid "Add Tag"
+msgstr "Добави таг"
+
+#: .\cadmin\templates\cadmin\tag_update.html:9
+#: .\cadmin\templates\cadmin\tag_update.html:16
+#: .\cadmin\templates\cadmin\tag_update.html:18
+#: .\cadmin\templates\cadmin\tag_update.html:59
+msgid "Update Tag"
+msgstr "Редактиране на таг"
 
 #: .\cadmin\templates\registration\login.html:37
 #, python-format
@@ -125,3 +485,80 @@ msgid ""
 msgstr ""
 "Вие се индетифицирахте като %(username)s, но не сте оторизиран за достъп до "
 "тазистраница. Бихте ли желали да влезете със друг акаунт?"
+
+#: .\cadmin\templates\registration\login.html:58
+msgid "Forgotten your password or username?"
+msgstr "Забравена парола или потребителско име?"
+
+#: .\cadmin\views.py:50
+msgid "Post added."
+msgstr "Публикацията е добавена"
+
+#: .\cadmin\views.py:88
+msgid "Post updated."
+msgstr "Публикацията е редактирана"
+
+#: .\cadmin\views.py:138
+msgid ""
+"Account created! Click on the link sent to your email to activate the account"
+msgstr ""
+"Акаунтът е създаден! Кликнете върху връзката, изпратена до имейла ви, за да "
+"го активирате"
+
+#: .\cadmin\views.py:142
+msgid "Unable to sent email verification. Please try again"
+msgstr ""
+"Невъзможно е да се свържем с вашия имейл, за да го потвърдим. Моля, опитайте "
+"отново"
+
+#: .\cadmin\views.py:195
+msgid "Post deleted"
+msgstr "Публикацията е изтрита"
+
+#: .\cadmin\views.py:244
+msgid "Category added"
+msgstr "Категорията е добавена"
+
+#: .\cadmin\views.py:285
+msgid "Category updated"
+msgstr "Категорията е редактирана"
+
+#: .\cadmin\views.py:299
+msgid "Category deleted"
+msgstr "Категорията е изтрита"
+
+#: .\cadmin\views.py:346
+msgid "Tag added"
+msgstr "Тагът е добавен"
+
+#: .\cadmin\views.py:388
+msgid "Tag updated"
+msgstr "Тагът е редактиран"
+
+#: .\cadmin\views.py:402
+msgid "Tag deleted"
+msgstr "Тагът е изтрит"
+
+#~ msgid "Autoelectronics Electra - Login"
+#~ msgstr "Автоелектроника Електра - Вход"
+
+#~ msgid "Create User"
+#~ msgstr "Създай потребител"
+
+#~ msgid "Create account - Autoelectronics Electra"
+#~ msgstr "Създай акаунт - Автоелектроника Електра"
+
+#~ msgid ">Account Info"
+#~ msgstr ">Информация за акаунта"
+
+#~ msgid ">Change Password"
+#~ msgstr ">Смяна на парола"
+
+#~ msgid ">Logout"
+#~ msgstr ">Изход"
+
+#~ msgid ">Category"
+#~ msgstr ">Категория"
+
+#~ msgid "Add New Category"
+#~ msgstr "Добави нова категория"

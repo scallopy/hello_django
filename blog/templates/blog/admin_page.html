@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+{% extends 'blog/base.html' %}
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+
 <body>
-{% extends "blog/base.html" %}
 
 {% block title %}
 	Blog - {{block.super}}
@@ -12,19 +15,19 @@
 <div class="content">
 	<div class="section-inner clearfix">
 	
-	<p>Welcome {{request.user.username}} !</p>
+	<p>{% blocktrans with user_username=request.user.username %}Welcome {{user_username}} !{% endblocktrans %}</p>
 	
-	<p>User Details:</p>
+	<p>{% trans "User Details:"%}</p>
 	
 	<ul>
-		<li>Email: {{request.user.username.email|default:"NA"}}</li>
-		<li>SuperUser: {{request.user.is_superuser}}</li>
-		<li>Staff: {{request.user.is_staff}}</li>
-		<li>Date Joined: {{request.user.date_joined}}</li>
-		<li>Last Login: {{request.user.last_login}}</li>
+		<li>{% blocktrans with user_email=request.user.username.email|default:"NA" %}Email: {{user_email}}{% endblocktrans %}</li>
+		<li>{% blocktrans with is_superuser=request.user.is_superuser %}SuperUser: {{is_superuser}}{% endblocktrans %}</li>
+		<li>{% blocktrans with is_staff=request.user.is_staff %}Staff: {{is_staff}}{% endblocktrans %}</li>
+		<li>{% blocktrans with date_joined=request.user.date_joined %}Date Joined: {{date_joined}}{% endblocktrans %}</li>
+		<li>{% blocktrans with last_login=request.user.last_login %}Last Login: {{last_login}}{% endblocktrans %}</li>
 	</ul>
 	
-	<p><a href="{% url 'blog_logout'%}">Logout</a></p>
+	<p><a href="{% url 'blog_logout'%}">{% trans "Logout"%}</a></p>
 	
 	</div>
 </div>

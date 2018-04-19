@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-09 23:25+0300\n"
+"POT-Creation-Date: 2018-04-18 21:34+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,59 +18,335 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\blog\templates\blog\base.html:24 .\blog\templates\blog\base.html:68
-#: .\blog\templates\blog\contact_usg.html:20
-#: .\blog\templates\blog\contact_usv.html:20
+#: .\blog\models.py:28
+msgid "Categories"
+msgstr "Категории"
+
+#: .\blog\models.py:49
+msgid "Title"
+msgstr "Заглавие"
+
+#: .\blog\models.py:50
+msgid "Slug"
+msgstr ""
+
+#: .\blog\models.py:50
+msgid "Slug will be generated automatically from the title of the post"
+msgstr "Slug ще се генерира автоматично от заглавието на вашата публикация"
+
+#: .\blog\models.py:51
+msgid "Content"
+msgstr "Съдържание"
+
+#: .\blog\models.py:68
+msgid "Name"
+msgstr "Име"
+
+#: .\blog\models.py:68
+msgid "Name of the sender"
+msgstr "Име на подателя"
+
+#: .\blog\models.py:70
+msgid "Subject"
+msgstr "Относно"
+
+#: .\blog\models.py:71
+msgid "Message"
+msgstr "Съобщение"
+
+#: .\blog\models.py:75 .\blog\templates\blog\base.html:128
+msgid "Feedback"
+msgstr "Отзиви"
+
+#: .\blog\templates\blog\admin_page.html:18
+#, python-format
+msgid "Welcome %(user_username)s !"
+msgstr "Привет %(user_username)s !"
+
+#: .\blog\templates\blog\admin_page.html:20
+msgid "User Details:"
+msgstr "Потребителски данни:"
+
+#: .\blog\templates\blog\admin_page.html:23
+#, python-format
+msgid "Email: %(user_email)s"
+msgstr ""
+
+#: .\blog\templates\blog\admin_page.html:24
+#, python-format
+msgid "SuperUser: %(is_superuser)s"
+msgstr "Супер потребител: %(is_superuser)s"
+
+#: .\blog\templates\blog\admin_page.html:25
+#, python-format
+msgid "Staff: %(is_staff)s"
+msgstr "Персонал: %(is_staff)s"
+
+#: .\blog\templates\blog\admin_page.html:26
+#, python-format
+msgid "Date Joined: %(date_joined)s"
+msgstr "Дата на присъединяване: %(date_joined)s"
+
+#: .\blog\templates\blog\admin_page.html:27
+#, python-format
+msgid "Last Login: %(last_login)s"
+msgstr "Последно влизане: %(last_login)s"
+
+#: .\blog\templates\blog\admin_page.html:30
+msgid "Logout"
+msgstr "Изход"
+
+#: .\blog\templates\blog\base.html:30
+msgid "How to find us"
+msgstr "Как да ни намерите"
+
+#: .\blog\templates\blog\base.html:33
+msgid "Bulgaria, Rousse,<br> Gotse Delchev Blvd 68"
+msgstr "България, гр. Русе, бул. Гоце Делчев №68"
+
+#: .\blog\templates\blog\base.html:34
+msgid "Bulgaria, Rousse,<br> Vidin Street 17"
+msgstr "България, гр. Русе, ул. Видин №17"
+
+#: .\blog\templates\blog\base.html:40
+msgid "Notice:"
+msgstr "Известия:"
+
+#: .\blog\templates\blog\base.html:43 .\blog\templates\blog\base.html:93
+#: .\blog\templates\blog\base.html:124
+#: .\blog\templates\blog\contact_usg.html:19
+#: .\blog\templates\blog\contact_usv.html:20 .\blog\templates\blog\login.html:8
+#: .\blog\templates\blog\login.html:11
 msgid "Autoelectronics Electra"
 msgstr "Автоелектроника Електра"
 
-#: .\blog\templates\blog\base.html:25
-msgid "Bulgaria, Rousse, Gotse Delchev Blvd 68;"
-msgstr "България, гр. Русе, бул. Гоце Делчев №68"
+#: .\blog\templates\blog\base.html:44
+msgid "GPS Systems"
+msgstr "GPS системи"
 
-#: .\blog\templates\blog\base.html:26
-msgid "Bulgaria, Rousse, Vidin Street 17;"
-msgstr "България, гр. Русе, ул. Видин №17"
+#: .\blog\templates\blog\base.html:45
+msgid "CCTV"
+msgstr "Видеонаблюдение"
 
-#: .\blog\templates\blog\base.html:69
+#: .\blog\templates\blog\base.html:46
+msgid "Security Systems"
+msgstr "Охранителни системи"
+
+#: .\blog\templates\blog\base.html:95
+msgid "Autoelectronics repairs"
+msgstr "Ремонт на автоелектроника"
+
+#: .\blog\templates\blog\base.html:101
+msgid "Search for:"
+msgstr "Търсене за:"
+
+#: .\blog\templates\blog\base.html:102
+msgid "Search..."
+msgstr "Търси..."
+
+#: .\blog\templates\blog\base.html:104
+msgid "Search"
+msgstr "Търси"
+
+#: .\blog\templates\blog\base.html:118
+msgid "Menu"
+msgstr "Меню"
+
+#: .\blog\templates\blog\base.html:125 .\blog\templates\blog\nav.html:8
 msgid "Blog"
 msgstr "Блог"
 
-#: .\blog\templates\blog\base.html:70
+#: .\blog\templates\blog\base.html:126
 msgid "About us:"
 msgstr "За нас"
 
-#: .\blog\templates\blog\base.html:71
+#: .\blog\templates\blog\base.html:127
 msgid "Add Post"
 msgstr "Добави публикация"
 
-#: .\blog\templates\blog\base.html:72
+#: .\blog\templates\blog\base.html:130 .\blog\templates\blog\login.html:40
+#: .\blog\templates\blog\login.html:75
 msgid "Log in"
 msgstr "Вход"
 
-#: .\blog\templates\blog\base.html:72
+#: .\blog\templates\blog\base.html:132 .\blog\templates\blog\login.html:41
 msgid "Registration"
 msgstr "Регистрация"
 
 #: .\blog\templates\blog\contact_usg.html:9
-#: .\blog\templates\blog\contact_usg.html:17
+#: .\blog\templates\blog\contact_usg.html:16
 #: .\blog\templates\blog\contact_usv.html:9
 #: .\blog\templates\blog\contact_usv.html:17
 msgid "Contact us:"
 msgstr "За връзка с нас:"
 
-#: .\blog\templates\blog\contact_usg.html:22
-#: .\blog\templates\blog\contact_usv.html:22
+#: .\blog\templates\blog\contact_usg.html:20
+#: .\blog\templates\blog\contact_usv.html:21
 msgid "Bulgaria, Rousse"
 msgstr "България, гр. Русе"
 
-#: .\blog\templates\blog\contact_usg.html:23
+#: .\blog\templates\blog\contact_usg.html:21
 msgid "Gotse Delchev Blvd 68"
 msgstr "бул. Гоце Делчев №68"
 
-#: .\blog\templates\blog\contact_usv.html:23
+#: .\blog\templates\blog\contact_usv.html:22
 msgid "Vidin Street 17"
 msgstr "ул. Видин №17"
+
+#: .\blog\templates\blog\feedback.html:8
+#, python-format
+msgid ""
+"\n"
+"\t\tFeedback - %(block.super)s\n"
+"\t"
+msgstr ""
+"\n"
+"\t\tОбратна връзка - %(block.super)s\n"
+"\t"
+
+#: .\blog\templates\blog\feedback.html:17
+msgid "Submit Your feedback"
+msgstr "Изпратете вашите отзиви"
+
+#: .\blog\templates\blog\feedback.html:41
+msgid "Submit"
+msgstr "Изпращане"
+
+#: .\blog\templates\blog\login.html:29
+msgid "Please correct the error below."
+msgstr "Моля, коригирайте грешката по-долу."
+
+#: .\blog\templates\blog\login.html:29
+msgid "Please correct the errors below."
+msgstr "Моля, коригирайте грешката по-долу."
+
+#: .\blog\templates\blog\login.html:56
+msgid "Username:"
+msgstr "Потребителско име:"
+
+#: .\blog\templates\blog\login.html:59
+msgid "Enter Username:"
+msgstr "Въведи потребителско име:"
+
+#: .\blog\templates\blog\login.html:63
+msgid "Password:"
+msgstr "Парола:"
+
+#: .\blog\templates\blog\login.html:66
+msgid "Enter Password:"
+msgstr "Въведи парола:"
+
+#: .\blog\templates\blog\login.html:70
+msgid "Forgot password?"
+msgstr "Забравена парола?"
+
+#: .\blog\templates\blog\login.html:92
+msgid "Create account:"
+msgstr "Създайте профил:"
+
+#: .\blog\templates\blog\login.html:100
+msgid "Register"
+msgstr "Регистрай ме"
+
+#: .\blog\templates\blog\logout.html:17
+msgid "You are logged out. "
+msgstr "Вие сте извън системата. "
+
+#: .\blog\templates\blog\logout.html:17
+msgid "Click here"
+msgstr "Кликнете тук"
+
+#: .\blog\templates\blog\logout.html:17
+msgid " to login again."
+msgstr " за да влезете отново."
+
+#: .\blog\templates\blog\nav.html:7
+msgid "Home"
+msgstr "Начало"
+
+#: .\blog\templates\blog\nav.html:9
+msgid "Contact"
+msgstr "За връзка с нас:"
+
+#: .\blog\templates\blog\nav.html:10
+msgid "Career"
+msgstr "Kариера"
+
+#: .\blog\templates\blog\post_by_category.html:18
+msgid "All the posts under category"
+msgstr "Всички публикации от категория"
+
+#: .\blog\templates\blog\post_by_category.html:28
+msgid "There are not posts in category"
+msgstr "Няма публикации в категория"
+
+#: .\blog\templates\blog\post_by_category.html:37
+#: .\blog\templates\blog\post_by_tag.html:37
+#: .\blog\templates\blog\post_list.html:35
+msgid "Prev"
+msgstr "Предишна"
+
+#: .\blog\templates\blog\post_by_category.html:40
+#: .\blog\templates\blog\post_by_tag.html:40
+#: .\blog\templates\blog\post_list.html:38
+msgid "Page"
+msgstr "Страница"
+
+#: .\blog\templates\blog\post_by_category.html:40
+#: .\blog\templates\blog\post_by_tag.html:40
+#: .\blog\templates\blog\post_list.html:38
+msgid "of"
+msgstr "от"
+
+#: .\blog\templates\blog\post_by_category.html:43
+#: .\blog\templates\blog\post_by_tag.html:43
+#: .\blog\templates\blog\post_list.html:41
+msgid "Next"
+msgstr "Следваща"
+
+#: .\blog\templates\blog\post_by_tag.html:18
+msgid "All the posts tagged with"
+msgstr "Всички публикации отбелязани с"
+
+#: .\blog\templates\blog\post_by_tag.html:28
+msgid "There are not posts tagged with"
+msgstr "Няма публикации отбелязани с"
+
+#: .\blog\templates\blog\post_detail.html:20
+msgid "Edit"
+msgstr "Редактиране"
+
+#: .\blog\templates\blog\post_info.html:7
+msgid "Date:"
+msgstr "Дата:"
+
+#: .\blog\templates\blog\post_info.html:8
+msgid "Category:"
+msgstr "Категория"
+
+#: .\blog\templates\blog\post_list.html:26
+msgid "There are no posts"
+msgstr "Няма публикации"
+
+#: .\blog\templates\blog\track_user.html:18
+msgid ""
+"This is your first visit to the site. From now on I will track your visits "
+"to this site."
+msgstr ""
+"Това е първото ви посещение в сайта. Отсега нататък ще проследявам вашите "
+"посещенияна този сайт."
+
+#: .\blog\templates\blog\track_user.html:21
+#, python-format
+msgid "This is your %(visit)s visit."
+msgstr "Това е вашето %(visit)s посещение"
+
+#: .\blog\templates\blog\track_user.html:25
+msgid "Enough! Stop Tracking Me"
+msgstr "Достатъчно! Спрете да ме проследявате!"
+
+#~ msgid "Login Form"
+#~ msgstr "Форма за вxoд"
 
 #~ msgid "Rousse"
 #~ msgstr "Русе"

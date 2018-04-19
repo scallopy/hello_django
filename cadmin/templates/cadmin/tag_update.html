@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html>
-<body>
-
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<body>
 {% extends "cadmin/base_admin.html" %}
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<body>
 
 {% block title %}
-	Update Tag - {{block.super}}
+	{% trans "Update Tag"%} - {{block.super}}
 {% endblock %}
 
 {% block main %}
 
 	<div class="main">
 	
-		<p>&#187; <a href="{% url 'category_list' %}">All Tags</a> &#187; Update Tag</p>
+		<p>&#187; <a href="{% url 'category_list' %}">{% trans "All Tags"%}</a> &#187; {% trans "Update Tag"%}</p>
 		
-		<h3>Update Tag</h3>
+		<h3>{% trans "Update Tag"%}</h3>
 		
 		{% if messages %}
 			{% for message in messages %}
@@ -60,7 +56,7 @@
 				
 				<tr>
 					<td></td>
-					<td><input type="sumbit" value="Update Tag"></td>
+					<td><input type="submit" value='{% trans "Update Tag"%}'></td>
 				</tr>
 				
 			</table>

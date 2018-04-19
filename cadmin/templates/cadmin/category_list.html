@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html>
+{% extends "cadmin/base_admin.html" %}
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <body>
 
-{% extends "cadmin/base_admin.html" %}
-
 {% block title %}
-	All Categories - {{block.super}}
+	{% trans "All Categories"%} - {{block.super}}
 {% endblock %}
 
 {% block main %}
 
 	<div class="main">
 	
-		<p>&#187; <a href="{% url 'category_list' %}">All Categories</a></p>
+		<p>&#187; <a href="{% url 'category_list' %}">{% trans "All Categories"%}</a></p>
 		
-		<p class="button"><a href="{% url 'category_add' %}">Add Category &raquo;</a></p>
+		<p class="button"><a href="{% url 'category_add' %}">{% trans "Add Category"%} &raquo;</a></p>
 		
 		{% if messages %}
 			{% for message in messages %}
@@ -22,16 +23,16 @@
 			{% endfor %}
 		{% endif %}
 		
-		<p class="count">Total Categories: {{categories.paginator.count}}</p>
+		<p class="count">{% trans "Total Categories:"%} {{categories.paginator.count}}</p>
 		
 			{% for category in categories %}
 				{% if forloop.first		%}
 					<table class="tbl-class">
 						<tr>
-							<th>Name</th>
-							<th>Slug</th>
-							<th>Author</th>
-							<th>Action</th>
+							<th>{% trans "Name"%}</th>
+							<th>{% trans "Slug"%}</th>
+							<th>{% trans "Author"%}</th>
+							<th>{% trans "Action"%}</th>
 						</tr>
 				{% endif %}
 				
@@ -40,8 +41,8 @@
 					<td>{{category.slug}}</td>
 					<td>{{category.author.user.username}}</td>
 					<td>
-						<a href="{% url 'category_update' category.id %}">Edit</a> |
-						<a href="{% url 'category_delete' category.id %}?next={{request.get_full_path}}" onclick=" return confirm('Are you sure ?')">Delete</a>
+						<a href="{% url 'category_update' category.id %}">{% trans "Edit"%}</a> |
+						<a href="{% url 'category_delete' category.id %}?next={{request.get_full_path}}" onclick=" return confirm('Are you sure ?')">{% trans "Delete"%}</a>
 					</td>
 				</tr>
 				
@@ -50,30 +51,30 @@
 				{% endif %}
 				
 			{% empty %}
-				No Categories
+				{% trans "No Categories"%}
 			{% endfor %}
 		
-	</div>
+	
 	
 	{% if categories %}
 	
 		<div class="pagination">
 			<p>
 				{% if categories.has_previous %}
-					<a href="?page={{categories.previous_page_number}}">&lt; Prev</a> |
+					<a href="?page={{categories.previous_page_number}}">&lt; {% trans "Prev"%}</a> |
 				{% endif %}
 				
-				<span>Page{{categories.number}} of {{categories.paginator.num_pages}}</span> |
+				<span>{% trans "Page"%}{{categories.number}} {% trans "of"%} {{categories.paginator.num_pages}}</span> |
 				
 				{% if catgories.has_next %}
-					<a href="?page={{categories.next_page_number}}">Next &gt;</a>
+					<a href="?page={{categories.next_page_number}}">{% trans "Next"%} &gt;</a>
 				{% endif %}
 				
 			</p>
 		</div>
 		
 	{% endif %}
-	
+	</div>
 {% endblock %}
 			
 </body>

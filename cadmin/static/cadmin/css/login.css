@@ -1,5 +1,15 @@
 /* LOGIN FORM */
 
+#content-main {
+    float: left;
+    width: 100%;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
 body.login {
     background: #f8f8f8;
 }
@@ -10,7 +20,7 @@ body.login {
 }
 
 .login #header h1 {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .login #header h1 a {
@@ -18,19 +28,33 @@ body.login {
 }
 
 .login #content {
-    padding: 20px 20px 0;
+    padding: 0 20px 0;
 }
 
 .login #container {
     background: #fff;
-    border: 1px solid #eaeaea;
-    border-radius: 4px;
+    border: 2px solid #eaeaea;
+    border-radius: 12px;
+	box-shadow:20px 20px 20px 10px grey;
     overflow: hidden;
     width: 28em;
     min-width: 300px;
     margin: 100px auto;
 }
 
+/* All Mobile Sizes (devices and browser) */
+@media only screen and ( max-width: 767px ) {
+	.login #container {
+    background: #fff;
+    border: 2px solid #eaeaea;
+    border-radius: 12px;
+	box-shadow:20px 20px 20px 10px grey;
+    overflow: hidden;
+    width: 100%;
+    min-width: 100%;
+    margin: auto;
+}
+}
 .login #content-main {
     width: 100%;
 }
@@ -74,5 +98,32 @@ body.login {
 }
 
 .login .password-reset-link {
-    text-align: center;
+    text-align: left;
 }
+
+/* Style tab links */
+.tablink {
+    background-color: #f8f9f9;
+	color: #417690;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 24px;
+    width: 50%;
+}
+
+
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: #447e9b;
+    display: none;
+    height: 100%;
+}
+
+#Login {background-color: white;}
+#Registration {background-color: white;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
