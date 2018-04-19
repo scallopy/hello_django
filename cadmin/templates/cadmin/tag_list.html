@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html>
+{% extends "cadmin/base_admin.html" %}
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <body>
 
-{% extends "cadmin/base_admin.html" %}
-
 {% block title %}
-	All Tags - {{block.super}}
+	{% trans "All Tags"%} - {{block.super}}
 {% endblock %}
 
 {% block main %}
 
 	<div class="main">
 	
-		<p>&#187; <a href="{% url 'tag_list' %}">All Tags</a></p>
+		<p>&#187; <a href="{% url 'tag_list' %}">{% trans "All Tags"%}</a></p>
 		
-		<p class="button"><a href="{% url 'tag_add' %}">Add Tag &raquo;</a></p>
+		<p class="button"><a href="{% url 'tag_add' %}">{% trans "Add Tag"%} &raquo;</a></p>
 		
 		{% if messages %}
 			{% for message in messages %}
@@ -28,10 +29,10 @@
 				{% if forloop.first		%}
 					<table class="tbl-class">
 						<tr>
-							<th>Name</th>
-							<th>Slug</th>
-							<th>Author</th>
-							<th>Action</th>
+							<th>{% trans "Name"%}</th>
+							<th>{% trans "Slug"%}</th>
+							<th>{% trans "Author"%}</th>
+							<th>{% trans "Action"%}</th>
 						</tr>
 				{% endif %}
 				
@@ -40,8 +41,8 @@
 					<td>{{tag.slug}}</td>
 					<td>{{tag.author.user.username}}</td>
 					<td>
-						<a href="{% url 'tag_update' tag.id %}">Edit</a> |
-						<a href="{% url 'tag_delete' tag.id %}?next={{request.get_full_path}}" onclick=" return confirm('Are you sure ?')">Delete</a>
+						<a href="{% url 'tag_update' tag.id %}">{% trans "Edit"%}</a> |
+						<a href="{% url 'tag_delete' tag.id %}?next={{request.get_full_path}}" onclick=" return confirm('Are you sure ?')">{% trans "Delete"%}</a>
 					</td>
 				</tr>
 				
@@ -53,25 +54,25 @@
 				No Tags
 			{% endfor %}
 		
-	</div>
+	
 	
 	{% if tags %}
 	
 		<div class="pagination">
 			<p>
 				{% if tags.has_previous %}
-					<a href="?page={{tags.previous_page_number}}">&lt; Prev</a> |
+					<a href="?page={{tags.previous_page_number}}">&lt; {% trans "Prev"%}</a> |
 				{% endif %}
 				
-				<span>Page{{tag.number}} of {{tags.paginator.num_pages}}</span> |
+				<span>{% trans "Page"%}{{tag.number}} {% trans "of"%} {{tags.paginator.num_pages}}</span> |
 				
 				{% if catgories.has_next %}
-					<a href="?page={{tags.next_page_number}}">Next &gt;</a>
+					<a href="?page={{tags.next_page_number}}">{% trans "Next"%} &gt;</a>
 				{% endif %}
 				
 			</p>
 		</div>
-		
+	</div>	
 	{% endif %}
 	
 {% endblock %}

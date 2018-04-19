@@ -1,46 +1,122 @@
 <!DOCTYPE html>
-{% extends "cadmin/base.html" %}
 {% load i18n static %}
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
-{% load i18n %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Autoelectronics Electra :: Admin Panel"%}</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="{% block stylesheet %}{% static 'blog/css/style1.css' %}{% endblock %}">
+	<!--<link rel="stylesheet" href="{% static 'cadmin/css/reset.css' %}">-->
+	<script defer src="{% static 'fonts/fontawesome-free-5.0.9/svg-with-js/js/fontawesome-all.js' %}"></script>
+</head>
 <body>
 	
 	
-	{% block content %}
+	
+	<div id="tophead">
+		<div class="container">
+			<i class="fas fa-wrench" style="color:#294a70"></i>
+			<i class="fas fa-car" style="color:#294a70"></i>
+			<i class="fas fa-bus" style="color:#294a70"></i>
+			<i class="fas fa-truck" style="color:#294a70"></i>
+			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080;"></i><a class="quick-call" href="tel:+359887720074"><b><i>0887 72 00 74</i></b></a> 
+			
+			<div class="quick-links" style="line-height:1; margin-left:10px;">
+				<a class="links-btn" href="#">
+					{% trans "How to find us"%}
+				</a>
+				<ul>
+					<li><a href="/contact/usg/">{% trans "Bulgaria, Rousse,<br> Gotse Delchev Blvd 68"%}</a></li>
+					<li><a href="/contact/usv/">{% trans "Bulgaria, Rousse,<br> Vidin Street 17"%}</a><li>
+				</ul>
+			</div>
+		
+			<div class="quick-links" style="line-height:1; margin-left:10px;">
+				<a class="links-btn" href="#">
+					<i class="fas fa-hand-point-right"></i>{% trans "Notice:"%}
+				</a>
+				<ul>
+					<li><a href="/about/">{% trans "Autoelectronics Electra"%}</a> </li>
+					<li><a href="#">{% trans "GPS Systems"%}</a><li>
+					<li><a href="#">{% trans "CCTV"%}</a><li>
+					<li><a href="#">{% trans "Security Systems"%}</a><li>
+				</ul>
+			</div>
+				
+			
+				
+				<!--<span class="fa-layers fa-fw fa-2x" >
+					<a href="/"><i class="fas fa-sign fa-lg" data-fa-transform="down-2" style="color:#000080"></i>
+					<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3 right-3" style="font-weight:900">BG</span></a>
+				</span> -->
+				
+				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="ro" />
+					<input type="submit" value="RO" />
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+					<input name="language" type="hidden" value="ru" />
+					<input type="submit" value="RU" />
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="bg" />
+					<input type="submit" value="BG" />
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="en" />
+					<input type="submit" value="EN" />
+				</form>
+		
+		</div>
+	</div>
 	
 		<div class="header">
 			<div class="section-inner clearfix">
 				<h2 class="title"><a href="{% url 'post_list' %}">{% trans "Autoelectronics Electra - Admin Panel"%}</a></h2>
 				<div class="user-welcome">
-					<h3>Welcome {{request.user.username}}</h3>
+					<p>{% trans "Welcome"%} {{request.user.username}} !</p>
 				</div>
 			</div>
 		</div>
 		
 		<div class="content">
-			<div class="section-inner">
-				<div class="nav">
-					<ul>
-						<li><a href="{% url 'post_list' %}">{% trans ">Post"%}</a></li>
-						<li><a href="{% url 'category_list' %}">{% trans ">Category"%}</a></li>
-						<li><a href="{% url 'tag_list' %}">{% trans ">Tag"%}</a></li>
-						<li><a href="{% url 'account_info' %}">{% trans ">Account Info"%}</a></li>
-						<li><a href="{% url 'password_change' %}">{% trans ">Change Password"%}</a></li>
-						<li><a target="_blank" href="{{request.scheme}}://{{request.get_host}}">{% trans ">View Site"%}</a></li>
-						<li><a href="{% url 'logout' %}">{% trans ">Logout"%}</a></li>
-					</ul>
-				</div>
-				
-				{% block main %}
-				
-				{% endblock %}
-				
+			<div class="nav">
+				<ul>
+					<li><a href="{% url 'post_list' %}">{% trans "Posts"%}</a></li>
+					<li><a href="{% url 'category_list' %}">{% trans "Categories"%}</a></li>
+					<li><a href="{% url 'tag_list' %}">{% trans "Tags"%}</a></li>
+					<li><a href="{% url 'account_info' %}">{% trans "Account Info"%}</a></li>
+					<li><a href="{% url 'password_change' %}">{% trans "Change Password"%}</a></li>
+					<li><a target="_blank" href="{{request.scheme}}://{{request.get_host}}">{% trans "View Site"%}</a></li>
+					<li><a href="{% url 'logout' %}">{% trans "Logout"%}</a></li>
+				</ul>
 			</div>
-			
+				
+			{% block main %}
+				
+			{% endblock %}
+				
 		</div>
-		
+			
+	
+	{% block content %}	
 	{% endblock %}
+	
+	<div class="footer">			
+		<hr>
+		<p style="background-color:#1E90FF;"><b>&copy;Scallopy; </b> 	email: scallopy@abv.bg </p>
+	</div>
+
 	
 </body>
 </html>

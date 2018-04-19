@@ -13,7 +13,7 @@ from django.conf import settings
 from django.contrib.auth.forms import (
     AuthenticationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm,
 )
-
+from django.utils.translation import gettext_lazy as _
 
 # Create your views here.
 @login_required
@@ -47,7 +47,7 @@ def post_add(request):
                 new_post.save()
                 f.save_m2m()
         
-            messages.add_message(request, messages.INFO, 'Post added.')
+            messages.add_message(request, messages.INFO, _('Post added.'))
             return redirect('post_add')
         
     # if request is GET the show unbound form to the user
@@ -85,7 +85,7 @@ def post_update(request, pk):
                 updated_post.save()
                 f.save_m2m()
                 
-            messages.add_message(request, messages.INFO, 'Post updated.')
+            messages.add_message(request, messages.INFO, _('Post updated.'))
             return redirect(reverse('post_update', args=[post.id]))
 
     # If request is GET the show unbound form to the user, along with data
@@ -94,6 +94,12 @@ def post_update(request, pk):
     return render(request, 'cadmin/post_update.html', {'form': f, 'post': post})
 
 @login_required
+def admin_page(request):
+    if not request.user.is_authenticated():
+        return redirect('cadmin_login')
+    
+    return render(request, 'cadmin/admin_page.html')
+
 def home(request):
     if not request.user.is_authenticated():
         return redirect('login')
@@ -102,7 +108,7 @@ def home(request):
 
 def login(request, **kwargs):
     if request.user.is_authenticated():
-        return redirect('about')
+        return redirect('cadmin/admin_page.html')
     else:
         return auth_views.login(request, **kwargs)
 		
@@ -111,7 +117,7 @@ def logout(request):
     return render(request, 'cadmin/logout.html')
 
 
-def register(request):
+def signup(request):
     if request.method == 'POST':
         f = CustomUserCreationForm(request.POST)
         if f.is_valid():
@@ -129,11 +135,11 @@ Please visit the following link to verify your account \n\n{0}://{1}/cadmin/acti
 
             try:
                 send_mail(subject, message, settings.SERVER_EMAIL, [request.POST['email']])
-                messages.add_message(request, messages.INFO, 'Account created! Click on the link sent to your email to activate the account')
+                messages.add_message(request, messages.INFO, _('Account created! Click on the link sent to your email to activate the account'))
                         
             except:
                 error = True
-                messages.add_message(request, messages.INFO, 'Unable to sent email verification. Please try again')
+                messages.add_message(request, messages.INFO, _('Unable to sent email verification. Please try again'))
 
             if not error:
                 u = User.objects.create_user(
@@ -149,12 +155,12 @@ Please visit the following link to verify your account \n\n{0}://{1}/cadmin/acti
                 author.user = u
                 author.save()
 
-            return redirect('register')
+            return redirect('signup')
 
     else:
         f = CustomUserCreationForm()
 
-    return render(request, 'cadmin/register.html', {'form': f})
+    return render(request, 'cadmin/signup.html', {'form': f})
 
 def activate_account(request):
     key = request.GET['key']
@@ -186,7 +192,7 @@ def post_delete(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     next_page = request.GET['next']
-    messages.add_message(request, messages.INFO, 'Post deleted')
+    messages.add_message(request, messages.INFO, _('Post deleted'))
     return redirect(next_page)
 
     
@@ -201,21 +207,22 @@ def category_list(request):
 
     return render(request, 'cadmin/category_list.html', {'categories': categories})
 
+# view to add new category
 @login_required
 def category_add(request):
 
-    # if request is POST, create a bound form(form with data)
+    # If request is POST, create a bound form(form with data)
     if request.method == "POST":
         f = CategoryForm(request.POST)
 
         # check whether form is valid or not
-        # if the form is valid, save data to the database
-        # and redirect the user back to the add postform
+        # if the form is valid, save the data to the database
+        # and redirect the user back to the add post form
 
-        # if form is invalid show form with errors again
+        # If form is invalid show form with errors again
         if f.is_valid():
             # new_category = f.save()
-            # new_category = f.save(commi=False)
+            # new_category = f.save(commit=False)
             # new_category.author = get_user(request)
             # new_category.save()
 
@@ -225,39 +232,38 @@ def category_add(request):
                 author = Author.objects.get(user__username='staff')
                 new_category.author = author
                 new_category.save()
-
             elif request.POST.get('author') and request.user.is_superuser:
-                # if author is supplied and user is suoeruser
+                # if author is supplied and user is superuser
                 new_category = f.save()
-
             else:
                 # if author not a superuser
                 new_category = f.save(commit=False)
                 new_category.author = Author.objects.get(user__username=request.user.username)
                 new_category.save()
 
-            messages.add_message(request,messages.INFO, 'Category added')
+            messages.add_message(request, messages.INFO, _('Category added'))
             return redirect('category_add')
 
-        # if request is GET the show unbound form to the user
-        else:
-            f = CategoryForm()
+    # if request is GET the show unbound form to the user
+    else:
+        f = CategoryForm()
 
-        return render(request, 'cadmin/category_add.html', {'form': f})
+    return render(request, 'cadmin/category_add.html', {'form': f})
+
 
 # view to update category
 def category_update(request, pk):
-    category = get_obgect_or_404(Category, pk=pk)
+    category = get_object_or_404(Category, pk=pk)
 
-    # if request is POST, create a bound form(form with data)
-    if request.method == "POST":
+    # If request is POST, create a bound form(form with data)
+    if request.method == "POST": # If request is POST, create a bound form
         f = CategoryForm(request.POST, instance=category)
 
         # check whether form is valid or not
         # if the form is valid, save the data to the database
         # and redirect the user back to the category form
 
-        # if the form is invalid show form with errors again
+        # If form is invalid show form with errors again
         if f.is_valid():
 
             if request.POST.get('author') == "" and request.user.is_superuser:
@@ -266,11 +272,9 @@ def category_update(request, pk):
                 author = Author.objects.get(user__username='staff')
                 updated_category.author = author
                 updated_category.save()
-
             elif request.POST.get('author') and request.user.is_superuser:
                 # if author is supplied and user is superuser
                 updated_category = f.save()
-
             else:
                 # if author not a superuser
                 updated_category = f.save(commit=False)
@@ -278,8 +282,8 @@ def category_update(request, pk):
                 updated_category.save()
 
             new_category = f.save()
-            messages.add_message(request, messages.INFO, 'Category updated')
-            return redirect(request('category_update', args=[category.id]))
+            messages.add_message(request, messages.INFO, _('Category updated'))
+            return redirect(reverse('category_update', args=[category.id]))
 
     # if request is GET the show unbound form to the user
     else:
@@ -292,7 +296,7 @@ def category_delete(request, pk):
     category = get_object_or_404(Category, pk=pk)
     category.delete()
     next_page = request.GET['next']
-    messages.add_message(request, messages.INFO, 'Category deleted')
+    messages.add_message(request, messages.INFO, _('Category deleted'))
     return redirect(next_page)
 
 # view to add list all tags
@@ -339,7 +343,7 @@ def tag_add(request):
                 new_tag.author = Author.objects.get(user__username=request.user.username)
                 new_tag.save()
 
-            messages.add_message(request, messages.INFO, 'Tag added')
+            messages.add_message(request, messages.INFO, _('Tag added'))
             return redirect('tag_add')
 
     # if request is GET the show unbound form to the user
@@ -381,7 +385,7 @@ def tag_update(request, pk):
                 updated_tag.author = Author.objects.get(user__username=request.user.username)
                 updated_tag.save()
 
-            messages.add_message(request, messages.INFO, 'Tag updated')
+            messages.add_message(request, messages.INFO, _('Tag updated'))
             return redirect(reverse('tag_update', args=[tag.id]))
 
     # if request is GET the show unbound form to the user
@@ -395,7 +399,7 @@ def tag_delete(request, pk):
     tag = get_object_or_404(Tag, pk=pk)
     tag.delete()
     next_page = request.GET['next']
-    messages.add_message(request, messages.INFO, 'Tag deleted')
+    messages.add_message(request, messages.INFO, _('Tag deleted'))
     return redirect(next_page)
 
 @login_required

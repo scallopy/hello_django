@@ -3,10 +3,8 @@
 {% load i18n static %}
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
-{% load i18n %}
 <body style="background-color:#90EE90;">
 
-	
 	{% block title %}
 		Add New Post - {{block.super}}
 	{% endblock %}
@@ -15,7 +13,7 @@
 	
 	<div class="main">
 	
-		<p>&#187; <a href="{% url 'post_list' %}">{% trans "All Posts"%}</a> &#187; Add Post</p>
+		<p>&#187; <a href="{% url 'post_list' %}">{% trans "All Posts"%}</a> &#187; {% trans "Add Post"%}</p>
 		
 		<h3>{% trans "Add Post: "%}</h3>
 		
@@ -77,7 +75,7 @@
 				{% endif %}
 				<tr>
 					<td></td>
-					<td><input type="submit" value="Add Post"></td>
+					<td><input type="submit" value="{% trans 'Add Post'%}"></td>
 				</tr>
 			</div>
 			</table>

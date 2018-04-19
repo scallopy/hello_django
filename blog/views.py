@@ -176,17 +176,17 @@ def login(request):
 
         else:
             messages.error(request, 'Error wrong username/password')
-    return render(request, 'blog/login.html')
+    return render(request, 'cadmin/login.html')
 
 def logout(request):
     auth.logout(request)
-    return render(request, 'blog/logout.html')
+    return render(request, 'cadmin/logout.html')
 
 def admin_page(request):
     if not request.user.is_authenticated():
-        return redirect('blog_login')
+        return redirect('cadmin_login')
     
-    return render(request, 'blog/admin_page.html')
+    return render(request, 'cadmin/admin_page.html')
 
 def contact_usg(request):
     return render(request, 'blog/contact_usg.html')

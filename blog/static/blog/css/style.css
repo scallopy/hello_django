@@ -84,3 +84,27 @@ table td{
     text-align: center;
     font-size: 12px;
 }
+#tophead {
+    clear: both;
+    font-family: "Merriweather Sans",sans-serif;
+    min-height: 35px;
+}
+.container{
+  background-color: #49688e;
+  width: 1170px;
+  margin: 0 auto;
+  font-family: "Merriweather Sans",sans-serif;
+}
+#quick-contact {
+    float: left;
+    padding-top: 8px;
+}
+#quick-contact li {
+    border-left: 1px solid #fff;
+    float: left;
+    font-size: 14px;
+    line-height: 1.1;
+    list-style: outside none none;
+    margin-left: 15px;
+    padding-left: 15px;
+}

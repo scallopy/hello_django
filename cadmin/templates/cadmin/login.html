@@ -1,38 +1,99 @@
 <!DOCTYPE html>
-<html>
-<body style="background-color:#1E90FF;">
-{% extends "cadmin/base_admin.html" %}
+{% extends "cadmin/base1.html" %}
+{% load i18n static %}
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static 'cadmin/css/login.css' %}" />
+{{ form.media }}
+{% endblock %}
 
-{% block content %}
+{% block title %}{{ title }} | {{ site_title|default:_('Autoelectronics Electra') }}{% endblock %}
 
-    <div class="login">
-        <h1>Autoelectronics Electra- Login</h1>
+{% block branding %}
+<h1 id="site-name">{% trans "Autoelectronics Electra"%}<h1>
+{% endblock %}
 
-        <form method="post" action="" id="login-form">
-            {% csrf_token %}
-            <table>
-                {{form.as_table}}
-                <tr>
-					<td><input type="hidden" name="next" value="{{next|default:''}}"></td>
-                    <td><button><input type="submit"></button></td>
-                </tr>
-				
-				<tr>
-					<td></td>
-					<td><button><input type="submit" value="Forgotten Password"></button></td>
-				</tr>
-                
-            </table>
-			
+{% block bodyclass %}{{ block.super }} login{% endblock %}
 
-        </form>
-		<div class="password-reset-link">
-		
-			<a href="/cadmin/password_reset/">{% trans 'Forgotten your password or username?' %}</a>
-		</div>
-    </div>
+{% block usertools %}{% endblock %}
+
+{% block nav-global %}
 
 {% endblock %}
 
-</body>
-</html>
+{% block content_title %}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+{% if form.errors and not form.non_field_errors %}
+<p class="errornote">
+{% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}{% trans "Please correct the errors below." %}{% endif %}
+</p>
+{% endif %}
+
+{% if form.non_field_errors %}
+{% for error in form.non_field_errors %}
+<p class="errornote">
+    {{ error }}
+</p>
+{% endfor %}
+{% endif %}
+<button class="tablink" onclick="openPage('Login', this, 'white' )" id="defaultOpen">{% trans "Log in"%}</button>
+<button class="tablink" onclick="location.href='/cadmin/signup/';">{% trans "Registration"%}</button>
+<div id="content" class="colM">	
+	<div id="Login" class="tabcontent">
+	
+	{% if messages %}
+		<ul>
+		{% for message in messages %}
+			<li>{{message}}</li>
+		{% endfor %}
+		</ul>
+	{% endif %}
+	
+	<form id="login-form" action="" method="post">
+		{% csrf_token %}
+		<div class="form-row">
+			<input id="id_username" placeholder='{% trans "Enter Username:" %}' name="username" autofocus="" maxlenght="254" required="" type="text">
+		</div></br>
+		
+		<div class="form-row">
+			<input id="id_password" placeholder='{% trans "Enter Password:" %}' name="password" required="" type="password">
+		</div>
+		
+		<div class="password-reset-link">
+			<a href="/cadmin/password_reset/">{% trans "Forgot password?"%}</a>
+		</div>
+		
+		<table>
+			<tr>
+				<td><input type="submit" name="submit" value='{% trans "Log in"%}'></td>
+			</tr>
+		</table>
+		
+	</form>
+	
+	
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>	
+	
+
+</div>
+
+{% endblock %}
+

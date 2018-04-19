@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
-<body>
 {% extends "cadmin/base_admin.html" %}
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<body>
 
 {% block title %}
 	All Posts - {{block.super}}
@@ -11,9 +13,9 @@
 
 	<div class="main">
 	
-		<p>&#187; <a href="{% url 'post_list' %}">All Posts</a></p>
+		<p>&#187; <a href="{% url 'post_list' %}">{% trans "All Posts"%}</a></p>
 		
-		<p class="button"><a href="{% url 'post_add' %}">Add Post &raquo;</a></p>
+		<p class="button"><a href="{% url 'post_add' %}">{% trans "Add Post"%} &raquo;</a></p>
 		
 		{% if messages %}
 			{% for message in messages %}
@@ -21,20 +23,20 @@
 			{% endfor %}
 		{% endif %}
 		
-		<p class="count">Total Posts: {{posts.paginator.count}}</p>
+		<p class="count">{% trans "Total Posts"%}: {{posts.paginator.count}}</p>
 		
 			{% for post in posts %}
 				
 				{% if forloop.first %}
 					<table class="tbl-class">
 						<tr>
-							<th>Title</th>
-							<th>Category</th>
+							<th>{% trans "Title"%}</th>
+							<th>{% trans "Category"%}</th>
 							{% if request.user.is_superuser %}
-								<th>Author</th>
+								<th>{% trans "Author"%}</th>
 							{% endif %}
-							<th>Date</th>
-							<th>Action</th>
+							<th>{% trans "Date"%}</th>
+							<th>{% trans "Action"%}</th>
 						</tr>
 				{% endif %}
 					
@@ -47,8 +49,8 @@
 						
 						<td title="{{post.pub_date}}">{{post.pub_date|date:"d M Y"}}</td>
 						<td>
-							<a href="{% url 'post_update' post.id %}">Edit</a> |
-							<a href="{% url 'post_delete' post.id %}?next={{request.get_full_path}}" onclick=" return confirm('Are you sure ?')">Delete</a>
+							<a href="{% url 'post_update' post.id %}">{% trans "Edit"%}</a> |
+							<a href="{% url 'post_delete' post.id %}?next={{request.get_full_path}}" onclick=" return confirm('Are you sure ?')">{% trans "Delete"%}</a>
 						</td>
 					<tr>
 					
@@ -60,25 +62,26 @@
 				No Posts
 			{% endfor %}
 				
-	</div>
+	
 	
 	{% if posts %}
 	
 		<div class="pagination">
 			<p>
 				{% if posts.has_previous %}
-					<a href="?page={{posts.previous_page_number}}">&lt; Prev</a> |
+					<a href="?page={{posts.previous_page_number}}">&lt; {% trans "Prev"%}</a> |
 				{% endif %}
 				
-				<span>Page {{posts.number}} of {{posts.paginator.num_pages}}</span> |
+				<span>{% trans "Page"%} {{posts.number}} {% trans "of"%} {{posts.paginator.num_pages}}</span> |
 				
 				{% if posts.has_next %}
-					<a href="?page={{posts.next_page_number}}">Next &gt;</a>
+					<a href="?page={{posts.next_page_number}}">{% trans "Next"%} &gt;</a>
 				{% endif %}
 					
 			</p>
 		</div>
 	{% endif %}
+	</div>
 
 {% endblock %}
 

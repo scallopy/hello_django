@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 from django.template.defaultfilters import slugify
 from django.urls import reverse
 from django.contrib.auth.models import User
@@ -24,7 +25,7 @@ class Category(models.Model):
     author = models.ForeignKey(Author)
 
     class Meta:
-        verbose_name_plural = "Categories"
+        verbose_name_plural = _('Categories')
 
     def __str__(self):
         return self.name
@@ -45,9 +46,9 @@ class Tag(models.Model):
         return reverse('post_by_tag', args=[self.slug])
 
 class Post(models.Model):
-    title = models.CharField(max_length=200)
-    slug = models.SlugField(unique=True, help_text="Slug will be generated automatically from the title of the post")
-    content = RichTextUploadingField()
+    title = models.CharField(_('Title'),max_length=200)
+    slug = models.SlugField(_('Slug'), unique=True, help_text=_("Slug will be generated automatically from the title of the post"))
+    content = RichTextUploadingField(_('Content'))
     pub_date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(Author)
     category = models.ForeignKey(Category)
@@ -64,14 +65,14 @@ class Post(models.Model):
         super(Post, self).save(*args, **kwargs)
 
 class Feedback(models.Model):
-    name = models.CharField(max_length=200, help_text="Name of the sender")
+    name = models.CharField(_('Name'), max_length=200, help_text=_("Name of the sender"))
     email = models.EmailField(max_length=200)
-    subject = models.CharField(max_length=200)
-    message = models.TextField()
+    subject = models.CharField(_('Subject'), max_length=200)
+    message = models.TextField(_('Message'))
     date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name_plural = "Feedback"
+        verbose_name_plural = _("Feedback")
 
     def __str__(self):
         return self.name + "-" + self.email

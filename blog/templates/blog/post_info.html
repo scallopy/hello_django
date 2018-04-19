@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+{% load i18n static %}
 <body>
-	<span>Date: {{ post.pub_date|date:"D d M Y, H:i" }} </span> |
-	<span>Category: <a href="{{ post.category.get_absolute_url }}">{{post.category}}</a></span> |
+	<span>{% trans "Date:"%} {{ post.pub_date|date:"D d M Y, H:i" }} </span> |
+	<span>{% trans "Category:"%} <a href="{{post.category.get_absolute_url}}">{{post.category}}</a></span> |
 	<span>Tag:
 		{% for tag in post.tags.all %}
 			<a href="{{ tag.get_absolute_url }}">{{tag}}</a>
