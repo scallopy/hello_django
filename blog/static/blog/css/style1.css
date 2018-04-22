@@ -52,8 +52,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 html {
     font-family: sans-serif;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust:     100%;
+    text-size-adjust: 100%;
+    ms-text-size-adjust:     100%;
 }
 
 body {
@@ -304,7 +304,8 @@ blockquote {
 
 blockquote {
     background-color: #f9f9f9;
-    border-left: 4px solid #ffab1f;
+    border-left: 4px solid #1e90ff;
+	border-bottom: 4px solid #1e90ff;
     font-style: italic;
     font-weight: normal;
     margin-bottom: 20px;
@@ -540,7 +541,7 @@ textarea {
 
 a
 a:visited {
-    color:#00080;
+    color: #00080;
     /*text-decoration: inherit;*/
 }
 
@@ -617,7 +618,7 @@ a:active {
 
 .main-navigation ul li a {
     color: #ffffff;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #1e90ff;
     display: block;
     font-size: 16px;
     font-weight: normal;
@@ -628,10 +629,20 @@ a:active {
 }
 
 .main-navigation ul li:first-child > a {
-    border-left: 1px solid #fff;
+    border-left: 1px solid #1e90ff;
+}
+
+.main-navigation ul li:first-child > a:hover {
+	background:#1e90ff;
+    border-left: 1px solid #1e90ff;
 }
 
 .main-navigation ul li li:first-child a {
+    border-left:none;
+}
+
+.main-navigation ul li li:first-child a:hover {
+	background:#1e90ff;
     border-left:none;
 }
 
@@ -1205,7 +1216,8 @@ a.cta-button-primary:hover,
 embed,
 iframe,
 object {
-    max-width: 100%;
+    width: 100%;
+	height: auto;
 }
 
 /*--------------------------------------------------------------
@@ -1410,9 +1422,17 @@ object {
 }
 
 .site-content {
-    padding:40px 0;
+    padding:40px;
     float: left;
     width: 100%;
+}
+
+@media only screen and ( max-width: 767px ) {
+	.site-content {
+		padding:40px 0;
+		float: left;
+		width: 100%;
+	}
 }
 .home.home-content-not-enabled .site-content {
   padding: 0;
@@ -1607,6 +1627,7 @@ object {
     position: relative;
 }
 
+
 /*styling for top Socila links*/
 
 .header-social-wrapper {
@@ -1657,6 +1678,7 @@ object {
 /*--------------------------------------------------------------
 ## Social Links Style By WEN Themes
 --------------------------------------------------------------*/
+/*
 .education_hub_widget_social {
   clear: both;
   overflow: hidden;
@@ -1829,8 +1851,11 @@ object {
 .education_hub_widget_social ul li a[href*="slack.com"]:before {
   content: "\f198";
 }
+*/
 
 /*social links hover effect */
+
+/*
 
 .education_hub_widget_social ul li a[href*="facebook.com"]:hover {
   background-color: #3b5998;
@@ -1970,7 +1995,11 @@ object {
    background-color:#56b68b;
 }
 
+*/
+
 /*Recent added social links*/
+
+/*
 .education_hub_widget_social ul li a[href*="mailto:"]::before {
     content: "\f0e0";
 }
@@ -2002,9 +2031,12 @@ object {
     content: "\f198";
 }
 
+*/
 
   /*hover effect*/
 
+ /*
+ 
 .education_hub_widget_social ul li a[href*="soundcloud.com"]:hover{
     background-color: #ff5500;
 }
@@ -2025,6 +2057,10 @@ object {
 .education_hub_widget_social ul li a[href*="slack.com"]:hover {
     background-color:#56b68b;
 }
+
+
+*/
+
 
 /*--------------------------------------------------------------
 ## Custom Basic Slider Style By WEN Themes
@@ -2137,7 +2173,7 @@ object {
     font-size: 36px;
     padding: 15px 20px 15px 25px;
     text-shadow: 0 0 1px #000000;
-     transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
 }
 
 #main-slider .cycle-next::after {
@@ -2267,7 +2303,8 @@ object {
     z-index: 9999;
 }
 
-#sidebar-primary .widget-title,
+
+ .widget-title,
 #sidebar-secondary .widget-title {
     background: #294a70 none repeat scroll 0 0;
     border-bottom: 0 solid #ffab1f;
@@ -2311,9 +2348,8 @@ object {
 --------------------------------------------------------------*/
 
 #sidebar-primary {
-    width:25%;
-    padding-left:15px;
-    padding-right: 15px;
+    width:20%;
+    padding: 15px;
     float: right;
 }
 
@@ -3151,7 +3187,7 @@ input[type="url"] {
   .main-navigation li a {
       padding:10px 15px;
       clear: both;
-      border-bottom: 1px solid;
+      border-bottom: 1px solid #1e90ff;
   }
 
   .main-navigation li li a {
@@ -3167,7 +3203,7 @@ input[type="url"] {
   }
 
   .main-navigation li:hover > a {
-      background:inherit;
+      background: #1e90ff;
       color: #ffffff;
   }
 
@@ -3187,7 +3223,7 @@ input[type="url"] {
   }
 
   #main-nav{
-      background: inherit;
+      background: #1e90ff;
   }
 
   .main-navigation ul.sub-menu.toggled-on {
@@ -3490,32 +3526,32 @@ input[type="url"] {
 }
 
 /*cadmin_css*/
+#section-inner,
 .section-inner{
-	border-left: 3px solid #e3e3e3;
+	border-left: 3px solid #1e90ff;
     max-width: 60%;
     padding: 0 15px;
     margin: 0 auto;
-	float: center;
-}
-
-.section-inner-left{
-	max-width: 40%;
-	padding: 0 15px;
-    margin-left: 30%;
-	float: left;
-}
-
-.section-inner-right{
-	max-width: 40%;
-	padding: 0 15px;
-    margin-left: 70%;
-	float: right;
 }
 
 .clearfix:after{
     content: "";
     display: block;
     clear: both;
+}
+
+@media only screen and (max-width:1169px){
+	#section-inner,
+	.section-inner,
+	.clearfix:after{
+		border-left: none;
+		max-width: 100%;
+		text-align: center;
+		padding-top: 15px;
+		padding-right: 0;
+		margin: 0;
+		color: #fff;
+	}	
 }
 
 
@@ -3550,28 +3586,68 @@ td {
     color: #fff;
 }
 
-.navbar{
-    background-color: #1E90FF;
-    text-align: center;
+.header a{
+    color: #fff;
 }
 
-.navbar a{
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
+@media only screen and (max-width:1169px){
+	.header{
+		width: 100%;
+		text-align: center;
+		border: 3px solid #1e90ff;
+		margin: 0;
+		padding: 0;
+		color: #fff;
+	}
+
+	.header p{
+		margin: 0;
+		width: 100%;
+	}
+
+	.header h2{
+		width: 100%;
+		text-align: center;
+		border-bottom: 3px solid #1e90ff;
+		padding: 15px 0;
+		margin: 0;
+		color: #fff;
+	}
+
+	.header h2 a:hover {
+		width: 100%;
+		background-color: #1E90FF;
+		color: #fff;
+		text-decoration: underline;
+	}
+	
+	.header a{
+		color: #fff;
+	}
+
+	.header .user-welcome p{
+		width: 100%;
+		font-size: 19px;
+		color: #fff;
+		padding-top: 15px;
+		margin: 0;
+		float: center;
+	}
 }
+	
+	
+	
+	
+	
 .nav {
     float: left;
-    max-width: 100%;
+    width: 20%;
     margin: 0;
-    padding: 1em;
+    padding: 15px;
 }
 
 .nav ul {
-    list-style-type: disc;
-	max-width: 100%;
-    padding: 0;
+    list-style-type: disc
 }
    
 .nav a:hover {
@@ -3580,55 +3656,74 @@ td {
     text-decoration: underline;
 }
 
+@media only screen and (max-width:1169px){
+	.nav {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border: 3px solid #1e90ff;
+	}
+	.nav ul {
+		list-style-type: disc
+	}
+   
+	.nav a:hover {
+		background-color: #1e90ff;
+		color: #fff;
+		text-decoration: underline;
+	}
+	
+}
 
-.sidebar a:hover {
+.sidebar-primary {
+    float: right;
+    width: 30%;
+    margin: 0;
+    padding: 15px;
+	border-left: 3px solid #1e90ff;
+}
+
+.sidebar-primary ul {
+    list-style-type: disc
+}
+   
+.sidebar-primary a:hover {
     background-color: #1e90ff;
 	color: #fff;
     text-decoration: underline;
 }
 
-.sidebar ul{
-    padding: 0;
-    /*display: inline-block;*/
-    list-style-type: none;
-    border: 2px solid;
-    /*background-color: #f7f1f1;*/
-    padding: 14px 20px;
-    color: #fff;
-	border-right: 1px solid #e3e3e3;
+@media only screen and (max-width:1169px){
+	.sidebar-primary {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border: 3px solid #1e90ff;
+	}
+	.sidebar-primary ul {
+		list-style-type: disc
+	}
+   
+	.sidebar-primary a:hover {
+		background-color: #1e90ff;
+		color: #fff;
+		text-decoration: underline;
+	}
+	
 }
 
-.sidebar ul a {
-    /*color: #fff;*/
-    display: inline-block;
-    width: 100%;
-    line-height: 1;
-    padding: 10px 0;
-}
-
-.sidebar{
-	float: left;
-    width: 20%;
-    height: calc(100% - 113px);
-    overflow: auto;
-	margin-left: 0;
-    font-size: 16px;
-    overflow-x: hidden;
-    color: #000;
-    border-right: 2px solid #e3e3e3;
-}
-.sidebar ul{
-    list-style-type: none;
-}
 
 .content {
     margin-top: 16px;
 }
 
 .main{
+	width: 50%;
     margin-left: 20%;
+	margin-right: 20%;
+	padding: 15px;
     font-size: 16px;
-	border-left: 3px solid #e3e3e3;
+	border-left: 3px solid #1e90ff;
 }
 
 .main a:hover{
@@ -3636,8 +3731,36 @@ td {
 }
 
 .main h1{
-    font-size: 16px;
+    font-size: 20px;
 }
+
+.main p{
+    font-size: 18px;
+}
+
+@media only screen and (max-width:1169px){
+	.main{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		font-size: 16px;
+		border: 3px solid #1e90ff;
+	}
+
+	.main a:hover{
+		text-decoration: underline;
+	}
+
+	.main h1{
+		font-size: 20px;
+	}
+
+	.main p{
+		font-size: 18px;
+	}
+}
+
+	
 
 .pagination{
     margin: 20px 0 20px 250px;
@@ -3668,12 +3791,35 @@ td.post-title {
     width: 400px;
 }
 
-.header a{
-    color: #fff;
-}
-
 .main th{
     text-align: left;
+}
+
+@media only screen and (max-width:1169px){
+	table{
+		border-collapse: collapse;
+		font-size: 15px;
+		/*margin: 15px auto;*/
+		margin-bottom: 20px;
+	}
+
+	table, th, td {
+		/*border: 2px solid #294a70;*/
+		padding: 10px 6px;
+		/*text-align: center;*/
+	}
+
+	table th {
+		/*background-color: #e3e3e3;*/
+	}
+
+	td.post-title {
+		width: 400px;
+	}
+
+	.main th{
+		text-align: left;
+	}
 }
 
 
@@ -3703,80 +3849,9 @@ p.button:hover{
 
 /* LOGIN FORM */
 
-body.login {
-    background: #f8f8f8;
-}
 
-.login #header {
-    height: auto;
-    padding: 5px 16px;
-}
 
-.login #header h1 {
-    font-size: 18px;
+#site-name {
+	background-color: #1E90FF;
+	text-align: center;
 }
-
-.login #header h1 a {
-    color: #fff;
-}
-
-.login #content {
-    padding: 20px 20px 0;
-}
-
-.login #container {
-    background: #fff;
-    border: 1px solid #eaeaea;
-    border-radius: 4px;
-    overflow: hidden;
-    width: 28em;
-    min-width: 300px;
-    margin: 100px auto;
-}
-
-.login #content-main {
-    width: 100%;
-}
-
-.login .form-row {
-    padding: 4px 0;
-    float: left;
-    width: 100%;
-    border-bottom: none;
-}
-
-.login .form-row label {
-    padding-right: 0.5em;
-    line-height: 2em;
-    font-size: 1em;
-    clear: both;
-    color: #333;
-}
-
-.login .form-row #id_username, .login .form-row #id_password {
-    clear: both;
-    padding: 8px;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-}
-
-.login span.help {
-    font-size: 10px;
-    display: block;
-}
-
-.login .submit-row {
-    clear: both;
-    padding: 1em 0 0 9.4em;
-    margin: 0;
-    border: none;
-    background: none;
-    text-align: left;
-}
-
-.login .password-reset-link {
-    text-align: center;
-}
-

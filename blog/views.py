@@ -162,7 +162,7 @@ def lousy_logout(request):
 
 def login(request):
     if request.user.is_authenticated():
-        return redirect('admin_page')
+        return redirect('account_info')
 
     if request.method ==  "POST":
         username = request.POST.get('username')
@@ -172,7 +172,7 @@ def login(request):
         if user is not None:
             # correct username and password login the user
             auth.login(request, user)
-            return redirect('about')
+            return redirect('account_info')
 
         else:
             messages.error(request, 'Error wrong username/password')
@@ -180,7 +180,7 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return render(request, 'cadmin/logout.html')
+    return render(request, 'blog/logout.html')
 
 def admin_page(request):
     if not request.user.is_authenticated():
@@ -194,9 +194,16 @@ def contact_usg(request):
 def contact_usv(request):
     return render(request, 'blog/contact_usv.html')
 	
-from django.utils.translation import (
-    activate, LANGUAGE_SESSION_KEY, check_for_language, get_language, to_locale,
-)
+def home_page(request):
+    return render(request, 'site/home_page.html')
+
+def today_is(request):
+    now = datetime.datetime.now()
+    html = "<html><body>Current date and time: {0}</body></html>".format(now)
+    return HttpResponse(html)
+
+def opening_hours(request):
+    return render(request, 'site/opening_hours.html')
 
     
     

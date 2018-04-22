@@ -8,7 +8,7 @@
 {% block title %}{{ title }} | {{ site_title|default:_('Autoelectronics Electra') }}{% endblock %}
 
 {% block branding %}
-<h1 id="site-name">{% trans "Autoelectronics Electra"%}<h1>
+<h1 id="site-name"><a href="/">{% trans "Autoelectronics Electra"%}</a><h1>
 {% endblock %}
 
 {% block bodyclass %}{{ block.super }} login{% endblock %}
@@ -37,7 +37,7 @@
 </p>
 {% endfor %}
 {% endif %}
-<button class="tablink" onclick="location.href='/cadmin/login/';">{% trans "Log in"%}</button>
+<button class="tablink" onclick="location.href='/login/';">{% trans "Log in"%}</button>
 <button class="tablink" onclick="openPage('Registration', this, 'white')" id="defaultOpen">{% trans "Registration"%}</button>
 <div id="content" class="colM">	
 	

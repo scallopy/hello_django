@@ -65,7 +65,7 @@ class Post(models.Model):
         super(Post, self).save(*args, **kwargs)
 
 class Feedback(models.Model):
-    name = models.CharField(_('Name'), max_length=200, help_text=_("Name of the sender"))
+    name = models.CharField(_('Name of the sender'), max_length=200)
     email = models.EmailField(max_length=200)
     subject = models.CharField(_('Subject'), max_length=200)
     message = models.TextField(_('Message'))
@@ -76,3 +76,5 @@ class Feedback(models.Model):
 
     def __str__(self):
         return self.name + "-" + self.email
+
+

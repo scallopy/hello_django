@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 {% extends "blog/base.html" %}
 {% load i18n static %}
-{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
-<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
-<body style="background-color:#90EE90;">
-	
-	{% blocktrans %}
-		Feedback - {{block.super}}
-	{% endblocktrans %}
 	
 	{% block content %}
 	
-		<div class="content">
-			<div class="section-inner clearfix">
+		<div class="main">
 			
-				<h3>{% trans "Submit Your feedback"%}</h3>
+			
+				<h3>{% trans "Submit Your feedback"%}:</h3>
 				
 				{{form.non_field_errors}}
 				
@@ -24,30 +17,33 @@
 						{% for field in form %}
 							<tr>
 								<td>{{field.label_tag}}</td>
+							</tr>
+							<tr>
 								<td>
 									{{field.errors}}
 									{{field}}
 								</td>
+						
 								<td>
 									{% if field.help_text %}
 									{{field.help_text}}
 									{% endif %}
 								</td>
-							</td>
-						</tr>
-					{% endfor %}
+							</tr>
+						{% endfor %}
 						<tr>
 							<td></td>
+						</tr>
+						<tr>
 							<td><input type="submit" value="{% trans 'Submit'%}"></td>
 						</tr>
 					</table>		
 				</form>
 				
-			</div>
+			
 		</div>
 		
 	{% endblock %}
 	
-</body>
-</html>
+
 	

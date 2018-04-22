@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Autoelectronics Electra :: Admin Panel"%}</title>
+    <link rel="stylesheet" href="{% block stylesheet %}{% static 'cadmin/css/base.css' %}{% endblock %}">
+	<!--<link rel="stylesheet" href="{% static 'cadmin/css/reset.css' %}">-->
+	<script defer src="{% static 'django_project/fontawesome/svg-with-js/js/fontawesome-all.js' %}"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+{% load i18n %}
+<body>
+	<div id="tophead">
+		<div class="container">
+			<i class="fas fa-wrench" style="color:#294a70"></i>
+			<i class="fas fa-car" style="color:#294a70"></i>
+			<i class="fas fa-bus" style="color:#294a70"></i>
+			<i class="fas fa-truck" style="color:#294a70"></i>
+			
+			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080;"></i><a class="quick-call" href="tel:+359887720074"><b><i>0887 72 00 74</i></b></a> 
+			
+			<div class="quick-links" style="line-height:1; margin-left:10px;">
+				<a class="links-btn" href="#">
+					{% trans "How to find us"%}
+				</a>
+				<ul>
+					<li><a href="/contact/usg/">{% trans "Bulgaria, Rousse,<br> Gotse Delchev Blvd 68"%}</a></li>
+					<li><a href="/contact/usv/">{% trans "Bulgaria, Rousse,<br> Vidin Street 17"%}</a><li>
+				</ul>
+			</div>
+		
+			<div class="quick-links" style="line-height:1; margin-left:10px;">
+				<a class="links-btn" href="#">
+					<i class="fas fa-hand-point-right"></i>{% trans "Notice:"%}
+				</a>
+				<ul>
+					<li><a href="/about/">{% trans "Autoelectronics Electra"%}</a> </li>
+					<li><a href="#">{% trans "GPS Systems"%}</a><li>
+					<li><a href="#">{% trans "CCTV"%}</a><li>
+					<li><a href="#">{% trans "Security Systems"%}</a><li>
+				</ul>
+			</div>	
+				
+			
+				
+				<!--<span class="fa-layers fa-fw fa-2x" >
+					<a href="/"><i class="fas fa-sign fa-lg" data-fa-transform="down-2" style="color:#000080"></i>
+					<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3 right-3" style="font-weight:900">BG</span></a>
+				</span> -->
+				
+				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="ro" />
+					<input type="submit" value="RO" />
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}"/>
+					<input name="language" type="hidden" value="ru" />
+					<input type="submit" value="RU" />
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="bg" />
+					<input type="submit" value="BG" />
+				</form>
+				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px;">
+					{% csrf_token %}
+					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+					<input name="language" type="hidden" value="en" />
+					<input type="submit" value="EN" />
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<header id="masthead" class="site-header" role="baner" style="background-color:#1E90FF;">
+		<div class="container">
+			<div class="site-branding">
+				<a class="custom-logo-link" href="#" rel="home" itemprop="url">
+					<img  class="custom-logo" src="{% static 'blog/images/LogoELECTRA.png'%}" alt="Autoelectronics Electra" itemprop="logo" width="86" height="auto"><!--style="width: 20%; height: auto;"-->
+				</a>
+				<div class="site-identify">
+					<br>
+					<p class="site-title">
+						<a href="#" rel="home" style="color: #f1f3f4;">{% trans "Autoelectronics Electra"%}</a>
+					</p>
+					<p class="site-description" style="color: #f1f3f4;">{% trans "Autoelectronics repairs"%}</p>
+				</div>
+			</div>
+			<div class="search-section">
+				<form class="search-form" role="search" method="get" action="http://127.0.0.1:8000/">
+					<label>
+						<span class="screen-reader-text">{% trans "Search for:"%}</span>
+						<input class="search-field" placeholder='{% trans "Search..." %}' value="" name="s" title="Search for:" type="search"/>
+					</label>
+					<input class="search-submit" value='{% trans "Search"%}' type="submit"/>
+				</form>
+			</div>
+		</div>
+	</header>
+	<!--<div class="img" style="background-color:#1E90FF; padding-top: 20px">
+		<img src="{% static 'blog/images/LogoELECTRA.png'%}" style="width: 18%; height: auto;"><img src="{% static 'blog/images/01.png'%}" style="width: 82%; height: auto;" / >
+	</div>-->
+	
+	<div id="main-nav" class="clear-fix">
+		<div class="container">
+			<nav id="site-navigation" class="main-navigation" role="navigation" >
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<i class="fa fa-bars"></i>
+					{% trans "Menu"%}
+				</button>
+						
+				<div class="wrap-menu-content">
+					<div class="menu-container">
+						<ul id="primary-menu" class="menu">
+							<li><a href="/about/">{% trans "Autoelectronics Electra"%}</a></li>
+							<li><a href="/">{% trans "Blog"%}</a></li>
+							<li><a href="/about/us/">{% trans "About us:"%}</a></li>
+							<li><a href="/cadmin/post/add/">{% trans "Add Post"%}</a></li>
+							<li><a href="/feedback/">{% trans "Feedback"%}</a></li>
+							<li><i class="fas fa-user" data-fa-transform="down-5 right-12" style="color:#FAF0E6;"></i></li>
+							<li><a href="/cadmin/login/">{% trans "Log in"%}</a></li>
+							<li><i class="fas fa-user" data-fa-transform="down-5 right-12" style="color:#FAF0E6;"></i></li>
+							<li><a href="/cadmin/signup/">{% trans "Registration"%}</a></li>
+							<li><a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fshare%2F&display=popup">Share with Facebook</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+	<!--<div class="img">
+		<img src="{% static 'blog/images/LogoELECTRA.png' %}" / >-->
+	</div>
+		
+	
+
+	{% block content %}
+	
+	{% endblock %}
+	
+	<div class="footer">
+		<hr>
+		<p style="background-color:#1E90FF;"><b>&copy;Scallopy; </b> 	email: scallopy@abv.bg </p>
+	</div>
+
+</body>
+</html>

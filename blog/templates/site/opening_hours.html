@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "blog/base.html" %}
+{% load i18n static %}
+	
+{% block content %}
+	
+	<div class="main">	
+		<h3>{% trans "Opening Hours"%}:</h3>
+			
+			<table>
+				<tr>
+					<td>{% trans "Now is"%}</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>{% trans "Monday-Fryday"%}</td>
+					<td>09:00-18:30</td>
+				</tr>
+				<tr>
+					<td>{% trans "Saturday"%}</td>
+					<td>09:00-14:00</td>
+				</tr>
+				<tr>
+					<td>{% trans "Sunday"%}</td>
+					<td>{% trans "Closed"%}</td>
+				</tr>
+			</table>
+			
+	</div>	
+{% endblock %}

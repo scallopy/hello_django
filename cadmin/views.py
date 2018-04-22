@@ -108,7 +108,7 @@ def home(request):
 
 def login(request, **kwargs):
     if request.user.is_authenticated():
-        return redirect('cadmin/admin_page.html')
+        return redirect('account_info')
     else:
         return auth_views.login(request, **kwargs)
 		

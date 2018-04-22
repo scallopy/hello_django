@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 {% extends "cadmin/base_admin.html" %}
 {% load i18n static %}
-{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
-<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
-<body style="background-color:#90EE90;">
 
-	{% block title %}
-		Add New Post - {{block.super}}
-	{% endblock %}
 	
 	{% block main %}
 	

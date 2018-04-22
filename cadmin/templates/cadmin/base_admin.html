@@ -1,20 +1,21 @@
 <!DOCTYPE html>
+{% extends "blog/base.html" %}
 {% load i18n static %}
-{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
-<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% trans "Autoelectronics Electra :: Admin Panel"%}</title>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <link rel="stylesheet" href="{% block stylesheet %}{% static 'blog/css/style1.css' %}{% endblock %}">
-	<!--<link rel="stylesheet" href="{% static 'cadmin/css/reset.css' %}">-->
-	<script defer src="{% static 'fonts/fontawesome-free-5.0.9/svg-with-js/js/fontawesome-all.js' %}"></script>
-</head>
-<body>
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style1.css' %}" />
+{{ form.media }}
+{% endblock %}
+{% block extrascripts %}{% endblock %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Autoelectronics Electra :: Admin Panel') }}{% endblock %}
+
+{% block usertools %}{% endblock %}
 	
-	
-	
+{% block branding %}{% endblock %}
+
+{% block bodyclass %}{{ block.super }} login{% endblock %}
+
+
+{% block nav-global %}
 	<div id="tophead">
 		<div class="container">
 			<i class="fas fa-wrench" style="color:#294a70"></i>
@@ -80,16 +81,33 @@
 		</div>
 	</div>
 	
-		<div class="header">
-			<div class="section-inner clearfix">
+		<div id="masthead" class="header">
+			<div>
+			<h2><a href="/">&lt;&lt;&lt; {% trans "Back To The Site"%}</a></h2>
+			</div>
+			
+			<div id="section-inner" class="clearfix">
 				<h2 class="title"><a href="{% url 'post_list' %}">{% trans "Autoelectronics Electra - Admin Panel"%}</a></h2>
 				<div class="user-welcome">
 					<p>{% trans "Welcome"%} {{request.user.username}} !</p>
 				</div>
 			</div>
+			
 		</div>
 		
-		<div class="content">
+				
+{% endblock %}
+
+
+
+{% block content_title %}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+
+	{% block content %}
+	
+	<div class="content">
 			<div class="nav">
 				<ul>
 					<li><a href="{% url 'post_list' %}">{% trans "Posts"%}</a></li>
@@ -98,25 +116,36 @@
 					<li><a href="{% url 'account_info' %}">{% trans "Account Info"%}</a></li>
 					<li><a href="{% url 'password_change' %}">{% trans "Change Password"%}</a></li>
 					<li><a target="_blank" href="{{request.scheme}}://{{request.get_host}}">{% trans "View Site"%}</a></li>
-					<li><a href="{% url 'logout' %}">{% trans "Logout"%}</a></li>
+					<li><a href="/logout/">{% trans "Logout"%}</a></li>
 				</ul>
 			</div>
-				
-			{% block main %}
-				
-			{% endblock %}
-				
+	
+		<div class="sidebar-primary">
+	
+			<blockquote>
+				<i class="fab fa-facebook"  style="color:#4682b4;"></i>
+		
+				<a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fshare%2F&display=popup" style="color:#4682b4;">
+				Sharing</a>
+				<i class="fa fa-share-square"  style="color:#4682b4;"></i>
+			</blockquote>
+			<iframe src="/feedback/">{% trans "Feedback"%}"</iframe>
 		</div>
-			
+	{% block main %}{% endblock %}
 	
-	{% block content %}	
-	{% endblock %}
 	
-	<div class="footer">			
+	
+		
+	
+	
+	</div>
+{% endblock %}
+	
+	{% block footer %}
+	
+	<div class="footer">
 		<hr>
 		<p style="background-color:#1E90FF;"><b>&copy;Scallopy; </b> 	email: scallopy@abv.bg </p>
 	</div>
-
 	
-</body>
-</html>
+	{% endblock %}
