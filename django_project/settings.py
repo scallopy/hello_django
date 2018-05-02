@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'cadmin',
     'mptt',
     'flatpages_i18n',
+    'openinghours',
 ]
 
 MIDDLEWARE = [

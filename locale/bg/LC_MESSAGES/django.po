@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-18 21:34+0300\n"
+"POT-Creation-Date: 2018-05-01 23:28+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,18 +18,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\django_project\settings.py:131
+#: .\django_project\settings.py:132
 msgid "English"
 msgstr ""
 
-#: .\django_project\settings.py:132
+#: .\django_project\settings.py:133
 msgid "Bulgarian"
 msgstr "Български"
 
-#: .\django_project\settings.py:133
+#: .\django_project\settings.py:134
 msgid "Russian"
 msgstr "Руский"
 
-#: .\django_project\settings.py:134
+#: .\django_project\settings.py:135
 msgid "Romanian"
 msgstr ""

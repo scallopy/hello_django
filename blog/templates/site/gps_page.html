@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+{% extends "blog/base_site.html" %}
+{% load i18n static %}
+
+{% block main %}
+
+<div class="main">
+
+	<h2>{% trans "Interesting Facts"%}:</h2>
+	
+	{% blocktrans %}
+	
+	<p>The GPS project was launched by the U.S. Department of Defense in 1973 for use by 
+	the United States military and became fully operational in 1995. It was allowed 
+	for civilian use in the 1980s.</p> 
+	
+	{% endblocktrans %}
+	{% blocktrans %}
+	
+	<p>The GPS does not require the user to transmit any data, and it operates independently 
+	of any telephonic or internet reception, though these technologies can enhance the 
+	usefulness of the GPS positioning information. The GPS provides critical positioning 
+	capabilities to military, civil, and commercial users around the world. The United 
+	States government created the system, maintains it, and makes it freely accessible 
+	to anyone with a GPS receiver.</p>
+	
+	{% endblocktrans %}
+	{% blocktrans %}
+	
+	<p>It is a global navigation satellite system that provides geolocation and time 
+	information to a GPS receiver anywhere on or near the Earth where there is an 
+	unobstructed line of sight to four or more GPS satellites ( to obtain an accurate 
+	result for the position of the receiver ).</p> 
+	
+	{% endblocktrans %}
+	{% blocktrans %}
+	
+	<p>Although four satellites are required for normal operation, fewer apply in special 
+	cases. If one variable is already known, a receiver can determine its position 
+	using only three satellites. For example, a ship or aircraft may have known elevation. 
+	Some GPS receivers may use additional clues or assumptions such as reusing the last 
+	known altitude, dead reckoning, inertial navigation, or including information from 
+	the vehicle computer, to give a (possibly degraded) position when fewer than four 
+	satellites are visible.</p>
+	
+	{% endblocktrans %}
+	{% blocktrans %}
+	
+	<p>The current GPS consists of three major segments. These are the space segment, a 
+	control segment, and a user segment. The U.S. Air Force develops, maintains, and 
+	operates the space and control segments. GPS satellites broadcast signals from space, 
+	and each GPS receiver uses these signals to calculate its three-dimensional location 
+	(latitude, longitude, and altitude) and the current time.</p>
+	
+	{% endblocktrans %}
+	{% blocktrans %}
+	
+	<h3>Many civilian applications use one or more of GPS's three basic components: absolute 
+	location, relative movement, and time transfer:</h3>
+		
+	{% endblocktrans %}
+	<ul>
+		{% blocktrans %}
+	
+		<li>Agriculture:  Today, a growing number of crop producers are using GPS and other modern 
+		electronic and computer equipment to practice Site-Specific Management (SSM) and 
+		precision agriculture. This technology has the potential in agricultural mechanization 
+		(farm and machinery management) by providing farmers with a sophisticated tool to 
+		measure yield on much smaller scales as well as precise determination and automatic 
+		storing of variables such as field time, working area, machine travel distance and 
+		speed, fuel consumption and yield information.</li></br>
+		
+		{% endblocktrans %}
+		{% blocktrans %}
+	
+		<li>Vehicles: location and routes for cars and trucks.</li></br>
+		
+		{% endblocktrans %}
+		{% blocktrans %}
+
+		<li>Cartography: both civilian and military cartographers use GPS extensively.</li></br>
+		
+		{% endblocktrans %}
+		{% blocktrans %}
+
+		<li>Cellular Telephony: Mobile telephony is the provision of telephone services to phones 
+		which may move around freely rather than stay fixed in one location. Mobile phones 
+		connect to a terrestrial cellular network of base stations (cell sites), whereas 
+		satellite phones connect to orbiting satellites. Both networks are interconnected 
+		to the public switched telephone network (PSTN) to allow any phone in the world to 
+		be dialed.</li></br>
+	
+		{% endblocktrans %}
+		{% blocktrans %}
+		
+		<li>Clock synchronization: the accuracy of GPS time signals (±10 ns)[88] is second only 
+		to the atomic clocks they are based on, and is used in applications such as GPS 
+		disciplined oscillators.</li></br>
+
+		{% endblocktrans %}
+		{% blocktrans %}
+	
+		<li>Fleet tracking: used to identify, locate and maintain contact reports with one or more 
+		fleet vehicles in real-time.</li></br>
+
+		{% endblocktrans %}
+		{% blocktrans %}
+	
+		<li>Vehicle tracking systems, person tracking systems, and pet tracking systems use GPS to 
+		locate devices that are attached to or carried by a person, vehicle, or pet. This can 
+		provide continuous tracking and send notifications.</li></br>
+
+		{% endblocktrans %}
+		{% blocktrans %}
+	
+		<li>Navigation: navigators value digitally precise velocity and orientation measurements.</li></br>
+		{% endblocktrans %}
+	
+		{% blocktrans %}
+		<li>Telematics: GPS technology integrated with computers and mobile communications 
+		technology in automotive navigation systems.</li></br>
+		{% endblocktrans %}
+		
+		</ul>
+
+			
+			
+			
+
+
+	<blockquote style="width:110px; float:left; padding: 5px; box-shadow: 2px 2px 2px 2px #1e90ff;">
+		<i class="fab fa-facebook"  style="color:#4682b4;"></i>
+		
+		<a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fshare%2F&display=popup" style="color:#4682b4;">
+		{% trans "Share"%}</a>
+		<i class="fa fa-share-square"  style="color:#4682b4;"></i>
+	</blockquote>
+	
+</div>
+		
+{% endblock %}

@@ -36,6 +36,9 @@ urlpatterns = [
     url(r'^(?P<pk>\d+)/(?P<post_slug>[\w\d-]+)$', views.post_detail, name='post_detail'),
     url(r'^$', views.home_page, name='home_page'),
     url(r'^post/list/$',views.post_list, name='post_list'),
+    url(r'^gps/$', views.gps_page, name='gps_page'),
+    url(r'^cctv/$', views.cctv_page, name='cctv_page'),
+    url(r'^security/$', views.security_page, name='security_page'),
     url(r'^opening/$', views.opening_hours, name='opening_hours'),
     ]
     

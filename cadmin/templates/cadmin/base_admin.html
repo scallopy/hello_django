@@ -106,8 +106,6 @@
 
 
 	{% block content %}
-	
-	<div class="content">
 			<div class="nav">
 				<ul>
 					<li><a href="{% url 'post_list' %}">{% trans "Posts"%}</a></li>
@@ -120,25 +118,34 @@
 				</ul>
 			</div>
 	
-		<div class="sidebar-primary">
-	
-			<blockquote>
-				<i class="fab fa-facebook"  style="color:#4682b4;"></i>
 		
-				<a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fshare%2F&display=popup" style="color:#4682b4;">
-				Sharing</a>
-				<i class="fa fa-share-square"  style="color:#4682b4;"></i>
-			</blockquote>
-			<iframe src="/feedback/">{% trans "Feedback"%}"</iframe>
-		</div>
 	{% block main %}{% endblock %}
-	
+	<div class="sidebar-primary">
+			<div style="text-align:right;">
+			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080;"></i><a class="quick-call" href="tel:+359887720074"><b><i>0887 72 00 74</i></b></a> 
+			</div>
+			<div class="quick-links" style="float:center;">
+				<a class="links-btn" href="#">
+					{% trans "How to find us"%}
+				</a>
+				<ul>
+					<li><a href="/contact/usg/">{% trans "Bulgaria, Rousse, Gotse Delchev Blvd 68"%}</a></li>
+					<li><a href="/contact/usv/">{% trans "Bulgaria, Rousse, Vidin Street 17"%}</a><li>
+				</ul>
+			</div>
+			</br></br>
+			
+			<h1>{% trans "Opening Hours"%}:</h1>
+			<iframe src="/opening/" style="overflow-y:auto;"></iframe>
+			<h1>{% trans "Feedback"%}:</h1>
+			<iframe src="/feedback/"></iframe>
+		</div>
 	
 	
 		
 	
 	
-	</div>
+	
 {% endblock %}
 	
 	{% block footer %}

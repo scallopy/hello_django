@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% extends "blog/base_site.html" %}
+{% load i18n static %}
+
+{% block main %}
+
+<div class="main">
+		
+	<h2>{% trans "Interesting Facts"%}:</h2>
+	
+	{% blocktrans %}
+	<p>
+	The first CCTV system was installed by Siemens AG at Test Stand VII in Peenemünde,
+	Nazi Germany in 1942, for observing the launch of V-2 rockets. The noted German engineer
+	Walter Bruch was responsible for the technological design and installation of the system.</p>
+
+    <p>In the U.S. the first commercial closed-circuit television system became available
+	in 1949, called Vericon.</p>
+	
+	{% endblocktrans %}
+	
+	
+	{% blocktrans %}
+	
+	<h3>Technology</h3>
+	<p>The earliest video surveillance systems involved constant monitoring because there was no 
+	way to record and store information. The development of reel-to-reel media enabled the 
+	recording of surveillance footage. These systems required magnetic tapes to be changed 
+	manually, which was a time consuming, expensive and unreliable process, with the operator
+	having to manually thread the tape from the tape reel through the recorder onto an empty 
+	take-up reel. Due to these shortcomings, video surveillance was not widespread. VCR 
+	technology became available in the 1970s, making it easier to record and erase information, 
+	and use of video surveillance became more common.</p>
+	
+	{% endblocktrans %}
+	
+	
+	{% blocktrans %}
+	
+	<p>During the 1990s, digital multiplexing was developed, allowing several cameras to record
+	at once, as well as time lapse and motion-only recording. This increased savings of time
+	and money which then led to an increase in the use of CCTV.</p>
+
+	<p>Recently CCTV technology has been enhanced with a shift toward Internet-based products 
+	and systems, and other technological developments.</p>
+	
+	<p>In September 1968, Olean, New York was the first city in the United States to install
+	video cameras along its main business street in an effort to fight crime. Another early 
+	appearance was in 1973 in Times Square in New York City.</p>
+	
+	{% endblocktrans %}
+	
+	
+
+	{% blocktrans %}
+	<p>During the 1980s video surveillance began to spread across the country specifically 
+	targeting public areas. This proves to be a cheaper way to deter crime compared to 
+	increasing the size of the police departments. Some businesses begin to use video
+	surveillance. From the mid-1990s on, police departments across the United States install
+	an increasing number of cameras in various public spaces including housing projects, 
+	schools, and public parks departments. 
+	{% endblocktrans %}
+	{% blocktrans %}
+	CCTV later become common in banks and stores to discourage theft, by recording evidence of 
+	criminal activity. In 1998, 3,000 CCTV systems were in use in New York City. A study by 
+	Nieto in 2008 found many businesses in the United States had invested heavily in video 
+	surveillance technology to protect products and promote safe workplace and consumer environments.
+	{% endblocktrans %}
+	{% blocktrans %}
+	A nationwide survey of a wide verify of companies found that 75 percent utilize CCTV surveillance. 
+	In private sector CCTV surveillance technology is operated in a wide variety of establishments such as in 
+	industry, manufacturing, retailing, financial, insurance, banking, transportation and
+	distribution, utilities, communications, health care, and hotels, motels.</p>
+	{% endblocktrans %}
+	
+	
+	
+	{% blocktrans %}
+	
+	<h3>Uses</h3>
+	<ul>
+	<li>Crime prevention</li>
+	<li>Body worn</li>
+	<li>Industrial processes</li>
+	<li>Traffic monitoring</li>
+	<li>Transport safety</li>
+	<li>Sporting events</li>
+	<li>Monitor employees</li>
+	<li>Use in schools</li>
+	<li>Criminal use</li>
+	<li>Home security</li>
+	</ul>
+	
+	{% endblocktrans %}
+	
+	
+	{% blocktrans %}
+	
+	<h3>Worldwide</h3>
+
+	<p>There are an estimated 350 million surveillance cameras worldwide as of 2016 compared
+	with about 160 million in 2012.</p> 
+	
+	{% endblocktrans %}		
+			
+			
+
+
+	<blockquote style="width:110px; float:left; padding: 5px; box-shadow: 2px 2px 2px 2px #1e90ff;">
+		<i class="fab fa-facebook"  style="color:#4682b4;"></i>
+		
+		<a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fshare%2F&display=popup" style="color:#4682b4;">
+		{% trans "Share"%}</a>
+		<i class="fa fa-share-square"  style="color:#4682b4;"></i>
+	</blockquote>
+		
+			
+</div>
+		
+{% endblock %}

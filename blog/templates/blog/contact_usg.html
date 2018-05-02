@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 {% extends "blog/base_site.html" %}
 {% load i18n static %}
-{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
-<html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
-{% load i18n %}
-<body style="background-color:#90EE90;">
-{% block title %}
-    {% trans "Contact us:" as the_title %} - {{block.super}}
-{% endblock %}
 
-{% block content %}
 
-	<div class="content">
-		<div class="section-inner clearfix">
+{% block main %}
+
+	<div class="main">
+		
 			<h3>&#187; <a href="{% url 'contact_usg' %}">{% trans "Contact us:"%}</h3>
 			<hr>
-			<p><iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5757.274405100815!2d25.9676437!3d43.8218842!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ae5e2995afbddd%3A0xe302b0bb238d2862!2zYnVsLiAiR290c2UgRGVsY2hldiIgNjgsIDcwMTYg0LIu0LcuINCX0LDQv9Cw0LQsIFJ1c2U!5e0!3m2!1sen!2sbg!4v1523268182262" width="70%" height="auto" frameborder="0" style="border:0; float:right;" allowfullscreen></iframe>
+			<div width="20%" height="300" style="float: right;">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11514.471828481466!2d25.960864026755278!3d43.82228334133399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ae5e299991a147%3A0x75c934a7e8026800!2z0JXQm9CV0JrQotCg0JAgLSDQlNCY0JzQmNCi0KrQoCDQlNCY0JzQmNCi0KDQntCS!5e0!3m2!1sbg!2sbg!4v1524901822700" width="20%" height="40%" frameborder="0" style="border: 1px solid #1e90ff;" allowfullscreen></iframe>
+			</div>
+			<div width="20%" height="auto" style="float: left;">
+			<p>
 			{% trans "Autoelectronics Electra"%}</br>
 			{% trans "Bulgaria, Rousse"%}</br>
 			{% trans "Gotse Delchev Blvd 68"%}</br>
 			
-			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a class="quick-call" href="tel:+35982861486"><b><i>082 / 86 14 86</i></b></br>
-			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a class="quick-call" href="tel:+359887720074"><b><i>0887 72 00 74</i></b></br>
-			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a class="quick-call" href="tel:+359888590051"><b><i>0888 59 00 51</i></b></br>
+			</p>
+			<p>
+			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a class="quick-call" href="tel:+35982861486" /><b><i>082 / 86 14 86</i></b></br>
+			</p>
+			<p>
+			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a class="quick-call" href="tel:+359887720074" /><b><i>0887 72 00 74</i></b></br>
+			</p>
+			<p>
+			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><a class="quick-call" href="tel:+359888590051" /><b><i>0888 59 00 51</i></b></br>
+			</p>
+			<p>
+			<i class="fas fa-envelope fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><i>elektra_co@abv.bg</i></p>
+			</p>
+			</div>
+			<div class="img" style="padding-top: 20px">
+				<img src="{% static 'blog/images/021.jpg'%}" style="width: 100%; height: auto;" / >
+			</div>
+			
+			<blockquote style="width:110px; float:left; padding: 5px; box-shadow: 2px 2px 2px 2px #1e90ff;">
+				<i class="fab fa-facebook"  style="color:#4682b4;"></i>
+				
+				<a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fshare%2F&display=popup" style="color:#4682b4;">
+				{% trans "Share"%}</a>
+				<i class="fa fa-share-square"  style="color:#4682b4;"></i>
+			</blockquote>
 		
-			<i class="fas fa-envelope fa-lg" data-fa-transform="shrink-7" style="color:#000080"></i><i>elektra_co@abv.bg</i></a></p>
-									
-		</div>
 	</div>
 	
 	
 
 {% endblock %}
-</body>
-</html>

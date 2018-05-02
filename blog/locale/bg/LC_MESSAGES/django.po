@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-18 21:34+0300\n"
+"POT-Creation-Date: 2018-05-01 23:28+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,10 +39,6 @@ msgid "Content"
 msgstr "Съдържание"
 
 #: .\blog\models.py:68
-msgid "Name"
-msgstr "Име"
-
-#: .\blog\models.py:68
 msgid "Name of the sender"
 msgstr "Име на подателя"
 
@@ -54,9 +50,9 @@ msgstr "Относно"
 msgid "Message"
 msgstr "Съобщение"
 
-#: .\blog\models.py:75 .\blog\templates\blog\base.html:128
+#: .\blog\models.py:75 .\blog\templates\blog\base_site.html:146
 msgid "Feedback"
-msgstr "Отзиви"
+msgstr "Обратна връзка"
 
 #: .\blog\templates\blog\admin_page.html:18
 #, python-format
@@ -96,119 +92,1164 @@ msgstr "Последно влизане: %(last_login)s"
 msgid "Logout"
 msgstr "Изход"
 
-#: .\blog\templates\blog\base.html:30
-msgid "How to find us"
-msgstr "Как да ни намерите"
-
 #: .\blog\templates\blog\base.html:33
-msgid "Bulgaria, Rousse,<br> Gotse Delchev Blvd 68"
-msgstr "България, гр. Русе, бул. Гоце Делчев №68"
+msgid "Welcome,"
+msgstr "Привет,"
 
-#: .\blog\templates\blog\base.html:34
-msgid "Bulgaria, Rousse,<br> Vidin Street 17"
-msgstr "България, гр. Русе, ул. Видин №17"
+#: .\blog\templates\blog\base.html:38
+msgid "View site"
+msgstr "Към сайта"
 
-#: .\blog\templates\blog\base.html:40
-msgid "Notice:"
-msgstr "Известия:"
+#: .\blog\templates\blog\base.html:43
+msgid "Documentation"
+msgstr "Документация"
 
-#: .\blog\templates\blog\base.html:43 .\blog\templates\blog\base.html:93
-#: .\blog\templates\blog\base.html:124
-#: .\blog\templates\blog\contact_usg.html:19
-#: .\blog\templates\blog\contact_usv.html:20 .\blog\templates\blog\login.html:8
+#: .\blog\templates\blog\base.html:47
+msgid "Change password"
+msgstr "Смяна на парола:"
+
+#: .\blog\templates\blog\base.html:49 .\blog\templates\blog\base_site.html:153
+#: .\blog\templates\blog\base_site.html:515
+msgid "Log out"
+msgstr "Изход"
+
+#: .\blog\templates\blog\base.html:59 .\blog\templates\blog\nav.html:7
+msgid "Home"
+msgstr "Начало"
+
+#: .\blog\templates\blog\base_site.html:12
+#: .\blog\templates\blog\base_site.html:104
+#: .\blog\templates\blog\contact_usg.html:17
+#: .\blog\templates\blog\contact_usv.html:17 .\blog\templates\blog\login.html:8
 #: .\blog\templates\blog\login.html:11
 msgid "Autoelectronics Electra"
 msgstr "Автоелектроника Електра"
 
-#: .\blog\templates\blog\base.html:44
+#: .\blog\templates\blog\base_site.html:33
+#: .\blog\templates\blog\base_site.html:571
+msgid "How to find us"
+msgstr "Как да ни намерите"
+
+#: .\blog\templates\blog\base_site.html:36
+#: .\blog\templates\blog\base_site.html:574
+msgid "Bulgaria, Rousse, Gotse Delchev Blvd 68"
+msgstr "България, гр. Русе, бул. Гоце Делчев №68"
+
+#: .\blog\templates\blog\base_site.html:37
+#: .\blog\templates\blog\base_site.html:575
+msgid "Bulgaria, Rousse, Vidin Street 17"
+msgstr "България, гр. Русе, ул. Видин №17"
+
+#: .\blog\templates\blog\base_site.html:43
+msgid "Notice:"
+msgstr "Известия:"
+
+#: .\blog\templates\blog\base_site.html:46
+#: .\blog\templates\blog\base_site.html:142
+#: .\blog\templates\blog\base_site.html:186
+msgid "Autoelectronics"
+msgstr "Автоелектроника"
+
+#: .\blog\templates\blog\base_site.html:47
+#: .\blog\templates\blog\base_site.html:143
 msgid "GPS Systems"
 msgstr "GPS системи"
 
-#: .\blog\templates\blog\base.html:45
+#: .\blog\templates\blog\base_site.html:48
+#: .\blog\templates\blog\base_site.html:144
 msgid "CCTV"
 msgstr "Видеонаблюдение"
 
-#: .\blog\templates\blog\base.html:46
+#: .\blog\templates\blog\base_site.html:49
+#: .\blog\templates\blog\base_site.html:145
 msgid "Security Systems"
 msgstr "Охранителни системи"
 
-#: .\blog\templates\blog\base.html:95
-msgid "Autoelectronics repairs"
-msgstr "Ремонт на автоелектроника"
-
-#: .\blog\templates\blog\base.html:101
+#: .\blog\templates\blog\base_site.html:92
 msgid "Search for:"
 msgstr "Търсене за:"
 
-#: .\blog\templates\blog\base.html:102
+#: .\blog\templates\blog\base_site.html:93
 msgid "Search..."
 msgstr "Търси..."
 
-#: .\blog\templates\blog\base.html:104
+#: .\blog\templates\blog\base_site.html:95
 msgid "Search"
 msgstr "Търси"
 
-#: .\blog\templates\blog\base.html:118
+#: .\blog\templates\blog\base_site.html:106
+msgid "Autoelectronics repairs"
+msgstr "Ремонт на автоелектроника"
+
+#: .\blog\templates\blog\base_site.html:131
 msgid "Menu"
 msgstr "Меню"
 
-#: .\blog\templates\blog\base.html:125 .\blog\templates\blog\nav.html:8
-msgid "Blog"
-msgstr "Блог"
+#: .\blog\templates\blog\base_site.html:135
+#: .\blog\templates\blog\base_site.html:187
+msgid "Services"
+msgstr "Услуги"
 
-#: .\blog\templates\blog\base.html:126
-msgid "About us:"
-msgstr "За нас"
-
-#: .\blog\templates\blog\base.html:127
-msgid "Add Post"
-msgstr "Добави публикация"
-
-#: .\blog\templates\blog\base.html:130 .\blog\templates\blog\login.html:40
+#: .\blog\templates\blog\base_site.html:158
+#: .\blog\templates\blog\base_site.html:517 .\blog\templates\blog\login.html:40
 #: .\blog\templates\blog\login.html:75
 msgid "Log in"
 msgstr "Вход"
 
-#: .\blog\templates\blog\base.html:132 .\blog\templates\blog\login.html:41
-msgid "Registration"
-msgstr "Регистрация"
+#: .\blog\templates\blog\base_site.html:195
+msgid "Vehicle diagnostics and inspection"
+msgstr "Диагностика и проверка"
 
-#: .\blog\templates\blog\contact_usg.html:9
-#: .\blog\templates\blog\contact_usg.html:16
+#: .\blog\templates\blog\base_site.html:197
+msgid "Initial Diagnostics Of The Vehicle And Locating The Damage"
+msgstr ""
+"Първоначална диагностика на превозното средство и определяне  на повредите"
+
+#: .\blog\templates\blog\base_site.html:198
+msgid "Computer Diagnostics"
+msgstr "Компютърна диагностика"
+
+#: .\blog\templates\blog\base_site.html:199
+msgid "Clearing Errors"
+msgstr "Изчистване на грешки"
+
+#: .\blog\templates\blog\base_site.html:204
+msgid "Periodic Inspections"
+msgstr "Периодични проверки"
+
+#: .\blog\templates\blog\base_site.html:206
+msgid "Basic Inspection"
+msgstr "Основен преглед"
+
+#: .\blog\templates\blog\base_site.html:207
+msgid "Individual Inspection"
+msgstr "Индивидуален преглед"
+
+#: .\blog\templates\blog\base_site.html:208
+msgid "Extended Inspection"
+msgstr "Разширен преглед"
+
+#: .\blog\templates\blog\base_site.html:209
+msgid "Pre-journey Inspection"
+msgstr "Преглед преди пътуване"
+
+#: .\blog\templates\blog\base_site.html:210
+msgid "Pre-purchase Inspection"
+msgstr "Преглед преди покупка"
+
+#: .\blog\templates\blog\base_site.html:215
+msgid "Automotive electrical system"
+msgstr "Електрическа система на автомобилите"
+
+#: .\blog\templates\blog\base_site.html:217
+msgid "Alternator Replacement"
+msgstr "Смяна на алтернатор"
+
+#: .\blog\templates\blog\base_site.html:218
+msgid "APS car system"
+msgstr "Ремонт на APS"
+
+#: .\blog\templates\blog\base_site.html:219
+msgid "Battery Charging Test"
+msgstr "Проверка на зареждането на акумулатора"
+
+#: .\blog\templates\blog\base_site.html:220
+msgid "Battery Load Test"
+msgstr "Товарен тест на акумулатора"
+
+#: .\blog\templates\blog\base_site.html:221
+msgid "Batery Replacement"
+msgstr "Смяна на акумулатор"
+
+#: .\blog\templates\blog\base_site.html:222
+msgid "Central Locking Servomotor Replacement"
+msgstr "Смяна на мотор нa централно заключване"
+
+#: .\blog\templates\blog\base_site.html:223
+msgid "Dashboard Gauges Replacement"
+msgstr "Смяна на  уреди на арматурното табло"
+
+#: .\blog\templates\blog\base_site.html:224
+msgid "Distributor Cap Replacement"
+msgstr "Смяна на капачка на разпределителя"
+
+#: .\blog\templates\blog\base_site.html:225
+msgid "Distributor Rotor Replacement"
+msgstr "Смяна на палец на разпределителя"
+
+#: .\blog\templates\blog\base_site.html:226
+msgid "Fuse Replacement"
+msgstr "Смяна на предпазители"
+
+#: .\blog\templates\blog\base_site.html:227
+msgid "Headlight Bulb Replacement"
+msgstr "Смяна крушка на фаровете"
+
+#: .\blog\templates\blog\base_site.html:228
+msgid "Ignition Coil Replacement"
+msgstr "Смяна на бобината"
+
+#: .\blog\templates\blog\base_site.html:229
+msgid "Ignition Loads Replacement"
+msgstr "Смяна на  кабели високо напрежение"
+
+#: .\blog\templates\blog\base_site.html:230
+msgid "Ignition Module Replacement"
+msgstr "Смяна на модул за запалване"
+
+#: .\blog\templates\blog\base_site.html:231
+msgid "Ignition Switch Replacement"
+msgstr "Смяна на контактен ключ"
+
+#: .\blog\templates\blog\base_site.html:232
+msgid "Indicator Breaker Replacement"
+msgstr "Смяна на  релето за мигачите"
+
+#: .\blog\templates\blog\base_site.html:233
+msgid "Installation of APS"
+msgstr "Монтаж на парктроник"
+
+#: .\blog\templates\blog\base_site.html:234
+msgid "Light Bulb Replacement(rear)"
+msgstr "Смяна на крушка(задна)"
+
+#: .\blog\templates\blog\base_site.html:235
+msgid "Light Level Regulation Motor Replacement"
+msgstr "Смяна на  мотор за регулиране на фаровете"
+
+#: .\blog\templates\blog\base_site.html:236
+msgid "Spark/glow Plugs Replacement"
+msgstr "Смяна на  запалително/подгревна свещ"
+
+#: .\blog\templates\blog\base_site.html:237
+msgid "Starter Replacement"
+msgstr "Смяна на стартера"
+
+#: .\blog\templates\blog\base_site.html:238
+msgid "Window Regulator Repair"
+msgstr "Ремонт на регулатора на прозорци"
+
+#: .\blog\templates\blog\base_site.html:239
+msgid "Windscreen Washer Pump Replacement"
+msgstr "Смяна на помпата за миене на предното стъкло"
+
+#: .\blog\templates\blog\base_site.html:240
+msgid "Wiper Blade Motor Replacement"
+msgstr "Смяна на мотора на чистачките"
+
+#: .\blog\templates\blog\base_site.html:241
+msgid "Wiper Tie Rod Replacement"
+msgstr "Смяна на рамото на чистачката"
+
+#: .\blog\templates\blog\base_site.html:242
+msgid "Xenon Bulbs Replacement"
+msgstr "Смяна на ксенонови крушки"
+
+#: .\blog\templates\blog\base_site.html:247
+msgid "Vehicle Sensors"
+msgstr "Датчици и сензори"
+
+#: .\blog\templates\blog\base_site.html:249
+msgid "A/C Sensor replasment"
+msgstr "Смяна на датчик на климатика"
+
+#: .\blog\templates\blog\base_site.html:250
+msgid "Accelerator pedal position sensor replasment"
+msgstr "Смяна на датчик на положение на педала на газта"
+
+#: .\blog\templates\blog\base_site.html:251
+msgid "Air pressure sensor replacement"
+msgstr "Смяна на сензор за въздушно налягяне"
+
+#: .\blog\templates\blog\base_site.html:252
+msgid "Brake fluid level sensor replacement"
+msgstr "Смяна на датчик за ниво на спирачната течност"
+
+#: .\blog\templates\blog\base_site.html:253
+msgid "Brake pad wear sensor replacement"
+msgstr "Смяна на датчик за износване на накладките"
+
+#: .\blog\templates\blog\base_site.html:254
+msgid "Brake position sensor replacement"
+msgstr "Смяна на датчик за положение на спирачния педал"
+
+#: .\blog\templates\blog\base_site.html:255
+msgid "Brake system pressure sensor replacement"
+msgstr "Смяна на датчик за налягане в спирачната система"
+
+#: .\blog\templates\blog\base_site.html:256
+msgid "Camshaft position sensor replacement"
+msgstr "Смяна на датчик за позиция на разпределителния вал"
+
+#: .\blog\templates\blog\base_site.html:257
+msgid "Clutch pedal position sensor replacement"
+msgstr "Смяна на датчик за положение на педала на съединителя"
+
+#: .\blog\templates\blog\base_site.html:258
+msgid "Coolant level sensor replacement"
+msgstr "Смяна на датчик за ниво на охладителна течност"
+
+#: .\blog\templates\blog\base_site.html:259
+msgid "Coolant temperature sensor replacement"
+msgstr "Смяна на датчик за температура на охладителната течност"
+
+#: .\blog\templates\blog\base_site.html:260
+msgid "Cooling system sensor replacement"
+msgstr "Смяна на датчик на охладителната система"
+
+#: .\blog\templates\blog\base_site.html:261
+msgid "Crankshaft sensor replacement"
+msgstr "Смяна на датчик на коляновия вал"
+
+#: .\blog\templates\blog\base_site.html:262
+msgid "DeNOx module pressure sensor replacement"
+msgstr "Смяна на датчик за налягане в DeNOx модула"
+
+#: .\blog\templates\blog\base_site.html:263
+msgid "Door sensor replacement"
+msgstr "Смяна на датчик на врата"
+
+#: .\blog\templates\blog\base_site.html:264
+msgid "Engine oil level sensor replacement"
+msgstr "Смяна на датчик за ниво на маслото в двигателя"
+
+#: .\blog\templates\blog\base_site.html:265
+msgid "Exhaust air temperature sensor replacement"
+msgstr "Смяна на датчик за температура на въздухa в ауспуха"
+
+#: .\blog\templates\blog\base_site.html:266
+msgid "Exhaust fumes pressure sensor replacement"
+msgstr "Смяна на датчик за налягане на изгорелите газове"
+
+#: .\blog\templates\blog\base_site.html:267
+msgid "Exhaust fumes temerature sensor replacement"
+msgstr "Смяна на датчик за температура на изгорелите газове"
+
+#: .\blog\templates\blog\base_site.html:268
+msgid "External temperature sensor replacement"
+msgstr "Смяна на датчик за външна температура"
+
+#: .\blog\templates\blog\base_site.html:269
+msgid "Fuel injection system sensor and transmitter replacement"
+msgstr "Смяна на датчик и трансмитер за впръскване на горивото"
+
+#: .\blog\templates\blog\base_site.html:270
+msgid "Fuel level sensor replacement"
+msgstr "Смяна на датчик за ниво на горивото"
+
+#: .\blog\templates\blog\base_site.html:271
+msgid "Fuel pressure sensor replacement"
+msgstr "Смяна на сензор за налягане на горивото"
+
+#: .\blog\templates\blog\base_site.html:272
+msgid "Fuel temperature sensor replacement"
+msgstr "Смяна на датчик за температура на горивото"
+
+#: .\blog\templates\blog\base_site.html:273
+msgid "Gauge sensor replacement"
+msgstr "Смяна на датчик на габаритите"
+
+#: .\blog\templates\blog\base_site.html:274
+msgid "Idle running sensor replacement"
+msgstr "Смяна на датчик за празен ход"
+
+#: .\blog\templates\blog\base_site.html:275
+msgid "Ignition Hall sensor replacement"
+msgstr "Смяна на датчик за запалване"
+
+#: .\blog\templates\blog\base_site.html:276
+msgid "Intake manifold pressure sensor replacement"
+msgstr "Смяна на датчик за налягане във всмукателния колектор"
+
+#: .\blog\templates\blog\base_site.html:277
+msgid "Knock sensor replacement"
+msgstr "Смяна на датчик за детонация"
+
+#: .\blog\templates\blog\base_site.html:278
+msgid "Mileage sensor replacement"
+msgstr "Смяна на датчик за пробег"
+
+#: .\blog\templates\blog\base_site.html:279
+msgid "NOx sensor replacement"
+msgstr "Смяна на  NOx датчик"
+
+#: .\blog\templates\blog\base_site.html:280
+msgid "Oil pressure sensor replacement"
+msgstr "Смяна на датчик за налягане на маслото"
+
+#: .\blog\templates\blog\base_site.html:281
+msgid "Oil sensor replacement"
+msgstr "Смяна на датчик за масло"
+
+#: .\blog\templates\blog\base_site.html:282
+msgid "Oil temperature sensor replacement"
+msgstr "Смяна на датчик за температура на маслото"
+
+#: .\blog\templates\blog\base_site.html:283
+msgid "Pressure sensor replacement"
+msgstr "Смяна на датчик за налягане"
+
+#: .\blog\templates\blog\base_site.html:284
+msgid "Pulse sensor/pulser  replacement"
+msgstr "Смяна на датчик за импулси"
+
+#: .\blog\templates\blog\base_site.html:285
+msgid "Rev counter sensor replacement"
+msgstr "Смяна на датчик на оборотмера"
+
+#: .\blog\templates\blog\base_site.html:286
+msgid "Sensor/relay replacement"
+msgstr "Смяна на датчик/реле"
+
+#: .\blog\templates\blog\base_site.html:287
+msgid "Speed sensor replacement"
+msgstr "Смяна на датчик за скорост"
+
+#: .\blog\templates\blog\base_site.html:288
+msgid "Steering wheel sensor replacement"
+msgstr "Смяна на датчик за завъртане на волана"
+
+#: .\blog\templates\blog\base_site.html:289
+msgid "Stoplights sensor replacement"
+msgstr "Смяна на датчик за стопсветлините"
+
+#: .\blog\templates\blog\base_site.html:290
+msgid "Throttle position sensor replacement"
+msgstr "Смяна на датчик за положение на дроселовата клапа"
+
+#: .\blog\templates\blog\base_site.html:291
+msgid "Transsmition sensor replacement"
+msgstr "Смяна на датчик на трансмисията"
+
+#: .\blog\templates\blog\base_site.html:292
+msgid "Windscreen washer fluid level sensor replacement"
+msgstr "Смяна на датчик за ниво на течността за чистачки"
+
+#: .\blog\templates\blog\base_site.html:297
+msgid "Air Conditioning System"
+msgstr "Климатична система"
+
+#: .\blog\templates\blog\base_site.html:299
+msgid "A/C System desinfection"
+msgstr "Дезинфекция  на климатика"
+
+#: .\blog\templates\blog\base_site.html:300
+msgid "A/C valve replacement"
+msgstr "Смяна на клапана на климатика"
+
+#: .\blog\templates\blog\base_site.html:301
+msgid "A/C compressor oil change"
+msgstr "Смяна на маслото на компресора на климатика"
+
+#: .\blog\templates\blog\base_site.html:302
+msgid "A/C compressor replacement"
+msgstr "Смяна на компресора на климатика"
+
+#: .\blog\templates\blog\base_site.html:303
+msgid "A/C dryer filter replacement"
+msgstr "Смяна на филтър на дехидратора  на климатика"
+
+#: .\blog\templates\blog\base_site.html:304
+msgid "A/C dryer replacement"
+msgstr "Смяна на дехидратора  на климатика"
+
+#: .\blog\templates\blog\base_site.html:305
+msgid "A/C heat exchanger replacement"
+msgstr "Смяна на топлообменника на климатика"
+
+#: .\blog\templates\blog\base_site.html:306
+msgid "A/C hoses/pipes replacement"
+msgstr "Смяна на тръби/маркучи на климатика"
+
+#: .\blog\templates\blog\base_site.html:307
+msgid "A/C ozone cleaning"
+msgstr "Почистване  на климатика с озон"
+
+#: .\blog\templates\blog\base_site.html:308
+msgid "A/C refill"
+msgstr "Зареждане  на климатика"
+
+#: .\blog\templates\blog\base_site.html:309
+msgid "A/C comprehensive servicing"
+msgstr "Пълно обслужване  на климатика"
+
+#: .\blog\templates\blog\base_site.html:310
+msgid "A/C evaporator replacement"
+msgstr "Смяна на изпарителя на климатика"
+
+#: .\blog\templates\blog\base_site.html:311
+msgid "A/C Condenser replacement"
+msgstr "Смяна на кондензатора на климатика"
+
+#: .\blog\templates\blog\base_site.html:312
+msgid "A/C system tightness check-ultraviolet"
+msgstr "Проверка на плътността  на климатика - с UV тестер"
+
+#: .\blog\templates\blog\base_site.html:317
+msgid "Vehicles Audio System"
+msgstr "Аудио система на автомобилите"
+
+#: .\blog\templates\blog\base_site.html:319
+msgid "Installation of Aerial"
+msgstr "Монтаж на антена"
+
+#: .\blog\templates\blog\base_site.html:320
+msgid "Installation of Speakers"
+msgstr "Монтаж на говорители"
+
+#: .\blog\templates\blog\base_site.html:321
+msgid "Sale and installation of Car audio systems, CD, DVD, TV, Multimedia"
+msgstr "Продажба и монтаж на Car audio systems, CD, DVD, TV, Мултимедия"
+
+#: .\blog\templates\blog\base_site.html:322
+msgid "Installation of Subwoofer"
+msgstr "Монтаж на субуфер"
+
+#: .\blog\templates\blog\base_site.html:323
+msgid "Installation of Amplifier"
+msgstr "Монтаж на усилвател"
+
+#: .\blog\templates\blog\base_site.html:324
+msgid "Mounting a device Hands-free in the vehicle"
+msgstr "Монтиране на устройство Hands-free в автомобила"
+
+#: .\blog\templates\blog\base_site.html:325
+msgid "Installation of Professional Audio Systems in vehicles"
+msgstr "Професионално озвучаване на автомобили"
+
+#: .\blog\templates\blog\base_site.html:330
+msgid "Vehicle Navigation"
+msgstr "Навигация на превозното средство"
+
+#: .\blog\templates\blog\base_site.html:332
+msgid "Navigation system fitting"
+msgstr "Монтаж на навигация"
+
+#: .\blog\templates\blog\base_site.html:333
+msgid "Navigation maps update"
+msgstr "Опресняване на картите за навигация"
+
+#: .\blog\templates\blog\base_site.html:338
+msgid "Mounting GPS Tracking System"
+msgstr "Монтаж на GPS системи за проследяване"
+
+#: .\blog\templates\blog\base_site.html:343
+msgid "Mounting Alarm System"
+msgstr "Монтаж на алармени системи"
+
+#: .\blog\templates\blog\base_site.html:348
+msgid "Repair Of Computers, Modules And Electrical Circuit Boards Of Vehicles"
+msgstr "Ремонт на компютри, модули и ел. платки на автомобилите"
+
+#: .\blog\templates\blog\base_site.html:353
+msgid ""
+"Installation and repair of all types of immobilizers, Bluetooth, APS car "
+"systems"
+msgstr "Монтаж и ремонт на всички видове имобилайзери, Bluetooth, "
+"парктроници"
+
+#: .\blog\templates\blog\base_site.html:358
+msgid "Repair Of Electric Stoves On Vans, Trucks And Buses"
+msgstr "Ремонт на ел. печки на бусове, камиони и автобуси"
+
+#: .\blog\templates\blog\base_site.html:363
+msgid "Installation and repair of central locking of vehicles"
+msgstr "Ремонт и монтаж на централно заключване на превозни средства"
+
+#: .\blog\templates\blog\base_site.html:368
+msgid "Installation Of Xenons Lights And Replacing Xenon Bulbs"
+msgstr "Монтиране на ксенонови светлини и смяна на ксенонови крушки"
+
+#: .\blog\templates\blog\base_site.html:373
+msgid "Sunroof Repair"
+msgstr "Ремонт на люк (шибидах)"
+
+#: .\blog\templates\blog\base_site.html:375
+msgid "Checking the problem of electrical or mechanical failure"
+msgstr "Проверка на проблема за електрически или механичен отказ"
+
+#: .\blog\templates\blog\base_site.html:376
+msgid "Sunroof repair"
+msgstr "Ремонт на люк ( шибидах )"
+
+#: .\blog\templates\blog\base_site.html:377
+msgid "Sunroof motor replacement"
+msgstr "Смяна на мотор на люк ( шибидах )"
+
+#: .\blog\templates\blog\base_site.html:382
+msgid "Mechanical Repairs"
+msgstr "Механични ремонти"
+
+#: .\blog\templates\blog\base_site.html:384
+msgid "ABS sensor replacement"
+msgstr "Смяна на ABS сензор"
+
+#: .\blog\templates\blog\base_site.html:385
+msgid "Accelerator cable replacement"
+msgstr "Смяна на жилото на газта"
+
+#: .\blog\templates\blog\base_site.html:386
+msgid "Air filter replacement"
+msgstr "Смяна на въздушен филтър"
+
+#: .\blog\templates\blog\base_site.html:387
+msgid "Air flowmeter replacement - mass sensor"
+msgstr "Смяна на дебитомер(MAF)"
+
+#: .\blog\templates\blog\base_site.html:388
+msgid "Axel shaft replacement"
+msgstr "Смяна на полуоска"
+
+#: .\blog\templates\blog\base_site.html:389
+msgid "Axel shaft sealer replacement"
+msgstr "Смяна на уплътнител на полуоска"
+
+#: .\blog\templates\blog\base_site.html:390
+msgid "Ball joint boot replacement"
+msgstr "Смяна на гумен маншон на шарнирен болт"
+
+#: .\blog\templates\blog\base_site.html:391
+msgid "Ball joint replacement"
+msgstr "Смяна на шарнирен болт"
+
+#: .\blog\templates\blog\base_site.html:392
+msgid "Brake adjuster replacement"
+msgstr "Смяна на регулатора на спирачните течности"
+
+#: .\blog\templates\blog\base_site.html:393
+msgid "Brake carrier replacement"
+msgstr "Смяна на спирачни апарати"
+
+#: .\blog\templates\blog\base_site.html:394
+msgid "Brake disk replacement"
+msgstr "Смяна на спирачни дискове"
+
+#: .\blog\templates\blog\base_site.html:395
+msgid "Brake disk replacement(front)"
+msgstr "Смяна на предни спирачни дискове"
+
+#: .\blog\templates\blog\base_site.html:396
+msgid "Brake disk replacement(rear)"
+msgstr "Смяна на задни спирачни дискове"
+
+#: .\blog\templates\blog\base_site.html:397
+msgid "Brake drum repair"
+msgstr "Ремонт на спирачни барабани"
+
+#: .\blog\templates\blog\base_site.html:398
+msgid "Brake drum replacement"
+msgstr "Смяна на спирачни  барабани"
+
+#: .\blog\templates\blog\base_site.html:399
+msgid "Brake fluid replacement"
+msgstr "Смяна на спирачна течност"
+
+#: .\blog\templates\blog\base_site.html:400
+msgid "Brake hose replacement"
+msgstr "Смяна на спирачни маркучи"
+
+#: .\blog\templates\blog\base_site.html:401
+msgid "Brake cylinders replacement"
+msgstr "Смяна на спирачни цилиндри"
+
+#: .\blog\templates\blog\base_site.html:402
+msgid "Brake master cylinder replacement"
+msgstr "Смяна на главен спирачен цилиндър"
+
+#: .\blog\templates\blog\base_site.html:403
+msgid "Brake pads replacement"
+msgstr "Смяна на накладки"
+
+#: .\blog\templates\blog\base_site.html:404
+msgid "Brake pads replacement(front)"
+msgstr "Смяна на предни накладки"
+
+#: .\blog\templates\blog\base_site.html:405
+msgid "Brake pads replacement(rear)"
+msgstr "Смяна на задни накладки"
+
+#: .\blog\templates\blog\base_site.html:406
+msgid "Brake shoe replacement"
+msgstr "Смяна на барабанни накладки"
+
+#: .\blog\templates\blog\base_site.html:407
+msgid "Brake system repair"
+msgstr "Ремонт на спирачната система"
+
+#: .\blog\templates\blog\base_site.html:408
+msgid "Brake tubes replacement"
+msgstr "Смяна на спирачни тръбички"
+
+#: .\blog\templates\blog\base_site.html:409
+msgid "Cabin filter replacement"
+msgstr "Смяна на филтър на купето"
+
+#: .\blog\templates\blog\base_site.html:410
+msgid "Camshaft replacement"
+msgstr "Смяна на разпределителен вал"
+
+#: .\blog\templates\blog\base_site.html:411
+msgid "Catalytic converter replacement"
+msgstr "Смяна на катализатор"
+
+#: .\blog\templates\blog\base_site.html:412
+msgid "Clutch cable replacement"
+msgstr "Смяна на жило на съединителя"
+
+#: .\blog\templates\blog\base_site.html:413
+msgid "Clutch cover replacement"
+msgstr "Смяна на кожух на съединителя"
+
+#: .\blog\templates\blog\base_site.html:414
+msgid "Clutch master cylinder replacement"
+msgstr "Смяна на главен цилиндър на съединителя"
+
+#: .\blog\templates\blog\base_site.html:415
+msgid "Clutch plate replacement"
+msgstr "Смяна на диск на съединителя"
+
+#: .\blog\templates\blog\base_site.html:416
+msgid "Clutch release bearing replacement"
+msgstr "Смяна на лагер на съединителя"
+
+#: .\blog\templates\blog\base_site.html:417
+msgid "Clutch slave cylinder replacement"
+msgstr "Смяна на изпълнителен цилиндър на съединителя"
+
+#: .\blog\templates\blog\base_site.html:418
+msgid "Complete clutch kit replacement"
+msgstr "Смяна на съединител комплект"
+
+#: .\blog\templates\blog\base_site.html:419
+msgid "Connecting rod bearing replacement"
+msgstr "Смяна на биелни лагери"
+
+#: .\blog\templates\blog\base_site.html:420
+msgid "Control arm replacement"
+msgstr "Смяна на носач"
+
+#: .\blog\templates\blog\base_site.html:421
+msgid "Coolant replacement"
+msgstr "Смяна на охладителна течност"
+
+#: .\blog\templates\blog\base_site.html:422
+msgid "Cooling system repair"
+msgstr "Ремонт на охлаждащата система"
+
+#: .\blog\templates\blog\base_site.html:423
+msgid "Crankshaft replacement"
+msgstr "Смяна на колянов вал"
+
+#: .\blog\templates\blog\base_site.html:424
+msgid "Diferential oil change"
+msgstr "Смяна на масло в диференциала"
+
+#: .\blog\templates\blog\base_site.html:425
+msgid "Drive shaft replacement"
+msgstr "Смяна на карданен вал"
+
+#: .\blog\templates\blog\base_site.html:426
+msgid "Driveshaft and diferential repair"
+msgstr "Ремонт на кардан и диференциал"
+
+#: .\blog\templates\blog\base_site.html:427
+msgid "Drive system repair"
+msgstr "Ремонт на системата за управление"
+
+#: .\blog\templates\blog\base_site.html:428
+msgid "EGR valve replacement"
+msgstr "Смяна на EGR клапан"
+
+#: .\blog\templates\blog\base_site.html:429
+msgid "Engine head gasket replacement"
+msgstr "Смяна на гарнитура на главата"
+
+#: .\blog\templates\blog\base_site.html:430
+msgid "Engine oil and oil filter replacement"
+msgstr "Смяна на масло и маслен филтър"
+
+#: .\blog\templates\blog\base_site.html:431
+msgid "Engine radiator replacement"
+msgstr "Смяна на радиатор"
+
+#: .\blog\templates\blog\base_site.html:432
+msgid "Engine repair"
+msgstr "Ремонт на двигателя"
+
+#: .\blog\templates\blog\base_site.html:433
+msgid "Engine valve replacement"
+msgstr "Смяна на клапан"
+
+#: .\blog\templates\blog\base_site.html:434
+msgid "Exhaust manifold gasket replacement"
+msgstr "Смяна на гарнитура на изпускателен колектор"
+
+#: .\blog\templates\blog\base_site.html:435
+msgid "Exhaust manifold replacement"
+msgstr "Смяна на изпускателен колектор"
+
+#: .\blog\templates\blog\base_site.html:436
+msgid "Exhaust suspension repair"
+msgstr "Ремонт на окачването на ауспух"
+
+#: .\blog\templates\blog\base_site.html:437
+msgid "Fan thermo/swith senzor replasement"
+msgstr "Смяна на термошалтер/датчик на вентилатора"
+
+#: .\blog\templates\blog\base_site.html:438
+msgid "Flywheel replacement"
+msgstr "Смяна на маховик"
+
+#: .\blog\templates\blog\base_site.html:439
+msgid "Fuel filter replacement"
+msgstr "Смяна на горивен филтър"
+
+#: .\blog\templates\blog\base_site.html:440
+msgid "Fuel hose replacement"
+msgstr "Смяна на горивни маркучи"
+
+#: .\blog\templates\blog\base_site.html:441
+msgid "Fuel injectors replacement"
+msgstr "Смяна горивни дюзи"
+
+#: .\blog\templates\blog\base_site.html:442
+msgid "Fuel pump replacement"
+msgstr "Смяна на горивна помпа"
+
+#: .\blog\templates\blog\base_site.html:443
+msgid "Fuel system repair"
+msgstr "Ремонт на горивната система"
+
+#: .\blog\templates\blog\base_site.html:444
+msgid "Fuel tank replacement"
+msgstr "Смяна на горивен резервоар"
+
+#: .\blog\templates\blog\base_site.html:445
+msgid "Guide roll replacement"
+msgstr "Смяна на паразитна ролка"
+
+#: .\blog\templates\blog\base_site.html:446
+msgid "Handbrake cable replacement"
+msgstr "Смяна на жилото на ръчната спирачка"
+
+#: .\blog\templates\blog\base_site.html:447
+msgid "Heater replacement"
+msgstr "Смяна на радиатор парно"
+
+#: .\blog\templates\blog\base_site.html:448
+msgid "Heater resistor replacement"
+msgstr "Смяна на съпротивление на вентилатор парно"
+
+#: .\blog\templates\blog\base_site.html:449
+msgid "Hood or boot lid air-spring replacement"
+msgstr "Смяна на газов амортисьор на преден или заден капак"
+
+#: .\blog\templates\blog\base_site.html:450
+msgid "Idle run regulator replacement"
+msgstr "Смяна на мотор за регулиране на празен ход"
+
+#: .\blog\templates\blog\base_site.html:451
+msgid "Injection pump replacement"
+msgstr "Смяна на инжекционна помпа"
+
+#: .\blog\templates\blog\base_site.html:452
+msgid "Intake hose gasket replacement"
+msgstr "Смяна на гарнитура на всмукателния маркуч"
+
+#: .\blog\templates\blog\base_site.html:453
+msgid "Intake hose replacement"
+msgstr "Смяна на всмукателен маркуч"
+
+#: .\blog\templates\blog\base_site.html:454
+msgid "Intake manifold gasket replacement"
+msgstr "Смяна на гарнитура на всмукателен колектор"
+
+#: .\blog\templates\blog\base_site.html:455
+msgid "Intake manifold replacement"
+msgstr "Смяна на всмукателния колектор"
+
+#: .\blog\templates\blog\base_site.html:456
+msgid "Intake system repair"
+msgstr "Ремонт на всмукателната система"
+
+#: .\blog\templates\blog\base_site.html:457
+msgid "Lambda probe replacement"
+msgstr "Смяна на ламбда сонда"
+
+#: .\blog\templates\blog\base_site.html:458
+msgid "MacPherson strut replacement"
+msgstr "Смяна на макферсон"
+
+#: .\blog\templates\blog\base_site.html:459
+msgid "Oil sump gasket replacement"
+msgstr "Смяна на гарнитура на картера"
+
+#: .\blog\templates\blog\base_site.html:460
+msgid "Piston pin replacement"
+msgstr "Смяна на бутален болт"
+
+#: .\blog\templates\blog\base_site.html:461
+msgid "Piston replacement"
+msgstr "Смяна на бутало"
+
+#: .\blog\templates\blog\base_site.html:462
+msgid "Piston rings replacement"
+msgstr "Смяна на сегменти"
+
+#: .\blog\templates\blog\base_site.html:463
+msgid "Power steering fluid change"
+msgstr "Смяна на течност на серво усилвател"
+
+#: .\blog\templates\blog\base_site.html:464
+msgid "Power steering pump replacement"
+msgstr "Смяна на помпа на сервоусилвател"
+
+#: .\blog\templates\blog\base_site.html:465
+msgid "Pulley replacement"
+msgstr "Смяна на ремъчна шайба"
+
+#: .\blog\templates\blog\base_site.html:466
+msgid "Pump injector units replacement"
+msgstr "Смяна на помпа-дюза елемент"
+
+#: .\blog\templates\blog\base_site.html:467
+msgid "Radiator fan replacement"
+msgstr "Смяна на вентилатор на радиатора"
+
+#: .\blog\templates\blog\base_site.html:468
+msgid "Replacement of cooling system hoses"
+msgstr "Смяна на маркучи от охладителната система"
+
+#: .\blog\templates\blog\base_site.html:469
+msgid "Rocker cover gasket replacement"
+msgstr "Смяна на гарнитура на капака на клапаните"
+
+#: .\blog\templates\blog\base_site.html:470
+msgid "Rubber boot replacement, steering knucle"
+msgstr "Смяна на гумен тампон на шенкела"
+
+#: .\blog\templates\blog\base_site.html:471
+msgid "Safety belt replacement"
+msgstr "Смяна на предпазен колан"
+
+#: .\blog\templates\blog\base_site.html:472
+msgid "Shock absorber bearing replacement"
+msgstr "Смяна на лагер на амортисьор"
+
+#: .\blog\templates\blog\base_site.html:473
+msgid "Shock absorber buffer replacement"
+msgstr "Смяна на тампон на амортисьора"
+
+#: .\blog\templates\blog\base_site.html:474
+msgid "Shock absorber replacement"
+msgstr "Смяна на амортисьор"
+
+#: .\blog\templates\blog\base_site.html:475
+msgid "Shock absorber rubber boot replacement"
+msgstr "Смяна на ударен тампон на амортисьор"
+
+#: .\blog\templates\blog\base_site.html:476
+msgid "Stabilizer bar replacement"
+msgstr "Смяна на стабилизираща щанга"
+
+#: .\blog\templates\blog\base_site.html:477
+msgid "Stabilizer replacement"
+msgstr "Смяна на биалетка"
+
+#: .\blog\templates\blog\base_site.html:478
+msgid "Stabilizer rubber sleeve replacement"
+msgstr "Смяна на втулка на стабилизираща щанга"
+
+#: .\blog\templates\blog\base_site.html:479
+msgid "Steering column joint replacement"
+msgstr "Смяна на шарнир на кормилния прът"
+
+#: .\blog\templates\blog\base_site.html:480
+msgid "Steering gear replacement"
+msgstr "Смяна на кормилна рейка"
+
+#: .\blog\templates\blog\base_site.html:481
+msgid "Steering system repair"
+msgstr "Ремонт на кормилна система"
+
+#: .\blog\templates\blog\base_site.html:482
+msgid "Sunspension spring replacement"
+msgstr "Смяна на пружина от окачването"
+
+#: .\blog\templates\blog\base_site.html:483
+msgid "Suspension repair"
+msgstr "Ремонт на окачване"
+
+#: .\blog\templates\blog\base_site.html:484
+msgid "Temperaure sensor replacement"
+msgstr "Смяна на температурен сензор"
+
+#: .\blog\templates\blog\base_site.html:485
+msgid "Tensioner roll replacement"
+msgstr "Смяна на обтягаща ролка"
+
+#: .\blog\templates\blog\base_site.html:486
+msgid "Termostat replacement"
+msgstr "Смяна на термостат"
+
+#: .\blog\templates\blog\base_site.html:487
+msgid "Tie rod end replacement"
+msgstr "Смяна на кормилен накрайник"
+
+#: .\blog\templates\blog\base_site.html:488
+msgid "Tie rod replacement"
+msgstr "Смяна на кормилна щанга"
+
+#: .\blog\templates\blog\base_site.html:489
+msgid "Timing belt replacement"
+msgstr "Смяна на ангренажен ремък"
+
+#: .\blog\templates\blog\base_site.html:490
+msgid "Timing chain replacement"
+msgstr "Смяна на ангранажна верига"
+
+#: .\blog\templates\blog\base_site.html:491
+msgid "Timing change"
+msgstr "Смяна на ангренажното задвижване"
+
+#: .\blog\templates\blog\base_site.html:492
+msgid "Towing tongue fitting"
+msgstr "Монтаж на теглич"
+
+#: .\blog\templates\blog\base_site.html:493
+msgid "Transission fluid and filter replacement in automatic transmission"
+msgstr "Смяна на масло и филтър за автоматична скоростна кутия"
+
+#: .\blog\templates\blog\base_site.html:494
+msgid "Transission fluid and filter replacement in manual transmission"
+msgstr "Смяна на масло и филтър за ръчна скоростна кутия"
+
+#: .\blog\templates\blog\base_site.html:495
+msgid "Turbocharger replacement"
+msgstr "Смяна на търбокомпресор"
+
+#: .\blog\templates\blog\base_site.html:496
+msgid "V-belt replacement"
+msgstr "Смяна на аксесоарен ремък"
+
+#: .\blog\templates\blog\base_site.html:497
+msgid "V-belt tensioner replacement"
+msgstr "Смяна на обтегача на аксесоарен ремък"
+
+#: .\blog\templates\blog\base_site.html:498
+msgid "Valve seals replacement"
+msgstr "Смяна на гумички на клапаните"
+
+#: .\blog\templates\blog\base_site.html:499
+msgid "Vibration damper replacement"
+msgstr "Смяна на мека връзка"
+
+#: .\blog\templates\blog\base_site.html:500
+msgid "Water pump replacement"
+msgstr "Смяна на водна помпа"
+
+#: .\blog\templates\blog\base_site.html:501
+msgid "Wheel bearing replacement"
+msgstr "Смяна на лагер на главина"
+
+#: .\blog\templates\blog\base_site.html:502
+msgid "Wheel hub replacement"
+msgstr "Смяна на главина"
+
+#: .\blog\templates\blog\base_site.html:503
+msgid "Wheel steering knuckle replacement"
+msgstr "Смяна на шенкел"
+
+#: .\blog\templates\blog\base_site.html:504
+msgid "Wiper blade replacement"
+msgstr "Смяна на чистачка"
+
+#: .\blog\templates\blog\base_site.html:505
+msgid "Wishbone silent block replacement"
+msgstr "Смяна на втулки на носача"
+
+#: .\blog\templates\blog\base_site.html:510
+msgid "View Site"
+msgstr "Към сайта"
+
+#: .\blog\templates\blog\base_site.html:531
+#: .\blog\templates\blog\opening_hours.html:10
+#: .\blog\templates\site\opening_hours.html:8
+msgid "Opening Hours"
+msgstr "Работно време"
+
+#: .\blog\templates\blog\base_site.html:534
+#: .\blog\templates\site\opening_hours.html:12
+msgid "Monday"
+msgstr "Понеделник"
+
+#: .\blog\templates\blog\base_site.html:538
+#: .\blog\templates\site\opening_hours.html:16
+msgid "Tuesday"
+msgstr "Вторник"
+
+#: .\blog\templates\blog\base_site.html:542
+#: .\blog\templates\site\opening_hours.html:20
+msgid "Wednesday"
+msgstr "Сряда"
+
+#: .\blog\templates\blog\base_site.html:546
+#: .\blog\templates\site\opening_hours.html:24
+msgid "Thursday"
+msgstr "Четвъртък"
+
+#: .\blog\templates\blog\base_site.html:550
+#: .\blog\templates\site\opening_hours.html:28
+msgid "Friday"
+msgstr "Петък"
+
+#: .\blog\templates\blog\base_site.html:554
+#: .\blog\templates\site\opening_hours.html:32
+msgid "Saturday"
+msgstr "Събота"
+
+#: .\blog\templates\blog\base_site.html:558
+#: .\blog\templates\site\opening_hours.html:36
+msgid "Sunday"
+msgstr "Неделя"
+
+#: .\blog\templates\blog\base_site.html:559
+#: .\blog\templates\site\opening_hours.html:37
+msgid "Closed"
+msgstr "Затворено"
+
+#: .\blog\templates\blog\contact_usg.html:10
 #: .\blog\templates\blog\contact_usv.html:9
-#: .\blog\templates\blog\contact_usv.html:17
 msgid "Contact us:"
 msgstr "За връзка с нас:"
 
-#: .\blog\templates\blog\contact_usg.html:20
-#: .\blog\templates\blog\contact_usv.html:21
+#: .\blog\templates\blog\contact_usg.html:18
+#: .\blog\templates\blog\contact_usv.html:18
 msgid "Bulgaria, Rousse"
 msgstr "България, гр. Русе"
 
-#: .\blog\templates\blog\contact_usg.html:21
+#: .\blog\templates\blog\contact_usg.html:19
 msgid "Gotse Delchev Blvd 68"
 msgstr "бул. Гоце Делчев №68"
 
-#: .\blog\templates\blog\contact_usv.html:22
+#: .\blog\templates\blog\contact_usg.html:43
+#: .\blog\templates\blog\contact_usv.html:42
+#: .\blog\templates\site\cctv_page.html:113
+#: .\blog\templates\site\gps_page.html:135
+#: .\blog\templates\site\home_page.html:65
+#: .\blog\templates\site\security_page.html:86
+msgid "Share"
+msgstr ""
+
+#: .\blog\templates\blog\contact_usv.html:19
 msgid "Vidin Street 17"
 msgstr "ул. Видин №17"
 
-#: .\blog\templates\blog\feedback.html:8
-#, python-format
-msgid ""
-"\n"
-"\t\tFeedback - %(block.super)s\n"
-"\t"
-msgstr ""
-"\n"
-"\t\tОбратна връзка - %(block.super)s\n"
-"\t"
+#: .\blog\templates\blog\feedback.html:10
+msgid "Submit Your Feedback"
+msgstr "Изпратете вашето мнение"
 
-#: .\blog\templates\blog\feedback.html:17
-msgid "Submit Your feedback"
-msgstr "Изпратете вашите отзиви"
-
-#: .\blog\templates\blog\feedback.html:41
+#: .\blog\templates\blog\feedback.html:38
 msgid "Submit"
 msgstr "Изпращане"
 
@@ -219,6 +1260,10 @@ msgstr "Моля, коригирайте грешката по-долу."
 #: .\blog\templates\blog\login.html:29
 msgid "Please correct the errors below."
 msgstr "Моля, коригирайте грешката по-долу."
+
+#: .\blog\templates\blog\login.html:41
+msgid "Registration"
+msgstr "Регистрация"
 
 #: .\blog\templates\blog\login.html:56
 msgid "Username:"
@@ -248,21 +1293,21 @@ msgstr "Създайте профил:"
 msgid "Register"
 msgstr "Регистрай ме"
 
-#: .\blog\templates\blog\logout.html:17
+#: .\blog\templates\blog\logout.html:15
 msgid "You are logged out. "
 msgstr "Вие сте извън системата. "
 
-#: .\blog\templates\blog\logout.html:17
+#: .\blog\templates\blog\logout.html:15
 msgid "Click here"
 msgstr "Кликнете тук"
 
-#: .\blog\templates\blog\logout.html:17
+#: .\blog\templates\blog\logout.html:15
 msgid " to login again."
 msgstr " за да влезете отново."
 
-#: .\blog\templates\blog\nav.html:7
-msgid "Home"
-msgstr "Начало"
+#: .\blog\templates\blog\nav.html:8
+msgid "Blog"
+msgstr "Блог"
 
 #: .\blog\templates\blog\nav.html:9
 msgid "Contact"
@@ -282,25 +1327,25 @@ msgstr "Няма публикации в категория"
 
 #: .\blog\templates\blog\post_by_category.html:37
 #: .\blog\templates\blog\post_by_tag.html:37
-#: .\blog\templates\blog\post_list.html:35
+#: .\blog\templates\blog\post_list.html:29
 msgid "Prev"
 msgstr "Предишна"
 
 #: .\blog\templates\blog\post_by_category.html:40
 #: .\blog\templates\blog\post_by_tag.html:40
-#: .\blog\templates\blog\post_list.html:38
+#: .\blog\templates\blog\post_list.html:32
 msgid "Page"
 msgstr "Страница"
 
 #: .\blog\templates\blog\post_by_category.html:40
 #: .\blog\templates\blog\post_by_tag.html:40
-#: .\blog\templates\blog\post_list.html:38
+#: .\blog\templates\blog\post_list.html:32
 msgid "of"
 msgstr "от"
 
 #: .\blog\templates\blog\post_by_category.html:43
 #: .\blog\templates\blog\post_by_tag.html:43
-#: .\blog\templates\blog\post_list.html:41
+#: .\blog\templates\blog\post_list.html:35
 msgid "Next"
 msgstr "Следваща"
 
@@ -324,7 +1369,7 @@ msgstr "Дата:"
 msgid "Category:"
 msgstr "Категория"
 
-#: .\blog\templates\blog\post_list.html:26
+#: .\blog\templates\blog\post_list.html:20
 msgid "There are no posts"
 msgstr "Няма публикации"
 
@@ -345,8 +1390,968 @@ msgstr "Това е вашето %(visit)s посещение"
 msgid "Enough! Stop Tracking Me"
 msgstr "Достатъчно! Спрете да ме проследявате!"
 
-#~ msgid "Login Form"
-#~ msgstr "Форма за вxoд"
+#: .\blog\templates\site\cctv_page.html:9 .\blog\templates\site\gps_page.html:9
+msgid "Interesting Facts"
+msgstr "Интересни факти"
 
-#~ msgid "Rousse"
-#~ msgstr "Русе"
+#: .\blog\templates\site\cctv_page.html:11
+msgid ""
+"\n"
+"\t<p>\n"
+"\tThe first CCTV system was installed by Siemens AG at Test Stand VII in "
+"Peenemünde,\n"
+"\tNazi Germany in 1942, for observing the launch of V-2 rockets. The noted "
+"German engineer\n"
+"\tWalter Bruch was responsible for the technological design and installation "
+"of the system.</p>\n"
+"\n"
+"    <p>In the U.S. the first commercial closed-circuit television system "
+"became available\n"
+"\tin 1949, called Vericon.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t<p>\n"
+"\tПървата система за видеонаблюдение е инсталирана от Siemens AG на "
+"изпитателен щанд VII в Пенемюнде,\n"
+"\tНази Германия през 1942 г. Използва се за наблюдение на пускането на "
+"ракети V-2. Бележитият немски инженер \n"
+"\tУолтър Бръч отговаря за технологичния проект и инсталация на системата.</"
+"p>\n"
+"\n"
+"    <p>В САЩ първата търговска система за видеонаблюдение, става достъпна\n"
+"през 1949, нарича се Верикон. </p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\cctv_page.html:23
+msgid ""
+"\n"
+"\t\n"
+"\t<h3>Technology</h3>\n"
+"\t<p>The earliest video surveillance systems involved constant monitoring "
+"because there was no \n"
+"\tway to record and store information. The development of reel-to-reel media "
+"enabled the \n"
+"\trecording of surveillance footage. These systems required magnetic tapes "
+"to be changed \n"
+"\tmanually, which was a time consuming, expensive and unreliable process, "
+"with the operator\n"
+"\thaving to manually thread the tape from the tape reel through the recorder "
+"onto an empty \n"
+"\ttake-up reel. Due to these shortcomings, video surveillance was not "
+"widespread. VCR \n"
+"\ttechnology became available in the 1970s, making it easier to record and "
+"erase information, \n"
+"\tand use of video surveillance became more common.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<h3>Технология</h3>\n"
+"\t<p>Най-ранните системи за видеонаблюдение включват постоянен мониторинг, "
+"тъй като не е имало \n"
+"\tначин за записване и съхраняване на информация. Разработването на записи "
+"от ролка до ролка позволява \n"
+"\tзаписването на кадри за наблюдение. Тези системи изискват магнитните ленти "
+"да се сменят \n"
+"\tръчно, което отнема време и е скъп и ненадежден процес, като операторът \n"
+"\tтрябва да навива ръчно лентата от ролката през рекордера върху празна \n"
+"\tролка за зареждане. Поради тези недостатъци видео наблюдението не е широко "
+"разпространено. VCR \n"
+"\tтехнологията става достъпна през 70-те години на миналия век, което "
+"улеснява записването и изтриването на информация, \n"
+"\tа използването на видео наблюдение става все по-често срещано.</p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\cctv_page.html:38
+msgid ""
+"\n"
+"\t\n"
+"\t<p>During the 1990s, digital multiplexing was developed, allowing several "
+"cameras to record\n"
+"\tat once, as well as time lapse and motion-only recording. This increased "
+"savings of time\n"
+"\tand money which then led to an increase in the use of CCTV.</p>\n"
+"\n"
+"\t<p>Recently CCTV technology has been enhanced with a shift toward Internet-"
+"based products \n"
+"\tand systems, and other technological developments.</p>\n"
+"\t\n"
+"\t<p>In September 1968, Olean, New York was the first city in the United "
+"States to install\n"
+"\tvideo cameras along its main business street in an effort to fight crime. "
+"Another early \n"
+"\tappearance was in 1973 in Times Square in New York City.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>През 90-те години на миналия век е разработена цифрова мултиплексия, "
+"позволяваща няколко камери да записват \n"
+"\tедновременно, както и времеви записвания и запис само за движение. Това "
+"увеличи спестяванията на време \n"
+"\tи пари, което доведе до увеличаване на използването на видеонаблюдение.</"
+"p>\n"
+"\n"
+"\t<p>Наскоро технологиите за видеонаблюдение се подобриха с преминаване към "
+"продукти и системи, основани на интернет, \n"
+"\tи други технологични разработки.</p>\n"
+"\t\n"
+"\t<p>През септември 1968 г. Олеан, Ню Йорк, е първият град в Съединените "
+"щати, който инсталира \n"
+"\tвидеокамери по главната търговска улица в опит да се бори с престъпността. "
+"Друга ранна \n"
+"\tпоява е през 1973 г. на Таймс Скуеър в Ню Йорк.</p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\cctv_page.html:55
+msgid ""
+"\n"
+"\t<p>During the 1980s video surveillance began to spread across the country "
+"specifically \n"
+"\ttargeting public areas. This proves to be a cheaper way to deter crime "
+"compared to \n"
+"\tincreasing the size of the police departments. Some businesses begin to "
+"use video\n"
+"\tsurveillance. From the mid-1990s on, police departments across the United "
+"States install\n"
+"\tan increasing number of cameras in various public spaces including housing "
+"projects, \n"
+"\tschools, and public parks departments. \n"
+"\t"
+msgstr ""
+"\n"
+"\t<p>През 80-те години видеонаблюдението в Съединените щати  започва да се "
+"разпространява в цялата страна, насочено \n"
+"\tспециално към обществени места.  Това се оказва по-евтин начин за "
+"възпиране на престъпността в сравнение \n"
+"\tс увеличаването на размера на полицейските служби. Някои фирми започват да "
+"използват \n"
+"\tвидеонаблюдение. От средата на 90-те години на миналия век, полицейските "
+"служби в Съединените щати инсталират \n"
+"\tвсе по-голям брой камери в различни обществени пространства, включително "
+"жилищни проекти, \n"
+"\tучилища и публични паркове. \n"
+"\t"
+
+#: .\blog\templates\site\cctv_page.html:63
+msgid ""
+"\n"
+"\tCCTV later become common in banks and stores to discourage theft, by "
+"recording evidence of \n"
+"\tcriminal activity. In 1998, 3,000 CCTV systems were in use in New York "
+"City. A study by \n"
+"\tNieto in 2008 found many businesses in the United States had invested "
+"heavily in video \n"
+"\tsurveillance technology to protect products and promote safe workplace and "
+"consumer environments.\n"
+"\t"
+msgstr ""
+"\n"
+"\tВидеокамерите  по-късно стават често срещани в банките и магазините, за да "
+"предотвратяват кражби, като и регистрират доказателства за \n"
+"\tпрестъпна дейност.  През 1998 г. в Ню Йорк се използват 3000 системи за "
+"видеонаблюдение. Изследване на \n"
+"\tNieto през 2008 г. установява, че много фирми в САЩ са инвестирали "
+"сериозно в \n"
+"\tтехнологиите за видеонаблюдение, за да защитят продуктите и да насърчат "
+"безопасното работно място и потребителските среди. \n"
+"\t"
+
+#: .\blog\templates\site\cctv_page.html:69
+msgid ""
+"\n"
+"\tA nationwide survey of a wide verify of companies found that 75 percent "
+"utilize CCTV surveillance. \n"
+"\tIn private sector CCTV surveillance technology is operated in a wide "
+"variety of establishments such as in \n"
+"\tindustry, manufacturing, retailing, financial, insurance, banking, "
+"transportation and\n"
+"\tdistribution, utilities, communications, health care, and hotels, motels.</"
+"p>\n"
+"\t"
+msgstr ""
+"\n"
+"\tНационално проучване на компаниите установява,  че 75&#8274; използват "
+"видеонаблюдение. \n"
+"\tВ частния сектор технологиите за видеонаблюдение се експлоатират в голямо "
+"разнообразие от предприятия в сферата на \n"
+"\tпромишлеността, производството, търговията на дребно, финансовите, "
+"застрахователните, банковите, транспортните, \n"
+"\tразпределителните и комуналните услуги, здравеопазването,  хотели, мотели "
+"и др.</p>\n"
+"\t"
+
+#: .\blog\templates\site\cctv_page.html:78
+msgid ""
+"\n"
+"\t\n"
+"\t<h3>Uses</h3>\n"
+"\t<ul>\n"
+"\t<li>Crime prevention</li>\n"
+"\t<li>Body worn</li>\n"
+"\t<li>Industrial processes</li>\n"
+"\t<li>Traffic monitoring</li>\n"
+"\t<li>Transport safety</li>\n"
+"\t<li>Sporting events</li>\n"
+"\t<li>Monitor employees</li>\n"
+"\t<li>Use in schools</li>\n"
+"\t<li>Criminal use</li>\n"
+"\t<li>Home security</li>\n"
+"\t</ul>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<h3>Приложение на видеонаблюдението</h3>\n"
+"\t<ul>\n"
+"\t<li>Предотвратяване на престъпления</li>\n"
+"\t<li>Лична защита</li>\n"
+"\t<li>Промишлени процеси</li>\n"
+"\t<li>Мониторинг на трафика</li>\n"
+"\t<li>Безопасност на транспорта</li>\n"
+"\t<li>Спортни събития</li>\n"
+"\t<li>Мониторинг на служителите</li>\n"
+"\t<li>Употреба в училищата</li>\n"
+"\t<li>Наказателните институции</li>\n"
+"\t<li>Домашна сигурност</li>\n"
+"\t</ul>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\cctv_page.html:97
+msgid ""
+"\n"
+"\t\n"
+"\t<h3>Worldwide</h3>\n"
+"\n"
+"\t<p>There are an estimated 350 million surveillance cameras worldwide as of "
+"2016 compared\n"
+"\twith about 160 million in 2012.</p> \n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<h3>В световен мащаб</h3>\n"
+"\n"
+"\t<p>В света има около 350 милиона камери за наблюдение от 2016 г. в "
+"сравнение с \n"
+"\tоколо 160 милиона през 2012 г.</p> \n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\gps_page.html:11
+msgid ""
+"\n"
+"\t\n"
+"\t<p>The GPS project was launched by the U.S. Department of Defense in 1973 "
+"for use by \n"
+"\tthe United States military and became fully operational in 1995. It was "
+"allowed \n"
+"\tfor civilian use in the 1980s.</p> \n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>Проектът за GPS е стартиран от Министерството на отбраната на САЩ през "
+"1973 г. за използване от \n"
+"\tармията на Съединените щати и е напълно оперативен от 1995 г. Той е "
+"разрешен \n"
+"\tза гражданска употреба през 80-те години.</p> \n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\gps_page.html:18
+msgid ""
+"\n"
+"\t\n"
+"\t<p>The GPS does not require the user to transmit any data, and it operates "
+"independently \n"
+"\tof any telephonic or internet reception, though these technologies can "
+"enhance the \n"
+"\tusefulness of the GPS positioning information. The GPS provides critical "
+"positioning \n"
+"\tcapabilities to military, civil, and commercial users around the world. "
+"The United \n"
+"\tStates government created the system, maintains it, and makes it freely "
+"accessible \n"
+"\tto anyone with a GPS receiver.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>GPS не изисква от потребителя да предава никакви данни, независимо \n"
+"\tот всяко телефонно или интернет приемане, въпреки че тези технологии могат "
+"да подобрят \n"
+"\tполезността на GPS позициониращата информация. GPS предоставя критични "
+"възможности \n"
+"\tза позициониране на военни, граждански и търговски потребители по целия "
+"свят. Правителството \n"
+"\tПравителството на Съединените щати създава системата, поддържа и я прави "
+"свободно достъпна \n"
+"\tза всеки, който има GPS приемник.</p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\gps_page.html:28
+msgid ""
+"\n"
+"\t\n"
+"\t<p>It is a global navigation satellite system that provides geolocation "
+"and time \n"
+"\tinformation to a GPS receiver anywhere on or near the Earth where there is "
+"an \n"
+"\tunobstructed line of sight to four or more GPS satellites ( to obtain an "
+"accurate \n"
+"\tresult for the position of the receiver ).</p> \n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>Това е глобална навигационна спътникова система, която предоставя "
+"геолокация и информация \n"
+"\tза времето на GPS приемник навсякъде в Земята или близо до нея, където има "
+"безпрепятствена \n"
+"\tвидимост към четири или повече спътника ( за да се получи точен \n"
+"\tрезултат за позицията на приемника ).</p> \n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\gps_page.html:36
+msgid ""
+"\n"
+"\t\n"
+"\t<p>Although four satellites are required for normal operation, fewer apply "
+"in special \n"
+"\tcases. If one variable is already known, a receiver can determine its "
+"position \n"
+"\tusing only three satellites. For example, a ship or aircraft may have "
+"known elevation. \n"
+"\tSome GPS receivers may use additional clues or assumptions such as reusing "
+"the last \n"
+"\tknown altitude, dead reckoning, inertial navigation, or including "
+"information from \n"
+"\tthe vehicle computer, to give a (possibly degraded) position when fewer "
+"than four \n"
+"\tsatellites are visible.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>Въпреки че са необходими четири сателита за нормална работа, по-малко "
+"се прилагат в специални \n"
+"\tслучаи. Ако една променлива вече е известна, приемникът може да определи "
+"позицията \n"
+"\tси само с три сателита. Например, кораб или самолет може да се открият по "
+"тяхната надморска височина. \n"
+"\tНякои GPS приемници могат да използват допълнителни предположения като "
+"повторно tизползване \n"
+"\tна последната известна надморска височина, мъртъв разчет, инерционна "
+"навигация или включване на информация от \n"
+"\tкомпютъра на превозното средство, за да се даде евентуална позиция, когато "
+"са \n"
+"\tвидими по-малко от четири сателита.</p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\gps_page.html:47
+msgid ""
+"\n"
+"\t\n"
+"\t<p>The current GPS consists of three major segments. These are the space "
+"segment, a \n"
+"\tcontrol segment, and a user segment. The U.S. Air Force develops, "
+"maintains, and \n"
+"\toperates the space and control segments. GPS satellites broadcast signals "
+"from space, \n"
+"\tand each GPS receiver uses these signals to calculate its three-"
+"dimensional location \n"
+"\t(latitude, longitude, and altitude) and the current time.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>Сегашният GPS се състои от три основни сегмента. Това са космическият "
+"сегмент, \n"
+"\tконтролния сегмент и потребителският сегмент. Военновъздушните сили на САЩ "
+"разработват, поддържат и \n"
+"\tуправляват пространството и контролните сегменти. GPS сателитите излъчват "
+"сигнали от космоса \n"
+"\tи всеки GPS приемник използва тези сигнали, за да изчисли триизмерното си "
+"местоположение \n"
+"\t(географска ширина, дължина и надморска височина) и текущото време.</p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\gps_page.html:56
+msgid ""
+"\n"
+"\t\n"
+"\t<h3>Many civilian applications use one or more of GPS's three basic "
+"components: absolute \n"
+"\tlocation, relative movement, and time transfer:</h3>\n"
+"\t\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<h3>Много граждански приложения използват един или повече от основните три "
+"компонента на GPS: абсолютно \n"
+"\tместоположение, относително движение и пренос на време:</h3>\n"
+"\t\t\n"
+"\t"
+
+#: .\blog\templates\site\gps_page.html:63
+msgid ""
+"\n"
+"\t\n"
+"\t\t<li>Agriculture:  Today, a growing number of crop producers are using "
+"GPS and other modern \n"
+"\t\telectronic and computer equipment to practice Site-Specific Management "
+"(SSM) and \n"
+"\t\tprecision agriculture. This technology has the potential in agricultural "
+"mechanization \n"
+"\t\t(farm and machinery management) by providing farmers with a "
+"sophisticated tool to \n"
+"\t\tmeasure yield on much smaller scales as well as precise determination "
+"and automatic \n"
+"\t\tstoring of variables such as field time, working area, machine travel "
+"distance and \n"
+"\t\tspeed, fuel consumption and yield information.</li></br>\n"
+"\t\t\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t\t<li>Селско стопанство: Днес все по-голям брой производители на "
+"селскостопански култури използват GPS и друго съвременно \n"
+"\t\tелектронно и компютърно оборудване за практикуване на специфично "
+"управление на място (SSM) и \n"
+"\t\tпрецизно земеделие. Тази технология има потенциала в селскостопанската "
+"механизация \n"
+"\t\t(управление на земеделските стопанства и машините), като предоставя на "
+"земеделските производители сложен инструмент за \n"
+"\t\tизмерване на добива при много по-малки мащаби, както и точно определяне "
+"и автоматично \n"
+"\t\tсъхранение на променливи като полево време, работна площ, скорост, "
+"разход \n"
+"\t\tна гориво и информация за добива.</li></br>\n"
+"\t\t\n"
+"\t\t"
+
+#: .\blog\templates\site\gps_page.html:74
+msgid ""
+"\n"
+"\t\n"
+"\t\t<li>Vehicles: location and routes for cars and trucks.</li></br>\n"
+"\t\t\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t\t<li>Превозни средства: местоположение и маршрути за автомобили и камиони."
+"</li></br>\n"
+"\t\t\n"
+"\t\t"
+
+#: .\blog\templates\site\gps_page.html:79
+msgid ""
+"\n"
+"\n"
+"\t\t<li>Cartography: both civilian and military cartographers use GPS "
+"extensively.</li></br>\n"
+"\t\t\n"
+"\t\t"
+msgstr ""
+"\n"
+"\n"
+"\t\t<li>Картографиране: както граждански, така и военни картографи използват "
+"широко GPS.</li></br>\n"
+"\t\t\n"
+"\t\t"
+
+#: .\blog\templates\site\gps_page.html:84
+msgid ""
+"\n"
+"\n"
+"\t\t<li>Cellular Telephony: Mobile telephony is the provision of telephone "
+"services to phones \n"
+"\t\twhich may move around freely rather than stay fixed in one location. "
+"Mobile phones \n"
+"\t\tconnect to a terrestrial cellular network of base stations (cell sites), "
+"whereas \n"
+"\t\tsatellite phones connect to orbiting satellites. Both networks are "
+"interconnected \n"
+"\t\tto the public switched telephone network (PSTN) to allow any phone in "
+"the world to \n"
+"\t\tbe dialed.</li></br>\n"
+"\t\n"
+"\t\t"
+msgstr ""
+"\n"
+"\n"
+"\t\t<li>Клетъчна телефония: Мобилната телефония е предоставяне на телефонни "
+"услуги на телефони, \n"
+"\t\tкоито могат да се движат свободно, а не да останат фиксирани на едно "
+"място. Мобилните телефони \n"
+"\t\tсе свързват към наземна клетъчна мрежа от базови станции (клетъчни "
+"сайтове), докато \n"
+"\t\tсателитните телефони се свързват към орбитални сателити. И двете мрежи "
+"са взаимосвързани \n"
+"\t\tс обществената комутируема телефонна мрежа (PSTN), за да позволят на "
+"всеки телефон в света да \n"
+"\t\tбъде набиран.</li></br>\n"
+"\t\n"
+"\t\t"
+
+#: .\blog\templates\site\gps_page.html:94
+msgid ""
+"\n"
+"\t\t\n"
+"\t\t<li>Clock synchronization: the accuracy of GPS time signals (±10 ns)[88] "
+"is second only \n"
+"\t\tto the atomic clocks they are based on, and is used in applications such "
+"as GPS \n"
+"\t\tdisciplined oscillators.</li></br>\n"
+"\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\t\n"
+"\t\t<li>Синхронизация на часовника: Точността на GPS сигнала (± 10 ns) е "
+"второстепенна само \n"
+"\t\tспрямо атомните часовници, на които се основават и се използва в "
+"приложения като GPS \n"
+"\t\tдисциплинирани осцилатори.</li></br>\n"
+"\n"
+"\t\t"
+
+#: .\blog\templates\site\gps_page.html:101
+msgid ""
+"\n"
+"\t\n"
+"\t\t<li>Fleet tracking: used to identify, locate and maintain contact "
+"reports with one or more \n"
+"\t\tfleet vehicles in real-time.</li></br>\n"
+"\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t\t<li>Проследяване на автопаркове: използва се за идентифициране, "
+"локализиране и поддържане на доклади за контакт с едно или повече \n"
+"\t\tавтомобили на автопарк в реално време.</li></br>\n"
+"\n"
+"\t\t"
+
+#: .\blog\templates\site\gps_page.html:107
+msgid ""
+"\n"
+"\t\n"
+"\t\t<li>Vehicle tracking systems, person tracking systems, and pet tracking "
+"systems use GPS to \n"
+"\t\tlocate devices that are attached to or carried by a person, vehicle, or "
+"pet. This can \n"
+"\t\tprovide continuous tracking and send notifications.</li></br>\n"
+"\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t\t<li>Системите за проследяване на превозни средства, системите за "
+"проследяване на хора и системите за проследяване на домашни любимци "
+"използват GPS, за да \n"
+"\t\tнамират устройства, които са прикрепени към или пренасяни от човек, "
+"превозно средство или домашен любимец. Може \n"
+"\t\tда се осигури непрекъснато проследяване и изпращане на известия.</li></"
+"br>\n"
+"\n"
+"\t\t"
+
+#: .\blog\templates\site\gps_page.html:114
+msgid ""
+"\n"
+"\t\n"
+"\t\t<li>Navigation: navigators value digitally precise velocity and "
+"orientation measurements.</li></br>\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t\t<li>Навигация: навигаторите оценяват цифрово прецизни измервания на "
+"скоростта и ориентацията.</li></br>\n"
+"\t\t"
+
+#: .\blog\templates\site\gps_page.html:119
+msgid ""
+"\n"
+"\t\t<li>Telematics: GPS technology integrated with computers and mobile "
+"communications \n"
+"\t\ttechnology in automotive navigation systems.</li></br>\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\t<li>Телематика: GPS технология, интегрирана с компютри и мобилни "
+"комуникационни \n"
+"\t\tтехнологии в автомобилните навигационни системи.</li></br>\n"
+"\t\t"
+
+#: .\blog\templates\site\home_page.html:11
+msgid "About us"
+msgstr "За нас"
+
+#: .\blog\templates\site\home_page.html:14
+msgid ""
+"\n"
+"<p>\"Elektra - Dimitar Dimitrov\" company started its activity in 1990.\n"
+"He works in the field of electronics - autoelectronics and all types of GPS "
+"systems, \n"
+"video surveillance and security systems.</p>\n"
+"\n"
+"<p>The company offers its customers fast and quality service based on years "
+"of \n"
+"experience, selected staff of qualified specialists, modern equipment for "
+"high-tech\n"
+" services and innovative diagnostic equipment.</p>\n"
+"\n"
+"<p>Autoelectronics \"Elektra\" is a service-trade complex with about 1200 sq."
+"m of \n"
+"working space in Bulgaria, the city of Rousse, 68, Gotse Delchev Blvd.</p>\n"
+"\n"
+"<p>For customer convenience, the company also has an autoelectronics service "
+"in \n"
+"Bulgaria, the city of Rousse, on 17, Vidin Street.</p>\n"
+"\n"
+"<p>At the same address, the store offers a wide range of xenon lights and "
+"elements \n"
+"for their installation, imported by \"PSP Computers\" Ltd - the official "
+"importer of \n"
+"LUXIMA products in Bulgaria. “Electra - Dimitar Dimitrov” is an authorized "
+"workshop \n"
+"for their installation.</p>\n"
+"\n"
+"<h2>Autoelectronics Electra offers the following services for vehicles:</"
+"h2>\n"
+"<ul>\n"
+"\t<li>Computer diagnostics of electrical control blocks (clearing of "
+"accumulated errors)</li>\n"
+"\t<li>KTC Diagnostic and Repair of Gasoline and Diesel Engines</li>\n"
+"\t<li>Repair of starters, alternators and electrical equipment</li>\n"
+"\t<li>Computer Diagnostics and Repair of Petrol and Diesel Injection Systems "
+"ABS, SRS, etc.</li>\n"
+"\t<li>Periodic reviews</li>\n"
+"\t<li>Repair electronics of the vehicle</li>\n"
+"\t<li>Repairs to the car's electrical system</li>\n"
+"\t<li>Maintenance and repair of the air conditioning system</li>\n"
+"\t<li>Sale and installation of Car audio systems, CD, DVD, TV, Multimedia</"
+"li>\n"
+"\t<li>Installation of Professional Audio Systems in vehicles</li>\n"
+"\t<li>Sale, installation, and updating of the vehicle's navigation system</"
+"li>\n"
+"\t<li>Installation of GPS tracking systems</li>\n"
+"\t<li>Installation of alarm systems</li>\n"
+"\t<li>Installation and repair of all types of immobilizers, Bluetooth, APS "
+"car systems</li>\n"
+"\t<li>Repair of computers, modules and electrical circuit boards of "
+"vehicles</li>\n"
+"\t<li>Repair and installation of central locking of vehicles</li>\n"
+"\t<li>Repair of electric stoves on vans, trucks, and buses</li>\n"
+"\t<li>Installation of Xenon systems</li>\n"
+"\t<li>Repair of electric vehicles</li>\n"
+"\t<li>Mechanical repairs</li>\n"
+"\t<li>Changing oils, filters, etc.</li>\n"
+"</ul>\n"
+msgstr ""
+"\n"
+"<p>Фирма \"Електра - Димитър Димитров\" ЕТ стартира дейността си през "
+"1990г.\n"
+"Работи в сферата на електрониката - автоелектроника и всички видове GPS "
+"системи, \n"
+"видеонаблюдение и охранителни системи.</p>\n"
+"\n"
+"<p>Фирмата предлага на клиентите си бързо и качествено обслужване, основано "
+"на \n"
+"дългогодишен опит, подбран персонал от квалифицирани специалисти, модерно "
+"оборудване за \n"
+"високотехнологични услуги и иновативна диагностична апаратура.</p>\n"
+"\n"
+"<p>Автосервиз \"Автоелектроника Електра\" е сервизно-търговски комплекс  с "
+"около 1200 кв.м \n"
+"работна площ  в гр. Русе, бул. Гоце Делчев № 68.</p>\n"
+"\n"
+"<p>За удобство на клиентите фирмата разполага също и със сервиз на \n"
+"ул. Видин №17.</p>\n"
+"\n"
+"<p>На същия адрес фирменият магазин предлага богата гама ксенонови светлини "
+"и елементи \n"
+"за техния монтаж, внасяни от  \"Пи Ес Пи Компютри\" ООД - официален вносител "
+"на \n"
+"продукти LUXIMA за България. \"Електра - Димитър Димитров\" ЕТ е оторизиран "
+"сервиз \n"
+"за техния монтаж.</p>\n"
+"\n"
+"<h2>Автоелектроника Електра Сервизът предлага следните  услуги за "
+"лекотоварни и товарни автомобили:</h2>\n"
+"<ul>\n"
+"\t<li>Компютърна диагностика на ел. управляващи блокове (изчистване на "
+"натрупани грешки)</li>\n"
+"\t<li>КТС диагностока и ремонт на бензинови и дизелови двигатели</li>\n"
+"\t<li>Ремонт на стартери, алтернатори и ел. оборудване </li>\n"
+"\t<li>Компютърна диагностика и ремонт на бензинови и дизелови инжекционни "
+"системи ABS, SRS и др.</li>\n"
+"\t<li>Периодични прегледи</li>\n"
+"\t<li>Ремонт на електрониката в автомобила</li>\n"
+"\t<li>Ремонти на електрическата система на автомобила</li>\n"
+"\t<li>Поддръжка и ремонт на климатичната система</li>\n"
+"\t<li>Продажба и монтаж на Car audio systems, CD, DVD, TV, Мултимедия</li>\n"
+"\t<li>Професионално озвучаване на автомобили</li>\n"
+"\t<li>Продажба, монтаж и актуализация на  навигационната система на "
+"превозното средство</li>\n"
+"\t<li>Монтаж на GPS системи за проследяване</li>\n"
+"\t<li>Монтаж на алармени системи</li>\n"
+"\t<li>Монтаж и ремонт на всички видове имобилайзери, Bluetooth, парктроници</"
+"li>\n"
+"\t<li>Ремонт на компютри, модули и ел. платки на автомобилите</li>\n"
+"\t<li>Ремонт и монтаж на централно заключване на превозни средства</li>\n"
+"\t<li>Ремонт на ел. печки на бусове, камиони и автобуси</li>\n"
+"\t<li>Монтаж на kсенонови системи</li>\n"
+"\t<li>Ремонт на електрически превозни средства</li>\n"
+"\t<li>Механични ремонти</li>\n"
+"\t<li>Смяна на масла, филтри и др.</li>\n"
+"</ul>\n"
+
+#: .\blog\templates\site\security_page.html:9
+msgid "What Is a Security System and How Does it Work?"
+msgstr "Какво е охранителна система и как работи?"
+
+#: .\blog\templates\site\security_page.html:11
+msgid ""
+"\n"
+"\t\n"
+"\t<p>Home security is both the security hardware in place on a property as "
+"well as personal security practices:</p> \n"
+"\t<p>&#9830; Security hardware includes doors, locks, alarm systems, "
+"lighting, motion detectors, security camera systems, \n"
+"\tetc. that are installed on a property;</p> \n"
+"\t<p>&#9830; Personal security involves practices such as ensuring doors "
+"are \n"
+"\tlocked, alarms activated, windows closed, extra keys not hidden outside, "
+"etc.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>Сигурността на дома е както хардуерът за сигурност, така и персоналните "
+"практики за сигурност: </p> \n"
+"\t<p>&#9830; Хардуер за сигурност включва врати, брави, алармени системи, "
+"осветление, детектори за движение, камери за сигурност и \n"
+"\tт.н., инсталирани на дадена собственост;</p> \n"
+"\t<p>&#9830; Персоналната сигурност включва практики като осигуряване на "
+"заключване на \n"
+"\tвратите, активиране на аларми, затваряне на прозорци, допълнителни "
+"клавиши, които не са скрити и др.</p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\security_page.html:20
+msgid ""
+"\n"
+"\t\n"
+"\t<h2>What is a security system?</h2>\n"
+"\t<p>The most basic definition of any security system is found in its name. "
+"It is literally a means or method by \n"
+"\twhich something is secured through a system of interworking components and "
+"devices.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<h2>Какво представлява охранителната система?</h2>\n"
+"\t<p>Основното определение за всяка охранителна система се намира в нейното "
+"име. Това е буквално средство или метод, чрез \n"
+"\tкойто нещо се осигурява чрез система от взаимодействащи компоненти и "
+"устройства.</p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\security_page.html:27
+msgid ""
+"\n"
+"\t\n"
+"\t<p>In this instance, we're talking about home security systems, which are "
+"networks of integrated electronic devices \n"
+"\tworking together with a central control panel to protect against burglars "
+"and other potential home intruders.</p>\n"
+"\n"
+"\t<h2>A typical home security system includes:</h2>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>В този случай става дума за системи за домашна охрана, които са мрежи "
+"от интегрирани електронни устройства, \n"
+"\tработещи заедно с централен контролен панел, за да се предпазят от крадци "
+"и други потенциални домашни нарушители.</p>\n"
+"\n"
+"\t<h2>Типичната система за домашна сигурност включва:</h2>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\security_page.html:35
+msgid ""
+"\n"
+"\t\n"
+"\t<p>&#9830; A control panel, which is the primary controller of a home's "
+"security system.</p>\n"
+"\t<p>&#9830; Sensors:\n"
+"\t<p>Sensors can detect intruders by a variety of methods, such as "
+"monitoring doors and windows for opening, or by \n"
+"\tmonitoring unoccupied interiors for motions, sound, vibration, or other "
+"disturbances.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>&#9830; Контролен панел, който е основният контролер на системата за "
+"сигурност на дома.</p>\n"
+"\t<p>&#9830; Датчици:\n"
+"\t<p>Датчиците могат да откриват нарушители по различни начини, като "
+"наблюдение на врати и прозорци за отваряне или чрез \n"
+"\tнаблюдение на незаети вътрешни пространства за движения, звук, вибрации "
+"или други смущения.</p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\security_page.html:43
+msgid ""
+"\n"
+"\t\n"
+"\t<p>&#9830; Wired or wireless security cameras.</p>\n"
+"\t\n"
+"\t<p>&#9830; A high-decibel siren or alarm.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>&#9830; Кабелни или безжични камери за сигурност.</p>\n"
+"\t\n"
+"\t<p>&#9830; Сирена с високи децибели или аларма.</p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\security_page.html:50
+msgid ""
+"\n"
+"\t\n"
+"\t<p>A security system is designed to detect intrusion – unauthorized entry "
+"– into a building or other area. \n"
+"\tThe security systems are used in residential, commercial, industrial, and "
+"military properties for protection against \n"
+"\tburglary (theft) or property damage, as well as personal protection "
+"against intruders. Car alarms likewise help protect vehicles and their "
+"contents.</p> \n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>Охранителната система е проектирана да открива проникване - "
+"неоторизирано влизане - в сграда или друга област. \n"
+"\tОхранителните системи се използват в жилищни, търговски, промишлени и "
+"военни обекти за защита от \n"
+"\tкражба с взлом или имуществени щети, както и лична защита срещу "
+"нарушители. Автомобилните аларми също помагат за защита на превозните "
+"средства и тяхното съдържание.</p> \n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\security_page.html:57
+msgid ""
+"\n"
+"\t\n"
+"\t<p>Some alarm systems serve a single purpose of burglary protection; "
+"combination systems provide both fire and \n"
+"\tintrusion protection. Intrusion alarm systems may also be combined with "
+"closed-circuit television surveillance \n"
+"\t(CCTV) systems to automatically record the activities of intruders, and "
+"may interface to access control systems for electrically locked doors.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>Повечето алармени системи обслужват една цел - защита от взлом; "
+"комбинираните системи обаче осигуряват защита от пожар \n"
+"\tи от проникване. Алармените системи могат да бъдат комбинирани и със "
+"системи за \n"
+"\tвидеонаблюдение, за автоматично записване на дейностите на нарушители и "
+"могат да се свързват със системи за контрол на достъпа за електрически "
+"заключени врати.</p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\security_page.html:64
+msgid ""
+"\n"
+"\t\n"
+"\t<p>The primary system consists of one or more intruder detection sensors "
+"and an alarm device that shows the invasion.</p>\n"
+"\t\n"
+"\t<p>To detect unauthorized entry or movement, it is also necessary to "
+"install additional spotlights, cameras and lasers.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>Основно охранителната система се състои от един или повече сензори за "
+"откриване на нарушители и алармено устройство, показващо инвазията.</p>\n"
+"\t\n"
+"\t<p>За откриване на неразрешено влизане или движение е необходимо също да "
+"се инсталират допълнителни прожектори, камери и лазери.</p>\n"
+"\t\n"
+"\t"
+
+#: .\blog\templates\site\security_page.html:71
+msgid ""
+"\n"
+"\t\n"
+"\t<p>&#9830; In addition to the system itself, security alarms are often "
+"combined with a monitoring service. The room management \n"
+"\tunit can send a signal to a personal telephone, certain telephone lines or "
+"the Internet.</p>\n"
+"\t\n"
+"\t"
+msgstr ""
+"\n"
+"\t\n"
+"\t<p>&#9830; В допълнение към самата система, алармите за сигурност често се "
+"комбинират с мониторингова услуга. Устройството за управление на помещения \n"
+"\tможе да изпраща сигнал и до персонален телефон, определени телефонни линии "
+"или интернет.</p>\n"
+"\t\n"
+"\t"
+
+#~ msgid "About us:"
+#~ msgstr "За нас"
+
+#~ msgid "Add Comment"
+#~ msgstr "Добави коментар"

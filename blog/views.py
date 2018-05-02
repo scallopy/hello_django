@@ -205,7 +205,14 @@ def today_is(request):
 def opening_hours(request):
     return render(request, 'site/opening_hours.html')
 
-    
+def gps_page(request):
+    return render(request, 'site/gps_page.html')
+
+def cctv_page(request):
+    return render(request, 'site/cctv_page.html')
+
+def security_page(request):
+    return render(request, 'site/security_page.html')
     
 
 

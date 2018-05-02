@@ -4,16 +4,28 @@
 	
 {% block content %}
 	
-	<div class="main">	
+	<div class="main" style="overflow-y:none;">	
 		<h3>{% trans "Opening Hours"%}:</h3>
 			
 			<table>
 				<tr>
-					<td>{% trans "Now is"%}</td>
-					<td></td>
+					<td>{% trans "Monday"%}</td>
+					<td>09:00-18:30</td>
 				</tr>
 				<tr>
-					<td>{% trans "Monday-Fryday"%}</td>
+					<td>{% trans "Tuesday"%}</td>
+					<td>09:00-18:30</td>
+				</tr>
+				<tr>
+					<td>{% trans "Wednesday"%}</td>
+					<td>09:00-18:30</td>
+				</tr>
+				<tr>
+					<td>{% trans "Thursday"%}</td>
+					<td>09:00-18:30</td>
+				</tr>
+				<tr>
+					<td>{% trans "Friday"%}</td>
 					<td>09:00-18:30</td>
 				</tr>
 				<tr>
@@ -25,6 +37,31 @@
 					<td>{% trans "Closed"%}</td>
 				</tr>
 			</table>
+			<script>
+
+				var d = new Date();
+				var n = d.getDay();
+				var now = d.getHours() + "." + d.getMinutes();
+				var weekdays = [
+					["Monday", 8.30, 12.00, 15.30,19.00],
+					["Tuesday", 8.30, 12.00, 15.30,19.00],
+					["Wednesday", 8.30, 12.00, 15.30,19.00],
+					["Thursday", 8.30, 12.00, 15.30,19.00],
+					["Friday", 8.30, 11.30],
+					["Saturday", 9.00, 14.00], 
+					["Sunday"]// we are closed, sorry!
+				];
+				var day = weekdays[n];
+
+
+				if (now > day[1] && now < day[2] || now > day[3] && now < day[4]) {
+					console.log("We're open right now!");
+				}
+				 else {
+					console.log("Sorry, we're closed!");
+				}
+
+			</script>
 			
 	</div>	
 {% endblock %}
