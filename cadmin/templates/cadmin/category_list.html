@@ -13,8 +13,8 @@
 
 	<div class="main">
 	
-		<p>&#187; <a href="{% url 'category_list' %}">{% trans "All Categories"%}</a></p>
-		
+		<h2>&#187; <a href="{% url 'category_list' %}">{% trans "All Categories"%}</a></h2>
+		<hr>
 		<p class="button"><a href="{% url 'category_add' %}">{% trans "Add Category"%} &raquo;</a></p>
 		
 		{% if messages %}

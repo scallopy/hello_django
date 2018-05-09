@@ -21,15 +21,15 @@
 <div id="tophead">
 		<div class="container">
 			
-			<i class="fas fa-wrench" style="color:#294a70;"></i>
-			<i class="fas fa-car" style="color:#294a70;"></i>
-			<i class="fas fa-bus" style="color:#294a70;"></i>
-			<i class="fas fa-truck" style="color:#294a70;"></i>
+			<i class="fas fa-wrench" style="color:#f5ec13;"></i>
+			<i class="fas fa-car" style="color:#f5ec13;"></i>
+			<i class="fas fa-bus" style="color:#f5ec13;"></i>
+			<i class="fas fa-truck" style="color:#f5ec13;"></i>
 			
-			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#000080;"></i><a class="quick-call" href="tel:+359887720074"><b><i>0887 72 00 74</i></b></a> 
-			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#000080"></i><a class="quick-call" href="tel:+35982861486" /><b><i>082/ 86 14 86</i></b></a>
+			<a class="quick-call" href="tel:+359887720074"><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#f5ec13;"></i><b><i>0887 72 00 74</i></b></a> 
+			<a class="quick-call" href="tel:+35982861486"><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#f5ec13"></i><b><i>082/ 86 14 86</i></b></a>
 			<div class="quick-links" style="line-height:1; margin-left:10px;">
-				<a class="links-btn" href="#" style="box-shadow: 1px 3px 3px 1px #294a70;">
+				<a class="links-btn" href="#">
 					{% trans "How to find us"%}
 				</a>
 				<ul>
@@ -38,17 +38,7 @@
 				</ul>
 			</div>
 		
-			<div class="quick-links" style="line-height:1; margin-left:10px; box-shadow: 1px 3px 3px 1px #294a70;">
-				<a class="links-btn" href="#">
-					<i class="fas fa-hand-point-right"></i>{% trans "Notice:"%}
-				</a>
-				<ul>
-					<li><a href="#">{% trans "Autoelectronics"%}</a> </li>
-					<li><a href="#">{% trans "GPS Systems"%}</a><li>
-					<li><a href="#">{% trans "CCTV"%}</a><li>
-					<li><a href="#">{% trans "Security Systems"%}</a><li>
-				</ul>
-			</div>
+			
 				
 			
 				
@@ -70,23 +60,23 @@
 					<input name="language" type="hidden" value="ru" />
 					<input type="submit" value="RU" />
 				</form>-->
-				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px; box-shadow: 1px 3px 3px 1px #294a70;">
+				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px;">
 					{% csrf_token %}
 					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
 					<input name="language" type="hidden" value="bg" />
-					<input type="submit" value="BG" />
+					<b><input type="submit" value="BG" /></b>
 				</form>
-				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px; box-shadow: 1px 3px 3px 1px #294a70;">
+				<form action="{% url 'set_language' %}" method="post" style="float: right; margin-top:2px;">
 					{% csrf_token %}
 					<input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
 					<input name="language" type="hidden" value="en" />
-					<input type="submit" value="EN" />
+					<b><input type="submit" value="EN" /></b>
 				</form>
 		</div>	
 	</div>
-	<header id="masthead" class="site-header" role="baner" style="background-color:#1E90FF;">
-		<div class="container">
-			<div class="search-section">
+	<header id="masthead" class="site-header" role="baner" style="border-bottom: 3px solid #d20000;">
+		<div>
+			<!--<div class="search-section">
 				<form class="search-form" role="search" method="get" action="http://127.0.0.1:8000/">
 					<label>
 						<span class="screen-reader-text">{% trans "Search for:"%}</span>
@@ -94,17 +84,52 @@
 					</label>
 					<input class="search-submit" value='{% trans "Search"%}' type="submit"/>
 				</form>
-			</div>
+			</div>-->
 			<div class="site-branding">
-				<a class="custom-logo-link" href="/" rel="home" itemprop="url">
-					<img  class="custom-logo" src="{% static 'blog/images/LogoELECTRA.png'%}" alt="Autoelectronics Electra" itemprop="logo" width="86" height="auto"><!--style="width: 20%; height: auto;"-->
-				</a>
+					<img  class="custom-logo-link" src="{% static 'blog/images/LogoELECTRA.png'%}" alt="Autoelectronics Electra" itemprop="logo"><!--width="86" height="auto">style="width: 20%; height: auto;"-->
 				<div class="site-identify">
-					<p class="site-title">
-						<a href="/" rel="home" style="color: #f1f3f4;">{% trans "Autoelectronics Electra"%}</a>
-					</p>
-					<p class="site-description" style="color: #f1f3f4;">{% trans "Autoelectronics repairs"%}</p>
-				</div>
+					<p class="site-title">{% trans "Autoelectronics Electra"%}</p>
+					<p class="site-description">{% trans "Autoelectronics repairs"%}</p>
+				</div>	
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+						<i class="fa fa-bars"></i>
+						{% trans "Menu"%}
+					</button>
+					
+							
+					<div class="wrap-menu-content">
+						<div class="menu-container">
+							<ul id="primary-menu" class="menu" >
+								
+								<li><a href="/">{% trans "About us"%}</a></li>
+								<li><a href="/services/">{% trans "Services"%}</a></li>
+								<li><a href="/gps/">{% trans "GPS Systems"%}</a><li>
+								<li><a href="/cctv/">{% trans "CCTV"%}</a><li>
+								<li><a href="/security/">{% trans "Security Systems"%}</a><li>
+								<li><a href="/feedback/">{% trans "Feedback"%}</a></li>
+								
+								
+								
+								{% if user.is_authenticated %}
+								<li>
+								<a href="/logout/">{% trans "Log out"%}<i class="fas fa-user" data-fa-transform="down-3 left-6" style="color:#FAF0E6; float:left;"></i>
+								</a>
+								</li>
+								{% else %}
+								<li>
+								<a href="/login/">{% trans "Log in"%}<i class="fas fa-user" data-fa-transform="down-3 left-6" style="color:#FAF0E6; float:left;"></i>
+								</a>
+								</li>
+								{% endif %}
+								
+								
+							</ul>
+						</div>
+					</div>
+				</nav>
+		
+	
 			</div>
 			
 		</div>
@@ -113,59 +138,7 @@
 		<img src="{% static 'blog/images/LogoELECTRA.png'%}" style="width: 18%; height: auto;"><img src="{% static 'blog/images/01.png'%}" style="width: 82%; height: auto;" / >
 	</div>-->
 	
-	<div id="main-nav" class="clear-fix">
-		
-		
-		<!--<a href="#menu" id="toggle"><span></span></a>
-			<div id="menu">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</div>-->
-			
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-					<i class="fa fa-bars"></i>
-					{% trans "Menu"%}
-				</button>
-				<button class="menu-toggle" aria-controls="secondary-menu" aria-expanded="false">
-					<i class="fa fa-bars"></i>
-					{% trans "Services"%}
-				</button>
-						
-				<div class="wrap-menu-content">
-					<div class="menu-container">
-						<ul id="primary-menu" class="menu" >
-							
-							<li><a href="/">{% trans "Autoelectronics"%}</a></li>
-							<li><a href="/gps/">{% trans "GPS Systems"%}</a><li>
-							<li><a href="/cctv/">{% trans "CCTV"%}</a><li>
-							<li><a href="/security/">{% trans "Security Systems"%}</a><li>
-							<li><a href="/feedback/">{% trans "Feedback"%}</a></li>
-							
-							
-							
-							{% if user.is_authenticated %}
-							<li>
-							<i class="fas fa-user" data-fa-transform="down-10 right-30" style="color:#FAF0E6; float:left;"></i>
-							<a href="/logout/">{% trans "Log out"%}</a>
-							</li>
-							{% else %}
-							<li>
-							<i class="fas fa-user" data-fa-transform="down-10 right-30" style="color:#FAF0E6; float:left;"></i>
-							<a href="/login/">{% trans "Log in"%}</a>
-							</li>
-							{% endif %}
-							
-							
-						</ul>
-					</div>
-				</div>
-			</nav>
-		
-	</div>
+	
 
 
 {% endblock %}
@@ -178,333 +151,19 @@
 {% block content %}
 
 
-	
+
 <nav id="site-navigation" class="nav" role="navigation">
 	
-	<div class="wrap-menu-content">
+	<!--<div class="wrap-menu-content">
 		<div class="menu-container">
-			<h1 style="color:#fff; margin:0;">{% trans "Autoelectronics"%}</h1>
-			<h2 style="color:#fff; margin:0;">{% trans "Services"%}:</h2>
+			
 			
 			
 		
 			<ul id="secondary-menu" class="menu">
 			
 				
-				<li><details>
-					<summary>{% trans "Vehicle diagnostics and inspection"%}</summary>
-					<ul>
-					<li><a href="#">{% trans "Initial Diagnostics Of The Vehicle And Locating The Damage"%}</a></li>
-					<li><a href="#">{% trans "Computer Diagnostics"%}</a></li>
-					<li><a href="#">{% trans "Clearing Errors"%}</a></li>
-					</ul>
-				</details></li>
 				
-				<li><details>
-					<summary>{% trans "Periodic Inspections"%}</summary>
-					<ul>
-					<li>{% trans "Basic Inspection"%}</li>
-					<li>{% trans "Individual Inspection"%}</li>
-					<li>{% trans "Extended Inspection"%}</li>
-					<li>{% trans "Pre-journey Inspection"%}</li>
-					<li>{% trans "Pre-purchase Inspection"%}</li>
-					</ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Automotive electrical system"%}</summary>
-					<ul>
-					<li>{% trans "Alternator Replacement"%}</li>
-					<li>{% trans "APS car system"%}</li>
-					<li>{% trans "Battery Charging Test"%}</li>
-					<li>{% trans "Battery Load Test"%}</li>
-					<li>{% trans "Batery Replacement"%}</li>
-					<li>{% trans "Central Locking Servomotor Replacement"%}</li>
-					<li>{% trans "Dashboard Gauges Replacement"%}</li>
-					<li>{% trans "Distributor Cap Replacement"%}</li>
-					<li>{% trans "Distributor Rotor Replacement"%}</li>
-					<li>{% trans "Fuse Replacement"%}</li>
-					<li>{% trans "Headlight Bulb Replacement"%}</li>
-					<li>{% trans "Ignition Coil Replacement"%}</li>
-					<li>{% trans "Ignition Loads Replacement"%}</li>
-					<li>{% trans "Ignition Module Replacement"%}</li>
-					<li>{% trans "Ignition Switch Replacement"%}</li>
-					<li>{% trans "Indicator Breaker Replacement"%}</li>
-					<li>{% trans "Installation of APS"%}</li>
-					<li>{% trans "Light Bulb Replacement(rear)"%}</li>
-					<li>{% trans "Light Level Regulation Motor Replacement"%}</li>
-					<li>{% trans "Spark/glow Plugs Replacement"%}</li>
-					<li>{% trans "Starter Replacement"%}</li>
-					<li>{% trans "Window Regulator Repair"%}</li>
-					<li>{% trans "Windscreen Washer Pump Replacement"%}</li>
-					<li>{% trans "Wiper Blade Motor Replacement"%}</li>
-					<li>{% trans "Wiper Tie Rod Replacement"%}</li>
-					<li>{% trans "Xenon Bulbs Replacement"%}</li>
-					</ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Vehicle Sensors"%}</summary>
-					<ul>
-					<li>{% trans "A/C Sensor replasment"%}</li>
-					<li>{% trans "Accelerator pedal position sensor replasment"%}</li>
-					<li>{% trans "Air pressure sensor replacement"%}</li>
-					<li>{% trans "Brake fluid level sensor replacement"%}</li>
-					<li>{% trans "Brake pad wear sensor replacement"%}</li>
-					<li>{% trans "Brake position sensor replacement"%}</li>
-					<li>{% trans "Brake system pressure sensor replacement"%}</li>
-					<li>{% trans "Camshaft position sensor replacement"%}</li>
-					<li>{% trans "Clutch pedal position sensor replacement"%}</li>
-					<li>{% trans "Coolant level sensor replacement"%}</li>
-					<li>{% trans "Coolant temperature sensor replacement"%}</li>
-					<li>{% trans "Cooling system sensor replacement"%}</li>
-					<li>{% trans "Crankshaft sensor replacement"%}</li>
-					<li>{% trans "DeNOx module pressure sensor replacement"%}</li>
-					<li>{% trans "Door sensor replacement"%}</li>
-					<li>{% trans "Engine oil level sensor replacement"%}</li>
-					<li>{% trans "Exhaust air temperature sensor replacement"%}</li>
-					<li>{% trans "Exhaust fumes pressure sensor replacement"%}</li>
-					<li>{% trans "Exhaust fumes temerature sensor replacement"%}</li>
-					<li>{% trans "External temperature sensor replacement"%}</li>
-					<li>{% trans "Fuel injection system sensor and transmitter replacement"%}</li>
-					<li>{% trans "Fuel level sensor replacement"%}</li>
-					<li>{% trans "Fuel pressure sensor replacement"%}</li>
-					<li>{% trans "Fuel temperature sensor replacement"%}</li>
-					<li>{% trans "Gauge sensor replacement"%}</li>
-					<li>{% trans "Idle running sensor replacement"%}</li>
-					<li>{% trans "Ignition Hall sensor replacement"%}</li>
-					<li>{% trans "Intake manifold pressure sensor replacement"%}</li>
-					<li>{% trans "Knock sensor replacement"%}</li>
-					<li>{% trans "Mileage sensor replacement"%}</li>
-					<li>{% trans "NOx sensor replacement"%}</li>
-					<li>{% trans "Oil pressure sensor replacement"%}</li>
-					<li>{% trans "Oil sensor replacement"%}</li>
-					<li>{% trans "Oil temperature sensor replacement"%}</li>
-					<li>{% trans "Pressure sensor replacement"%}</li>
-					<li>{% trans "Pulse sensor/pulser  replacement"%}</li> 
-					<li>{% trans "Rev counter sensor replacement"%}</li>
-					<li>{% trans "Sensor/relay replacement"%}</li>
-					<li>{% trans "Speed sensor replacement"%}</li>
-					<li>{% trans "Steering wheel sensor replacement"%}</li>
-					<li>{% trans "Stoplights sensor replacement"%}</li>
-					<li>{% trans "Throttle position sensor replacement"%}</li>
-					<li>{% trans "Transsmition sensor replacement"%}</li>
-					<li>{% trans "Windscreen washer fluid level sensor replacement"%}</li>
-					</ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Air Conditioning System"%}</summary>
-					<ul>
-					<li>{% trans "A/C System desinfection"%}<li>
-					<li>{% trans "A/C valve replacement"%}</li>
-					<li>{% trans "A/C compressor oil change"%}</li>
-					<li>{% trans "A/C compressor replacement"%}</li>
-					<li>{% trans "A/C dryer filter replacement"%}</li>
-					<li>{% trans "A/C dryer replacement"%}</li>
-					<li>{% trans "A/C heat exchanger replacement"%}</li> 
-					<li>{% trans "A/C hoses/pipes replacement"%}</li>
-					<li>{% trans "A/C ozone cleaning"%}</li>
-					<li>{% trans "A/C refill"%}</li>
-					<li>{% trans "A/C comprehensive servicing"%}</li>
-					<li>{% trans "A/C evaporator replacement"%}</li>
-					<li>{% trans "A/C Condenser replacement"%}</li>
-					<li>{% trans "A/C system tightness check-ultraviolet"%}</li>
-					</ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Vehicles Audio System"%}</summary>
-					<ul>
-					<li>{% trans "Installation of Aerial"%}</li>
-					<li>{% trans "Installation of Speakers"%}</li> 
-					<li>{% trans "Sale and installation of Car audio systems, CD, DVD, TV, Multimedia"%}</li>
-					<li>{% trans "Installation of Subwoofer"%}</li>
-					<li>{% trans "Installation of Amplifier"%}</li> 
-					<li>{% trans "Mounting a device Hands-free in the vehicle"%}</li>
-					<li>{% trans "Installation of Professional Audio Systems in vehicles"%}</li>
-					</ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Vehicle Navigation"%}</summary>
-					<ul>
-					<li>{% trans "Navigation system fitting"%}</li>
-					<li>{% trans "Navigation maps update"%}</li>
-					</ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Mounting GPS Tracking System"%}</summary>
-					<ul></ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Mounting Alarm System"%}</summary>
-					<ul></ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Repair Of Computers, Modules And Electrical Circuit Boards Of Vehicles"%}</summary>
-					<ul></ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Installation and repair of all types of immobilizers, Bluetooth, APS car systems"%}</summary>
-					<ul></ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Repair Of Electric Stoves On Vans, Trucks And Buses"%}</summary>
-					<ul></ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Installation and repair of central locking of vehicles"%}</summary>
-					<ul></ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Installation Of Xenons Lights And Replacing Xenon Bulbs"%} </summary>
-					<ul></ul>
-				</details></li>
-				
-				<li><details>
-					<summary>{% trans "Sunroof Repair"%}</summary>
-					<ul>
-					<li>{% trans "Checking the problem of electrical or mechanical failure"%}</li>
-					<li>{% trans "Sunroof repair"%}</li>
-					<li>{% trans "Sunroof motor replacement"%}</li>
-					</ul>
-				</details></li>
-
-				<li><details>
-					<summary>{% trans "Mechanical Repairs"%}</summary>
-					<ul>
-					<li>{% trans "ABS sensor replacement"%}</li>
-					<li>{% trans "Accelerator cable replacement"%}</li>
-					<li>{% trans "Air filter replacement"%}</li>
-					<li>{% trans "Air flowmeter replacement - mass sensor"%}</li>
-					<li>{% trans "Axel shaft replacement"%}</li>
-					<li>{% trans "Axel shaft sealer replacement"%}</li>
-					<li>{% trans "Ball joint boot replacement"%}</li>
-					<li>{% trans "Ball joint replacement"%}</li>
-					<li>{% trans "Brake adjuster replacement"%}</li>
-					<li>{% trans "Brake carrier replacement"%}</li>
-					<li>{% trans "Brake disk replacement"%}</li>
-					<li>{% trans "Brake disk replacement(front)"%}</li>
-					<li>{% trans "Brake disk replacement(rear)"%}</li>
-					<li>{% trans "Brake drum repair"%}</li>
-					<li>{% trans "Brake drum replacement"%}</li>
-					<li>{% trans "Brake fluid replacement"%}</li>
-					<li>{% trans "Brake hose replacement"%}</li>
-					<li>{% trans "Brake cylinders replacement"%}</li>
-					<li>{% trans "Brake master cylinder replacement"%}</li>
-					<li>{% trans "Brake pads replacement"%}</li>
-					<li>{% trans "Brake pads replacement(front)"%}</li>
-					<li>{% trans "Brake pads replacement(rear)"%}</li>
-					<li>{% trans "Brake shoe replacement"%}</li>
-					<li>{% trans "Brake system repair"%}</li>
-					<li>{% trans "Brake tubes replacement"%}</li> 
-					<li>{% trans "Cabin filter replacement"%}</li>
-					<li>{% trans "Camshaft replacement"%}</li>
-					<li>{% trans "Catalytic converter replacement"%}</li>
-					<li>{% trans "Clutch cable replacement"%}</li>
-					<li>{% trans "Clutch cover replacement"%}</li>
-					<li>{% trans "Clutch master cylinder replacement"%}</li>
-					<li>{% trans "Clutch plate replacement"%}</li>
-					<li>{% trans "Clutch release bearing replacement"%}</li>
-					<li>{% trans "Clutch slave cylinder replacement"%}</li>
-					<li>{% trans "Complete clutch kit replacement"%}</li>
-					<li>{% trans "Connecting rod bearing replacement"%}</li>
-					<li>{% trans "Control arm replacement"%}</li>
-					<li>{% trans "Coolant replacement"%}</li>
-					<li>{% trans "Cooling system repair"%}</li>
-					<li>{% trans "Crankshaft replacement"%}</li>
-					<li>{% trans "Diferential oil change"%}</li>
-					<li>{% trans "Drive shaft replacement"%}</li>
-					<li>{% trans "Driveshaft and diferential repair"%}</li>
-					<li>{% trans "Drive system repair"%}</li>
-					<li>{% trans "EGR valve replacement"%}</li>
-					<li>{% trans "Engine head gasket replacement"%}</li>
-					<li>{% trans "Engine oil and oil filter replacement"%}</li>
-					<li>{% trans "Engine radiator replacement"%}</li>
-					<li>{% trans "Engine repair"%}</li>
-					<li>{% trans "Engine valve replacement"%}</li>
-					<li>{% trans "Exhaust manifold gasket replacement"%}</li>
-					<li>{% trans "Exhaust manifold replacement"%}</li>
-					<li>{% trans "Exhaust suspension repair"%}</li>
-					<li>{% trans "Fan thermo/swith senzor replasement"%}</li>
-					<li>{% trans "Flywheel replacement"%}</li>
-					<li>{% trans "Fuel filter replacement"%}</li>
-					<li>{% trans "Fuel hose replacement"%}</li>
-					<li>{% trans "Fuel injectors replacement"%}</li>
-					<li>{% trans "Fuel pump replacement"%}</li>
-					<li>{% trans "Fuel system repair"%}</li>
-					<li>{% trans "Fuel tank replacement"%}</li>
-					<li>{% trans "Guide roll replacement"%}</li>
-					<li>{% trans "Handbrake cable replacement"%}</li>
-					<li>{% trans "Heater replacement"%}</li>
-					<li>{% trans "Heater resistor replacement"%}</li>
-					<li>{% trans "Hood or boot lid air-spring replacement"%}</li>
-					<li>{% trans "Idle run regulator replacement"%}</li>
-					<li>{% trans "Injection pump replacement"%}</li>
-					<li>{% trans "Intake hose gasket replacement"%}</li>
-					<li>{% trans "Intake hose replacement"%}</li>
-					<li>{% trans "Intake manifold gasket replacement"%}</li>
-					<li>{% trans "Intake manifold replacement"%}</li>
-					<li>{% trans "Intake system repair"%}</li>
-					<li>{% trans "Lambda probe replacement"%}</li>
-					<li>{% trans "MacPherson strut replacement"%}</li>
-					<li>{% trans "Oil sump gasket replacement"%}</li>
-					<li>{% trans "Piston pin replacement"%}</li>
-					<li>{% trans "Piston replacement"%}</li>
-					<li>{% trans "Piston rings replacement"%}</li>
-					<li>{% trans "Power steering fluid change"%}</li>
-					<li>{% trans "Power steering pump replacement"%}</li>
-					<li>{% trans "Pulley replacement"%}</li>
-					<li>{% trans "Pump injector units replacement"%}</li>
-					<li>{% trans "Radiator fan replacement"%}</li>
-					<li>{% trans "Replacement of cooling system hoses"%}</li>
-					<li>{% trans "Rocker cover gasket replacement"%}</li>
-					<li>{% trans "Rubber boot replacement, steering knucle"%}</li> 
-					<li>{% trans "Safety belt replacement"%}</li>
-					<li>{% trans "Shock absorber bearing replacement"%}</li>
-					<li>{% trans "Shock absorber buffer replacement"%}</li>
-					<li>{% trans "Shock absorber replacement"%}</li>
-					<li>{% trans "Shock absorber rubber boot replacement"%}</li>
-					<li>{% trans "Stabilizer bar replacement"%}</li>
-					<li>{% trans "Stabilizer replacement"%}</li>
-					<li>{% trans "Stabilizer rubber sleeve replacement"%}</li>
-					<li>{% trans "Steering column joint replacement"%}</li>
-					<li>{% trans "Steering gear replacement"%}</li>
-					<li>{% trans "Steering system repair"%}</li>
-					<li>{% trans "Sunspension spring replacement"%}</li>
-					<li>{% trans "Suspension repair"%}</li>
-					<li>{% trans "Temperaure sensor replacement"%}</li>
-					<li>{% trans "Tensioner roll replacement"%}</li>
-					<li>{% trans "Termostat replacement"%}</li>
-					<li>{% trans "Tie rod end replacement"%}</li>
-					<li>{% trans "Tie rod replacement"%}</li>
-					<li>{% trans "Timing belt replacement"%}</li>
-					<li>{% trans "Timing chain replacement"%}</li>
-					<li>{% trans "Timing change"%}</li>
-					<li>{% trans "Towing tongue fitting"%}</li>
-					<li>{% trans "Transission fluid and filter replacement in automatic transmission"%}</li>
-					<li>{% trans "Transission fluid and filter replacement in manual transmission"%}</li>
-					<li>{% trans "Turbocharger replacement"%}</li>
-					<li>{% trans "V-belt replacement"%}</li>
-					<li>{% trans "V-belt tensioner replacement"%}</li>
-					<li>{% trans "Valve seals replacement"%}</li>
-					<li>{% trans "Vibration damper replacement"%}</li>
-					<li>{% trans "Water pump replacement"%}</li>
-					<li>{% trans "Wheel bearing replacement"%}</li>
-					<li>{% trans "Wheel hub replacement"%}</li>
-					<li>{% trans "Wheel steering knuckle replacement"%}</li>
-					<li>{% trans "Wiper blade replacement"%}</li>
-					<li>{% trans "Wishbone silent block replacement"%}</li>
-					</ul>
-				</details></li>
 			
 					
 					<li><a target="_blank" href="{{request.scheme}}://{{request.get_host}}">{% trans "View Site"%}</a></li>
@@ -522,13 +181,14 @@
 				
 				
 		</div>		
-	</div>			
+	</div>-->			
 </nav>
+
 
 		{% block main %}{% endblock %}
 		<div class="sidebar-primary">
-			
-			<h1 style="color:#ffffff;">{% trans "Opening Hours"%}:</h1>
+			<b>
+			<h1 style="color:#f5ec13;"><b>{% trans "Opening Hours"%}</b>:</h1>
 				<table>
 					<tr>
 						<td>{% trans "Monday"%}</td>
@@ -558,15 +218,15 @@
 						<td>{% trans "Sunday"%}</td>
 						<td>{% trans "Closed"%}</td>
 					</tr>
-				</table>
+				</table></b>
 				<br>
 				<div style="text-align:right;">
-					<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#000080;"></i><a class="quick-call" href="tel:+359887720074"><b><i>0887 72 00 74</i></b></a> 
+					<a class="quick-call" href="tel:+359887720074"><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#f5ec13;"></i><b><i>0887 72 00 74</i></b></a> 
 					</br>
-					<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#000080"></i><a class="quick-call" href="tel:+35982861486" /><b><i>082/ 86 14 86</i></b></a>
+					<a class="quick-call" href="tel:+35982861486"><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#f5ec13"></i><b><i>082/ 86 14 86</i></b></a>
 					</div>
 					<br></br>
-					<div class="quick-links" style="float:center; box-shadow: 1px 3px 3px 1px #294a70;">
+					<div class="quick-links" style="font-family: 'Merriweather Sans',sans-serif;">
 						<a class="links-btn" href="#">
 							{% trans "How to find us"%}
 						</a>
@@ -576,12 +236,9 @@
 						</ul>
 					</div>
 					<br></br>
-					<blockquote style="float:right; padding: 5px; margin-right:0; box-shadow: 2px 2px 2px 2px #294a70;">
-						<i class="fab fa-facebook"  style="color:#4682b4;"></i>
-			
-						<a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fshare%2F&display=popup" style="color:#4682b4;">
-						Share</a>
-						<i class="fa fa-share-square"  style="color:#4682b4;"></i>
+					<blockquote>
+						<a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fshare%2F&display=popup">
+						<i class="fab fa-facebook fa-lg"  style="color:#4682b4;"></i>{% trans " Share"%}</a>
 					</blockquote>
 				</div>
 				
@@ -591,10 +248,10 @@
 {% endblock %}
 	
 	{% block footer %}
-	
+
 	<div class="footer">
-		<hr>
-		<p style="background-color:#1E90FF;"><b>&copy;Scallopy; </b> 	email: scallopy@abv.bg </p>
+		
+		<p><b>Created by &copy;Scallopy; </b> 	email: scallopy@abv.bg </p>
 	</div>
 	
 	{% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-01 23:28+0300\n"
+"POT-Creation-Date: 2018-05-08 21:52+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,7 +147,7 @@ msgstr "Автоелектроника Електра :: Админ Панел"
 
 #: .\cadmin\templates\cadmin\base11.html:27
 #: .\cadmin\templates\cadmin\base_admin.html:29
-#: .\cadmin\templates\cadmin\base_admin.html:129
+#: .\cadmin\templates\cadmin\base_admin.html:165
 msgid "How to find us"
 msgstr "Как да ни намерите"
 
@@ -228,7 +228,6 @@ msgid "Add Post"
 msgstr "Добави публикация"
 
 #: .\cadmin\templates\cadmin\base11.html:126
-#: .\cadmin\templates\cadmin\base_admin.html:140
 msgid "Feedback"
 msgstr "Отзиви"
 
@@ -268,7 +267,6 @@ msgstr "Тагове"
 
 #: .\cadmin\templates\cadmin\base_admin.html:115
 #: .\cadmin\templates\cadmin\password_change.html:13
-#: .\cadmin\templates\cadmin\password_change.html:15
 msgid "Change Password"
 msgstr "Смяна на парола"
 
@@ -276,21 +274,53 @@ msgstr "Смяна на парола"
 msgid "View Site"
 msgstr "Към Сайта"
 
+#: .\cadmin\templates\cadmin\base_admin.html:125
+msgid "Opening Hours"
+msgstr ""
+
+#: .\cadmin\templates\cadmin\base_admin.html:128
+msgid "Monday"
+msgstr ""
+
 #: .\cadmin\templates\cadmin\base_admin.html:132
+msgid "Tuesday"
+msgstr ""
+
+#: .\cadmin\templates\cadmin\base_admin.html:136
+msgid "Wednesday"
+msgstr ""
+
+#: .\cadmin\templates\cadmin\base_admin.html:140
+msgid "Thursday"
+msgstr ""
+
+#: .\cadmin\templates\cadmin\base_admin.html:144
+msgid "Friday"
+msgstr ""
+
+#: .\cadmin\templates\cadmin\base_admin.html:148
+msgid "Saturday"
+msgstr ""
+
+#: .\cadmin\templates\cadmin\base_admin.html:152
+msgid "Sunday"
+msgstr ""
+
+#: .\cadmin\templates\cadmin\base_admin.html:153
+msgid "Closed"
+msgstr ""
+
+#: .\cadmin\templates\cadmin\base_admin.html:168
 #, fuzzy
 #| msgid "Bulgaria, Rousse,<br> Gotse Delchev Blvd 68"
 msgid "Bulgaria, Rousse, Gotse Delchev Blvd 68"
 msgstr "България, гр. Русе, бул. Гоце Делчев №68"
 
-#: .\cadmin\templates\cadmin\base_admin.html:133
+#: .\cadmin\templates\cadmin\base_admin.html:169
 #, fuzzy
 #| msgid "Bulgaria, Rousse,<br> Vidin Street 17"
 msgid "Bulgaria, Rousse, Vidin Street 17"
 msgstr "България, гр. Русе, ул. Видин №17"
-
-#: .\cadmin\templates\cadmin\base_admin.html:138
-msgid "Opening Hours"
-msgstr ""
 
 #: .\cadmin\templates\cadmin\category_add.html:16
 #: .\cadmin\templates\cadmin\category_list.html:9
@@ -300,8 +330,8 @@ msgid "All Categories"
 msgstr "Всички категории"
 
 #: .\cadmin\templates\cadmin\category_add.html:16
-#: .\cadmin\templates\cadmin\category_add.html:18
-#: .\cadmin\templates\cadmin\category_add.html:58
+#: .\cadmin\templates\cadmin\category_add.html:19
+#: .\cadmin\templates\cadmin\category_add.html:59
 #: .\cadmin\templates\cadmin\category_list.html:18
 msgid "Add Category"
 msgstr "Добави Категория"
@@ -419,7 +449,7 @@ msgstr "за да влезете отново"
 msgid "Password Change"
 msgstr "Смяна на парола"
 
-#: .\cadmin\templates\cadmin\password_change.html:23
+#: .\cadmin\templates\cadmin\password_change.html:22
 msgid "Submit"
 msgstr "Изпращане"
 
