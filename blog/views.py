@@ -213,6 +213,9 @@ def cctv_page(request):
 
 def security_page(request):
     return render(request, 'site/security_page.html')
+
+def services(request):
+    return render(request, 'site/services.html')
     
 
 

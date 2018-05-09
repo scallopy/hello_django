@@ -40,5 +40,6 @@ urlpatterns = [
     url(r'^cctv/$', views.cctv_page, name='cctv_page'),
     url(r'^security/$', views.security_page, name='security_page'),
     url(r'^opening/$', views.opening_hours, name='opening_hours'),
+    url(r'^services/$', views.services, name='services'),
     ]
     

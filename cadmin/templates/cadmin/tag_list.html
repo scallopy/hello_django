@@ -13,8 +13,8 @@
 
 	<div class="main">
 	
-		<p>&#187; <a href="{% url 'tag_list' %}">{% trans "All Tags"%}</a></p>
-		
+		<h2>&#187; <a href="{% url 'tag_list' %}">{% trans "All Tags"%}</a></h2>
+		<hr>
 		<p class="button"><a href="{% url 'tag_add' %}">{% trans "Add Tag"%} &raquo;</a></p>
 		
 		{% if messages %}

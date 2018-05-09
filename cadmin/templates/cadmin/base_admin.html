@@ -121,27 +121,56 @@
 		
 	{% block main %}{% endblock %}
 	<div class="sidebar-primary">
-			<div style="text-align:right;">
-			<i class="fas fa-phone fa-lg" data-fa-transform="shrink-7" style="color:#000080;"></i><a class="quick-call" href="tel:+359887720074"><b><i>0887 72 00 74</i></b></a> 
-			</div>
-			<div class="quick-links" style="float:center;">
-				<a class="links-btn" href="#">
-					{% trans "How to find us"%}
-				</a>
-				<ul>
-					<li><a href="/contact/usg/">{% trans "Bulgaria, Rousse, Gotse Delchev Blvd 68"%}</a></li>
-					<li><a href="/contact/usv/">{% trans "Bulgaria, Rousse, Vidin Street 17"%}</a><li>
-				</ul>
-			</div>
-			</br></br>
-			
-			<h1>{% trans "Opening Hours"%}:</h1>
-			<iframe src="/opening/" style="overflow-y:auto;"></iframe>
-			<h1>{% trans "Feedback"%}:</h1>
-			<iframe src="/feedback/"></iframe>
-		</div>
+			<b>
+			<h1 style="color:#f5ec13;"><b>{% trans "Opening Hours"%}</b>:</h1>
+				<table>
+					<tr>
+						<td>{% trans "Monday"%}</td>
+						<td>09:00-18:30</td>
+					</tr>
+					<tr>
+						<td>{% trans "Tuesday"%}</td>
+						<td>09:00-18:30</td>
+					</tr>
+					<tr>
+						<td>{% trans "Wednesday"%}</td>
+						<td>09:00-18:30</td>
+					</tr>
+					<tr>
+						<td>{% trans "Thursday"%}</td>
+						<td>09:00-18:30</td>
+					</tr>
+					<tr>
+						<td>{% trans "Friday"%}</td>
+						<td>09:00-18:30</td>
+					</tr>
+					<tr>
+						<td>{% trans "Saturday"%}</td>
+						<td>09:00-14:00</td>
+					</tr>
+					<tr>
+						<td>{% trans "Sunday"%}</td>
+						<td>{% trans "Closed"%}</td>
+					</tr>
+				</table></b>
+				<br>
+				<div style="text-align:right;">
+					<a class="quick-call" href="tel:+359887720074"><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#f5ec13;"></i><b><i>0887 72 00 74</i></b></a> 
+					</br>
+					<a class="quick-call" href="tel:+35982861486"><i class="fas fa-phone fa-lg" data-fa-transform="shrink-7 right-12" style="color:#f5ec13"></i><b><i>082/ 86 14 86</i></b></a>
+				</div>
+				<br></br>
+				<div class="quick-links" style="font-family: 'Merriweather Sans',sans-serif;">
+					<a class="links-btn" href="#">
+						{% trans "How to find us"%}
+					</a>
+					<ul>
+						<li><a href="/contact/usg/">{% trans "Bulgaria, Rousse, Gotse Delchev Blvd 68"%}</a></li>
+						<li><a href="/contact/usv/">{% trans "Bulgaria, Rousse, Vidin Street 17"%}</a><li>
+					</ul>
+				</div>
 	
-	
+	</div>
 		
 	
 	
@@ -151,8 +180,8 @@
 	{% block footer %}
 	
 	<div class="footer">
-		<hr>
-		<p style="background-color:#1E90FF;"><b>&copy;Scallopy; </b> 	email: scallopy@abv.bg </p>
+		
+		<p><b>Created by &copy;Scallopy; </b> 	email: scallopy@abv.bg </p>
 	</div>
 	
 	{% endblock %}
