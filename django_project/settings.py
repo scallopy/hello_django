@@ -52,7 +52,10 @@ INSTALLED_APPS = [
     'cadmin',
     'mptt',
     'flatpages_i18n',
+<<<<<<< HEAD
     'fontawesome',
+=======
+>>>>>>> 066ea74d4f34c315cab0fb653e6f24dcbc7806ea
 ]
 
 MIDDLEWARE = [
@@ -149,9 +152,8 @@ DBGETTEXT_PROJECT_OPTIONS = 'django_project.dbgettext_options'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_ROOT = [
     os.path.join(BASE_DIR, 'django_project/static'),
