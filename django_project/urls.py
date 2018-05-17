@@ -36,6 +36,5 @@ urlpatterns += i18n_patterns(
     url(r'^', include('flatpages_i18n.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^cadmin/', include('cadmin.urls')),
-    url(r'^openinghours/', include('openinghours.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -30,7 +30,7 @@ DEBUG = True
 
 MODELTRANSLATION_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['autoelectronicselectra.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'cadmin',
     'mptt',
     'flatpages_i18n',
-    'openinghours',
+    'fontawesome',
 ]
 
 MIDDLEWARE = [
@@ -151,6 +151,10 @@ DBGETTEXT_PROJECT_OPTIONS = 'django_project.dbgettext_options'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
+]
+
+STATIC_ROOT = [
+    os.path.join(BASE_DIR, 'django_project/static'),
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
