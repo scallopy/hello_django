@@ -1,0 +1,129 @@
+/* LOGIN FORM */
+
+#content-main {
+    float: left;
+    width: 100%;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+body.login {
+    background: #f8f8f8;
+}
+
+.login #header {
+    height: auto;
+    padding: 5px 16px;
+}
+
+.login #header h1 {
+    font-size: 24px;
+}
+
+.login #header h1 a {
+    color: #fff;
+}
+
+.login #content {
+    padding: 0 20px 0;
+}
+
+.login #container {
+    background: #fff;
+    border: 2px solid #eaeaea;
+    border-radius: 12px;
+	box-shadow:20px 20px 20px 10px grey;
+    overflow: hidden;
+    width: 28em;
+    min-width: 300px;
+    margin: 100px auto;
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and ( max-width: 767px ) {
+	.login #container {
+    background: #fff;
+    border: 2px solid #eaeaea;
+    border-radius: 12px;
+	box-shadow:20px 20px 20px 10px grey;
+    overflow: hidden;
+    width: 100%;
+    min-width: 100%;
+    margin: auto;
+}
+}
+.login #content-main {
+    width: 100%;
+}
+
+.login .form-row {
+    padding: 4px 0;
+    float: left;
+    width: 100%;
+    border-bottom: none;
+}
+
+.login .form-row label {
+    padding-right: 0.5em;
+    line-height: 2em;
+    font-size: 1em;
+    clear: both;
+    color: #333;
+}
+
+.login .form-row #id_username, .login .form-row #id_password {
+    clear: both;
+    padding: 8px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.login span.help {
+    font-size: 10px;
+    display: block;
+}
+
+.login .submit-row {
+    clear: both;
+    padding: 1em 0 0 9.4em;
+    margin: 0;
+    border: none;
+    background: none;
+    text-align: left;
+}
+
+.login .password-reset-link {
+    text-align: left;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #f8f9f9;
+	color: #417690;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 24px;
+    width: 50%;
+}
+
+
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: #447e9b;
+    display: none;
+    height: 100%;
+}
+
+#Login {background-color: white;}
+#Registration {background-color: white;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
