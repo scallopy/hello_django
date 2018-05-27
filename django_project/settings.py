@@ -30,7 +30,9 @@ DEBUG = True
 
 MODELTRANSLATION_DEBUG = True
 
-ALLOWED_HOSTS = ['autoelectronicselectra.com',  'localhost', '127.0.0.1']
+
+ALLOWED_HOSTS = ['autoelectronicselectra.com', 'www.autoelectronicselectra.com','localhost', '127.0.0.1']
+
 
 
 # Application definition
@@ -52,6 +54,8 @@ INSTALLED_APPS = [
     'cadmin',
     'mptt',
     'flatpages_i18n',
+    'fontawesome',
+    'robots'
 ]
 
 MIDDLEWARE = [
@@ -65,6 +69,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.common.BrokenLinkEmailsMiddleware',
     'flatpages_i18n.middleware.FlatpageFallbackMiddleware',
+    'django.contrib.sites.middleware.CurrentSiteMiddleware',
 ]
 
 ROOT_URLCONF = 'django_project.urls'
@@ -81,6 +86,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
             ],
         },
     },
@@ -117,7 +124,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -129,12 +135,12 @@ LOCALE_PATHS = [
 
 LANGUAGE_CODE = 'en-us'
 from django.utils.translation import ugettext_lazy as _
-LANGUAGES = (
+LANGUAGES = [
     ('en', _('English')),
     ('bg', _('Bulgarian')),
     ('ru', _('Russian')),
     ('ro', _('Romanian')),
-)
+]
 
 TIME_ZONE = 'UTC'
 
@@ -152,6 +158,7 @@ DBGETTEXT_PROJECT_OPTIONS = 'django_project.dbgettext_options'
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -176,7 +183,7 @@ MANAGERS = ADMINS
 
 LOGIN_URL = 'login'
 
-SITE_ID = 1
+SITE_ID = 3
 
 ###################################
     ## CKEDITOR CONGIGURATION ##

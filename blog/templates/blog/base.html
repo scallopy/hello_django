@@ -3,7 +3,9 @@
 <html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
 	<title>{% trans "Autoelectronics Electra"%}{% block title %}{% endblock %}</title>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}"/>
 	<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static 'blog/css/style1.css' %}{% endblock %}" />
 	{% block extrastyle %}{% endblock %}
 	{% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static 'cadmin/css/rtl.css' %}{% endblock %}" />{% endif %}
@@ -14,6 +16,7 @@
 	<!--<script src="{% static 'blog/js/jquery.js' %}"></script>-->
 	{% block extrahead %}{% endblock %}
 	{% block blockbots %}<!--<meta name="robots" content="NONE,NOARCHIVE" />-->{% endblock %}
+
 </head>
 {% load i18n %}
 

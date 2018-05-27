@@ -35,5 +35,6 @@ urlpatterns = [
     url(r'^security/$', views.security_page, name='security_page'),
     url(r'^opening/$', views.opening_hours, name='opening_hours'),
     url(r'^services/$', views.services, name='services'),
+    url(r'^google9170e2a0ec62a1c0.html$', views.google, name='google9170e2a0ec62a1c0.html'),
     ]
     

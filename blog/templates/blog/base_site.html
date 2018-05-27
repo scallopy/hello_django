@@ -2,7 +2,7 @@
 {% extends "blog/base.html" %}
 {% load i18n static %}
 {% block extrastyle %}{{ block.super }}
-<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style1.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style1.css' %}" media="all" />
 {{ form.media }}
 {% endblock %}
 {% block extrascripts %}
@@ -10,9 +10,9 @@
 {% endblock %}
 
 {% block title %}{% endblock %}
-{% block extrahead %}
-<link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}"/>
-{% endblock %}
+{% block extrahead %}{% endblock %}
+
+{% block extrahead %}{% endblock %}
 
 {% block branding %}{% endblock %}
 

@@ -35,10 +35,11 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-	url(r'^sitemap.xml/', sitemaps_views.sitemap,{'sitemaps': sitemaps}, name='sitemaps'),
+    url(r'sitemap.xml/', sitemaps_views.sitemap, {'sitemaps': sitemaps}, name='sitemaps'),
+    url(r'^robots.txt/', include('robots.urls')),
     url(r'', include('blog.urls')),                         
     url(r'^', include('flatpages_i18n.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^cadmin/', include('cadmin.urls')),
-    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls'))
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
