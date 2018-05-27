@@ -1,15 +1,9 @@
 from django.conf.urls import url
-from . import views
+from blog import views
 from django.contrib.flatpages import views as flat_views
-from django.contrib.sitemaps.views import sitemap
-from .sitemaps import PostSitemap
 
-sitemaps = {
-    'posts': PostSitemap
-}
 
 urlpatterns = [
-    url(r'^sitemap\.xml/$', sitemap, {'sitemaps' : sitemaps} , name='sitemap'),
     url(r'^contact/usg/$', views.contact_usg, name='contact_usg'),
     url(r'^contact/usv/$', views.contact_usv, name='contact_usv'),
     url(r'^accounts/profile/$', views.admin_page, name='admin_page'),

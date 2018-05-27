@@ -19,19 +19,23 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import ugettext_lazy as _
-
+from blog import views
 from django.contrib.flatpages import views as flat_views
-from django.contrib.sitemaps.views import sitemap
+from django.contrib.sitemaps import views as sitemaps_views
+from django.views.decorators.cache import cache_page
+from blog.sitemaps import *
 
-
-
+# Dictionary containing your sitemap classes
+sitemaps = {
+   'static': StaticSitemap,
+}
 
 urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
-    url(r'^sitemap\.xml/$', sitemap, {'sitemaps' : sitemap} , name='sitemap'),
 ]
 
 urlpatterns += i18n_patterns(
+	url(r'^sitemap.xml/', sitemaps_views.sitemap,{'sitemaps': sitemaps}, name='sitemaps'),
     url(r'', include('blog.urls')),                         
     url(r'^', include('flatpages_i18n.urls')),
     url(r'^admin/', admin.site.urls),

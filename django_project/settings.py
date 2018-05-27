@@ -30,7 +30,7 @@ DEBUG = True
 
 MODELTRANSLATION_DEBUG = True
 
-ALLOWED_HOSTS = ['autoelectronicselectra.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['autoelectronicselectra.com',  'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -121,9 +121,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LOCALE_PATHS = (
+LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
-)
+	os.path.join(BASE_DIR, 'blog/locale'),
+	os.path.join(BASE_DIR, 'cadmin/locale'),
+]
 
 LANGUAGE_CODE = 'en-us'
 from django.utils.translation import ugettext_lazy as _
