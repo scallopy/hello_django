@@ -2,20 +2,18 @@
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{LANGUAGE_CODE|default:'en-us'}}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
-	<title>{% block title %}{% endblock %}</title>
-	<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static 'blog/css/style1.css' %}{% endblock %}" />
-	{% block extrastyle %}{% endblock %}
-	{% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static 'cadmin/css/rtl.css' %}{% endblock %}" />{% endif %}
-<<<<<<< HEAD
-	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
-=======
-	<script defer src="{% static 'blog/fontawesome/svg-with-js/js/fontawesome-all.js' %}"></script>
->>>>>>> 066ea74d4f34c315cab0fb653e6f24dcbc7806ea
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	{% block extrascripts %}{% endblock %}
-	<!--<script src="{% static 'blog/js/jquery.js' %}"></script>-->
-	{% block extrahead %}{% endblock %}
-	{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
+	<title>{% trans "Autoelectronics Electra"%}{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static 'blog/css/style1.css' %}{% endblock %}" media="all" />
+	    {% block extrastyle %}{% endblock %}
+    {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static 'cadmin/css/rtl.css' %}{% endblock %}" />{% endif %}
+    <script defer src="{% static 'blog/fontawesome/svg-with-js/js/fontawesome-all.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    {% block extrascripts %}{% endblock %}
+    <!--<script src="{% static 'blog/js/jquery.js' %}"></script>-->
+    {% block extrahead %}{% endblock %}
+    {% block blockbots %}{% endblock %}
 </head>
 {% load i18n %}
 

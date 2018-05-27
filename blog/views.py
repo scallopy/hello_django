@@ -10,8 +10,10 @@ from django_project import helpers
 
 
 
+
 def index(request):
     return HttpResponse("Hello Django")
+
 
 # view function to display a list of post
 def post_list(request):
@@ -216,6 +218,9 @@ def security_page(request):
 
 def services(request):
     return render(request, 'site/services.html')
+
+def google(request):
+    return render(request, 'blog/google9170e2a0ec62a1c0.html')
     
 
 

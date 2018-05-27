@@ -19,22 +19,27 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import ugettext_lazy as _
-
+from blog import views
 from django.contrib.flatpages import views as flat_views
-from django.contrib.sitemaps.views import sitemap
+from django.contrib.sitemaps import views as sitemaps_views
+from blog.sitemaps import *
+from django.views.decorators.cache import cache_page
 
-
-
+# Dictionary containing your sitemap classes
+sitemaps = {
+    'static': StaticSitemap, 
+}
 
 urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
-    url(r'^sitemap\.xml/$', sitemap, {'sitemaps' : sitemap} , name='sitemap'),
 ]
 
 urlpatterns += i18n_patterns(
+        url(r'sitemap.xml/', sitemaps_views.sitemap, {'sitemaps': sitemaps}, name='sitemaps'),
+    url(r'^robots.txt/', include('robots.urls')),
     url(r'', include('blog.urls')),                         
     url(r'^', include('flatpages_i18n.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^cadmin/', include('cadmin.urls')),
-    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls'))
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

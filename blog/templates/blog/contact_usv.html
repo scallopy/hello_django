@@ -2,6 +2,17 @@
 {% extends "blog/base_site.html" %}
 {% load i18n static %}
 
+{% block title %} | {% trans "How to find us"%} | {% trans "Vidin Street 17"%} | {% trans "Bulgaria, Rousse"%}{% endblock %}
+{% block extrahead %}
+<meta name="keywords" content='{% trans "Autoelectronics"%},
+			       {% trans "Autoservice"%},
+			       {% trans "Autoelectronics Electra"%},
+			       {% trans "Bulgaria, Rousse"%},
+			       {% trans "Vidin Street 17"%}'>
+<meta name="description" content='{% trans "Bulgaria, Rousse, Vidin Street 17"%}'>
+
+{% endblock %}
+
 {% block main %}
 
 	<div class="main">
