@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 {% extends "blog/base_site.html" %}
 {% load i18n static %}
+{% block title %} | {% trans "CCTV"%}{% endblock %}
+{% block extrahead %}
+<meta name="keywords" content='{% trans "Autoelectronics"%}, {% trans "Autoservice"%}, {% trans "Electra"%}, {% trans "Rousse"%}, {% trans "repairs"%}'>
+
+{% endblock %}
 
 {% block main %}
 

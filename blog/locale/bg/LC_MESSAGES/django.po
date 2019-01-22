@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-08 21:52+0300\n"
+"POT-Creation-Date: 2019-01-22 07:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,384 +18,415 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\blog\models.py:28
+#: blog/models.py:28
 msgid "Categories"
 msgstr "Категории"
 
-#: .\blog\models.py:49
+#: blog/models.py:49
 msgid "Title"
 msgstr "Заглавие"
 
-#: .\blog\models.py:50
+#: blog/models.py:50
 msgid "Slug"
 msgstr ""
 
-#: .\blog\models.py:50
+#: blog/models.py:50
 msgid "Slug will be generated automatically from the title of the post"
 msgstr "Slug ще се генерира автоматично от заглавието на вашата публикация"
 
-#: .\blog\models.py:51
+#: blog/models.py:51
 msgid "Content"
 msgstr "Съдържание"
 
-#: .\blog\models.py:68
+#: blog/models.py:68
 msgid "Name of the sender"
 msgstr "Име на подателя"
 
-#: .\blog\models.py:70
+#: blog/models.py:70
 msgid "Subject"
 msgstr "Относно"
 
-#: .\blog\models.py:71
+#: blog/models.py:71
 msgid "Message"
 msgstr "Съобщение"
 
-#: .\blog\models.py:75 .\blog\templates\blog\base_site.html:110
+#: blog/models.py:75 blog/templates/blog/base_site.html:112
 msgid "Feedback"
 msgstr "Обратна връзка"
 
-#: .\blog\templates\blog\admin_page.html:18
+#: blog/templates/blog/admin_page.html:18
 #, python-format
 msgid "Welcome %(user_username)s !"
 msgstr "Привет %(user_username)s !"
 
-#: .\blog\templates\blog\admin_page.html:20
+#: blog/templates/blog/admin_page.html:20
 msgid "User Details:"
 msgstr "Потребителски данни:"
 
-#: .\blog\templates\blog\admin_page.html:23
+#: blog/templates/blog/admin_page.html:23
 #, python-format
 msgid "Email: %(user_email)s"
 msgstr ""
 
-#: .\blog\templates\blog\admin_page.html:24
+#: blog/templates/blog/admin_page.html:24
 #, python-format
 msgid "SuperUser: %(is_superuser)s"
 msgstr "Супер потребител: %(is_superuser)s"
 
-#: .\blog\templates\blog\admin_page.html:25
+#: blog/templates/blog/admin_page.html:25
 #, python-format
 msgid "Staff: %(is_staff)s"
 msgstr "Персонал: %(is_staff)s"
 
-#: .\blog\templates\blog\admin_page.html:26
+#: blog/templates/blog/admin_page.html:26
 #, python-format
 msgid "Date Joined: %(date_joined)s"
 msgstr "Дата на присъединяване: %(date_joined)s"
 
-#: .\blog\templates\blog\admin_page.html:27
+#: blog/templates/blog/admin_page.html:27
 #, python-format
 msgid "Last Login: %(last_login)s"
 msgstr "Последно влизане: %(last_login)s"
 
-#: .\blog\templates\blog\admin_page.html:30
+#: blog/templates/blog/admin_page.html:30
 msgid "Logout"
 msgstr "Изход"
 
-#: .\blog\templates\blog\base.html:33
-msgid "Welcome,"
-msgstr "Привет,"
-
-#: .\blog\templates\blog\base.html:38
-msgid "View site"
-msgstr "Към сайта"
-
-#: .\blog\templates\blog\base.html:43
-msgid "Documentation"
-msgstr "Документация"
-
-#: .\blog\templates\blog\base.html:47
-msgid "Change password"
-msgstr "Смяна на парола:"
-
-#: .\blog\templates\blog\base.html:49 .\blog\templates\blog\base_site.html:116
-#: .\blog\templates\blog\base_site.html:174
-msgid "Log out"
-msgstr "Изход"
-
-#: .\blog\templates\blog\base.html:59 .\blog\templates\blog\nav.html:7
-msgid "Home"
-msgstr "Начало"
-
-#: .\blog\templates\blog\base_site.html:12
-#: .\blog\templates\blog\base_site.html:91
-#: .\blog\templates\blog\contact_usg.html:17
-#: .\blog\templates\blog\contact_usv.html:17 .\blog\templates\blog\login.html:8
-#: .\blog\templates\blog\login.html:11 .\blog\templates\site\services.html:29
+#: blog/templates/blog/base.html:7 blog/templates/blog/base_site.html:93
+#: blog/templates/blog/contact_usg.html:24
+#: blog/templates/blog/contact_usv.html:7
+#: blog/templates/blog/contact_usv.html:24 blog/templates/blog/login.html:8
+#: blog/templates/blog/login.html:11 blog/templates/site/home_page.html:6
+#: blog/templates/site/services.html:34
 msgid "Autoelectronics Electra"
 msgstr "Автоелектроника Електра"
 
-#: .\blog\templates\blog\base_site.html:33
-#: .\blog\templates\blog\base_site.html:231
+#: blog/templates/blog/base.html:44
+msgid "Welcome,"
+msgstr "Привет,"
+
+#: blog/templates/blog/base.html:49
+msgid "View site"
+msgstr "Към сайта"
+
+#: blog/templates/blog/base.html:54
+msgid "Documentation"
+msgstr "Документация"
+
+#: blog/templates/blog/base.html:58
+msgid "Change password"
+msgstr "Смяна на парола:"
+
+#: blog/templates/blog/base.html:60 blog/templates/blog/base_site.html:118
+#: blog/templates/blog/base_site.html:176
+msgid "Log out"
+msgstr "Изход"
+
+#: blog/templates/blog/base.html:70 blog/templates/blog/nav.html:7
+msgid "Home"
+msgstr "Начало"
+
+#: blog/templates/blog/base_site.html:35 blog/templates/blog/base_site.html:233
+#: blog/templates/blog/contact_usg.html:5
+#: blog/templates/blog/contact_usv.html:5
 msgid "How to find us"
 msgstr "Как да ни намерите"
 
-#: .\blog\templates\blog\base_site.html:36
-#: .\blog\templates\blog\base_site.html:234
+#: blog/templates/blog/base_site.html:38 blog/templates/blog/base_site.html:236
+#: blog/templates/blog/contact_usg.html:10
 msgid "Bulgaria, Rousse, Gotse Delchev Blvd 68"
 msgstr "България, гр. Русе, бул. Гоце Делчев №68"
 
-#: .\blog\templates\blog\base_site.html:37
-#: .\blog\templates\blog\base_site.html:235
+#: blog/templates/blog/base_site.html:39 blog/templates/blog/base_site.html:237
+#: blog/templates/blog/contact_usv.html:8
 msgid "Bulgaria, Rousse, Vidin Street 17"
 msgstr "България, гр. Русе, ул. Видин №17"
 
-#: .\blog\templates\blog\base_site.html:82
+#: blog/templates/blog/base_site.html:84
 msgid "Search for:"
 msgstr "Търсене за:"
 
-#: .\blog\templates\blog\base_site.html:83
+#: blog/templates/blog/base_site.html:85
 msgid "Search..."
 msgstr "Търси..."
 
-#: .\blog\templates\blog\base_site.html:85
+#: blog/templates/blog/base_site.html:87
 msgid "Search"
 msgstr "Търси"
 
-#: .\blog\templates\blog\base_site.html:92
+#: blog/templates/blog/base_site.html:94
 msgid "Autoelectronics repairs"
 msgstr "Ремонт на автоелектроника"
 
-#: .\blog\templates\blog\base_site.html:97
+#: blog/templates/blog/base_site.html:99
 msgid "Menu"
 msgstr "Меню"
 
-#: .\blog\templates\blog\base_site.html:105
-#: .\blog\templates\site\home_page.html:11
+#: blog/templates/blog/base_site.html:107 blog/templates/site/home_page.html:4
+#: blog/templates/site/home_page.html:17
 msgid "About us"
 msgstr "За нас"
 
-#: .\blog\templates\blog\base_site.html:106
-#: .\blog\templates\site\services.html:30
+#: blog/templates/blog/base_site.html:108 blog/templates/site/services.html:4
+#: blog/templates/site/services.html:35
 msgid "Services"
 msgstr "Услуги"
 
-#: .\blog\templates\blog\base_site.html:107
+#: blog/templates/blog/base_site.html:109
 msgid "GPS Systems"
 msgstr "GPS системи"
 
-#: .\blog\templates\blog\base_site.html:108
+#: blog/templates/blog/base_site.html:110 blog/templates/site/cctv_page.html:4
 msgid "CCTV"
 msgstr "Видеонаблюдение"
 
-#: .\blog\templates\blog\base_site.html:109
+#: blog/templates/blog/base_site.html:111
 msgid "Security Systems"
 msgstr "Охранителни системи"
 
-#: .\blog\templates\blog\base_site.html:121
-#: .\blog\templates\blog\base_site.html:176 .\blog\templates\blog\login.html:40
-#: .\blog\templates\blog\login.html:75
+#: blog/templates/blog/base_site.html:123
+#: blog/templates/blog/base_site.html:178 blog/templates/blog/login.html:40
+#: blog/templates/blog/login.html:75
 msgid "Log in"
 msgstr "Вход"
 
-#: .\blog\templates\blog\base_site.html:169
+#: blog/templates/blog/base_site.html:171
 msgid "View Site"
 msgstr "Към сайта"
 
-#: .\blog\templates\blog\base_site.html:191
-#: .\blog\templates\blog\opening_hours.html:10
-#: .\blog\templates\site\opening_hours.html:8
+#: blog/templates/blog/base_site.html:193
+#: blog/templates/blog/opening_hours.html:10
+#: blog/templates/site/opening_hours.html:8
 msgid "Opening Hours"
 msgstr "Работно време"
 
-#: .\blog\templates\blog\base_site.html:194
-#: .\blog\templates\site\opening_hours.html:12
+#: blog/templates/blog/base_site.html:196
+#: blog/templates/site/opening_hours.html:12
 msgid "Monday"
 msgstr "Понеделник"
 
-#: .\blog\templates\blog\base_site.html:198
-#: .\blog\templates\site\opening_hours.html:16
+#: blog/templates/blog/base_site.html:200
+#: blog/templates/site/opening_hours.html:16
 msgid "Tuesday"
 msgstr "Вторник"
 
-#: .\blog\templates\blog\base_site.html:202
-#: .\blog\templates\site\opening_hours.html:20
+#: blog/templates/blog/base_site.html:204
+#: blog/templates/site/opening_hours.html:20
 msgid "Wednesday"
 msgstr "Сряда"
 
-#: .\blog\templates\blog\base_site.html:206
-#: .\blog\templates\site\opening_hours.html:24
+#: blog/templates/blog/base_site.html:208
+#: blog/templates/site/opening_hours.html:24
 msgid "Thursday"
 msgstr "Четвъртък"
 
-#: .\blog\templates\blog\base_site.html:210
-#: .\blog\templates\site\opening_hours.html:28
+#: blog/templates/blog/base_site.html:212
+#: blog/templates/site/opening_hours.html:28
 msgid "Friday"
 msgstr "Петък"
 
-#: .\blog\templates\blog\base_site.html:214
-#: .\blog\templates\site\opening_hours.html:32
+#: blog/templates/blog/base_site.html:216
+#: blog/templates/site/opening_hours.html:32
 msgid "Saturday"
 msgstr "Събота"
 
-#: .\blog\templates\blog\base_site.html:218
-#: .\blog\templates\site\opening_hours.html:36
+#: blog/templates/blog/base_site.html:220
+#: blog/templates/site/opening_hours.html:36
 msgid "Sunday"
 msgstr "Неделя"
 
-#: .\blog\templates\blog\base_site.html:219
-#: .\blog\templates\site\opening_hours.html:37
+#: blog/templates/blog/base_site.html:221
+#: blog/templates/site/opening_hours.html:37
 msgid "Closed"
 msgstr "Затворено"
 
-#: .\blog\templates\blog\base_site.html:241
-#: .\blog\templates\blog\contact_usg.html:41
-#: .\blog\templates\blog\contact_usv.html:40
-#: .\blog\templates\site\cctv_page.html:111
-#: .\blog\templates\site\gps_page.html:133
-#: .\blog\templates\site\home_page.html:63
-#: .\blog\templates\site\security_page.html:84
-#: .\blog\templates\site\services.html:337
+#: blog/templates/blog/base_site.html:243
+#: blog/templates/blog/contact_usg.html:48
+#: blog/templates/blog/contact_usv.html:47
+#: blog/templates/site/cctv_page.html:116 blog/templates/site/gps_page.html:136
+#: blog/templates/site/home_page.html:69
+#: blog/templates/site/security_page.html:87
+#: blog/templates/site/services.html:342
 msgid " Share"
 msgstr " Споделяне"
 
-#: .\blog\templates\blog\contact_usg.html:10
-#: .\blog\templates\blog\contact_usv.html:9
-msgid "Contact us:"
-msgstr "За връзка с нас:"
-
-#: .\blog\templates\blog\contact_usg.html:18
-#: .\blog\templates\blog\contact_usv.html:18
-msgid "Bulgaria, Rousse"
-msgstr "България, гр. Русе"
-
-#: .\blog\templates\blog\contact_usg.html:19
+#: blog/templates/blog/contact_usg.html:5
+#: blog/templates/blog/contact_usg.html:8
+#: blog/templates/blog/contact_usg.html:26
 msgid "Gotse Delchev Blvd 68"
 msgstr "бул. Гоце Делчев №68"
 
-#: .\blog\templates\blog\contact_usv.html:19
+#: blog/templates/blog/contact_usg.html:5
+#: blog/templates/blog/contact_usg.html:8
+#: blog/templates/blog/contact_usg.html:25
+#: blog/templates/blog/contact_usv.html:5
+#: blog/templates/blog/contact_usv.html:7
+#: blog/templates/blog/contact_usv.html:25
+msgid "Bulgaria, Rousse"
+msgstr "България, гр. Русе"
+
+#: blog/templates/blog/contact_usg.html:8
+#: blog/templates/blog/contact_usv.html:7 blog/templates/site/cctv_page.html:6
+#: blog/templates/site/gps_page.html:6 blog/templates/site/home_page.html:6
+#: blog/templates/site/security_page.html:6
+#: blog/templates/site/services.html:28
+msgid "Autoelectronics"
+msgstr "Автоелектроника"
+
+#: blog/templates/blog/contact_usg.html:8
+#: blog/templates/blog/contact_usv.html:7 blog/templates/site/cctv_page.html:6
+#: blog/templates/site/gps_page.html:6 blog/templates/site/home_page.html:6
+#: blog/templates/site/security_page.html:6
+#: blog/templates/site/services.html:28
+msgid "Autoservice"
+msgstr "Автосервиз"
+
+#: blog/templates/blog/contact_usg.html:8 blog/templates/site/cctv_page.html:6
+#: blog/templates/site/gps_page.html:6 blog/templates/site/security_page.html:6
+#: blog/templates/site/services.html:28
+msgid "Electra"
+msgstr "Електра"
+
+#: blog/templates/blog/contact_usg.html:17
+#: blog/templates/blog/contact_usv.html:16
+msgid "Contact us:"
+msgstr "За връзка с нас:"
+
+#: blog/templates/blog/contact_usv.html:5
+#: blog/templates/blog/contact_usv.html:7
+#: blog/templates/blog/contact_usv.html:26
 msgid "Vidin Street 17"
 msgstr "ул. Видин №17"
 
-#: .\blog\templates\blog\feedback.html:10
+#: blog/templates/blog/feedback.html:10
 msgid "Submit Your Feedback"
 msgstr "Изпратете вашето мнение"
 
-#: .\blog\templates\blog\feedback.html:38
+#: blog/templates/blog/feedback.html:38
 msgid "Submit"
 msgstr "Изпращане"
 
-#: .\blog\templates\blog\login.html:29
+#: blog/templates/blog/login.html:29
 msgid "Please correct the error below."
 msgstr "Моля, коригирайте грешката по-долу."
 
-#: .\blog\templates\blog\login.html:29
+#: blog/templates/blog/login.html:29
 msgid "Please correct the errors below."
 msgstr "Моля, коригирайте грешката по-долу."
 
-#: .\blog\templates\blog\login.html:41
+#: blog/templates/blog/login.html:41
 msgid "Registration"
 msgstr "Регистрация"
 
-#: .\blog\templates\blog\login.html:56
+#: blog/templates/blog/login.html:56
 msgid "Username:"
 msgstr "Потребителско име:"
 
-#: .\blog\templates\blog\login.html:59
+#: blog/templates/blog/login.html:59
 msgid "Enter Username:"
 msgstr "Въведи потребителско име:"
 
-#: .\blog\templates\blog\login.html:63
+#: blog/templates/blog/login.html:63
 msgid "Password:"
 msgstr "Парола:"
 
-#: .\blog\templates\blog\login.html:66
+#: blog/templates/blog/login.html:66
 msgid "Enter Password:"
 msgstr "Въведи парола:"
 
-#: .\blog\templates\blog\login.html:70
+#: blog/templates/blog/login.html:70
 msgid "Forgot password?"
 msgstr "Забравена парола?"
 
-#: .\blog\templates\blog\login.html:92
+#: blog/templates/blog/login.html:92
 msgid "Create account:"
 msgstr "Създайте профил:"
 
-#: .\blog\templates\blog\login.html:100
+#: blog/templates/blog/login.html:100
 msgid "Register"
 msgstr "Регистрай ме"
 
-#: .\blog\templates\blog\logout.html:15
+#: blog/templates/blog/logout.html:15
 msgid "You are logged out. "
 msgstr "Вие сте извън системата. "
 
-#: .\blog\templates\blog\logout.html:15
+#: blog/templates/blog/logout.html:15
 msgid "Click here"
 msgstr "Кликнете тук"
 
-#: .\blog\templates\blog\logout.html:15
+#: blog/templates/blog/logout.html:15
 msgid " to login again."
 msgstr " за да влезете отново."
 
-#: .\blog\templates\blog\nav.html:8
+#: blog/templates/blog/nav.html:8
 msgid "Blog"
 msgstr "Блог"
 
-#: .\blog\templates\blog\nav.html:9
+#: blog/templates/blog/nav.html:9
 msgid "Contact"
 msgstr "За връзка с нас:"
 
-#: .\blog\templates\blog\nav.html:10
+#: blog/templates/blog/nav.html:10
 msgid "Career"
 msgstr "Kариера"
 
-#: .\blog\templates\blog\post_by_category.html:18
+#: blog/templates/blog/post_by_category.html:18
 msgid "All the posts under category"
 msgstr "Всички публикации от категория"
 
-#: .\blog\templates\blog\post_by_category.html:28
+#: blog/templates/blog/post_by_category.html:28
 msgid "There are not posts in category"
 msgstr "Няма публикации в категория"
 
-#: .\blog\templates\blog\post_by_category.html:37
-#: .\blog\templates\blog\post_by_tag.html:37
-#: .\blog\templates\blog\post_list.html:29
+#: blog/templates/blog/post_by_category.html:37
+#: blog/templates/blog/post_by_tag.html:37
+#: blog/templates/blog/post_list.html:29
 msgid "Prev"
 msgstr "Предишна"
 
-#: .\blog\templates\blog\post_by_category.html:40
-#: .\blog\templates\blog\post_by_tag.html:40
-#: .\blog\templates\blog\post_list.html:32
+#: blog/templates/blog/post_by_category.html:40
+#: blog/templates/blog/post_by_tag.html:40
+#: blog/templates/blog/post_list.html:32
 msgid "Page"
 msgstr "Страница"
 
-#: .\blog\templates\blog\post_by_category.html:40
-#: .\blog\templates\blog\post_by_tag.html:40
-#: .\blog\templates\blog\post_list.html:32
+#: blog/templates/blog/post_by_category.html:40
+#: blog/templates/blog/post_by_tag.html:40
+#: blog/templates/blog/post_list.html:32
 msgid "of"
 msgstr "от"
 
-#: .\blog\templates\blog\post_by_category.html:43
-#: .\blog\templates\blog\post_by_tag.html:43
-#: .\blog\templates\blog\post_list.html:35
+#: blog/templates/blog/post_by_category.html:43
+#: blog/templates/blog/post_by_tag.html:43
+#: blog/templates/blog/post_list.html:35
 msgid "Next"
 msgstr "Следваща"
 
-#: .\blog\templates\blog\post_by_tag.html:18
+#: blog/templates/blog/post_by_tag.html:18
 msgid "All the posts tagged with"
 msgstr "Всички публикации отбелязани с"
 
-#: .\blog\templates\blog\post_by_tag.html:28
+#: blog/templates/blog/post_by_tag.html:28
 msgid "There are not posts tagged with"
 msgstr "Няма публикации отбелязани с"
 
-#: .\blog\templates\blog\post_detail.html:20
+#: blog/templates/blog/post_detail.html:20
 msgid "Edit"
 msgstr "Редактиране"
 
-#: .\blog\templates\blog\post_info.html:7
+#: blog/templates/blog/post_info.html:7
 msgid "Date:"
 msgstr "Дата:"
 
-#: .\blog\templates\blog\post_info.html:8
+#: blog/templates/blog/post_info.html:8
 msgid "Category:"
 msgstr "Категория"
 
-#: .\blog\templates\blog\post_list.html:20
+#: blog/templates/blog/post_list.html:20
 msgid "There are no posts"
 msgstr "Няма публикации"
 
-#: .\blog\templates\blog\track_user.html:18
+#: blog/templates/blog/track_user.html:18
 msgid ""
 "This is your first visit to the site. From now on I will track your visits "
 "to this site."
@@ -403,20 +434,34 @@ msgstr ""
 "Това е първото ви посещение в сайта. Отсега нататък ще проследявам вашите "
 "посещенияна този сайт."
 
-#: .\blog\templates\blog\track_user.html:21
+#: blog/templates/blog/track_user.html:21
 #, python-format
 msgid "This is your %(visit)s visit."
 msgstr "Това е вашето %(visit)s посещение"
 
-#: .\blog\templates\blog\track_user.html:25
+#: blog/templates/blog/track_user.html:25
 msgid "Enough! Stop Tracking Me"
 msgstr "Достатъчно! Спрете да ме проследявате!"
 
-#: .\blog\templates\site\cctv_page.html:9 .\blog\templates\site\gps_page.html:9
+#: blog/templates/site/cctv_page.html:6 blog/templates/site/gps_page.html:6
+#: blog/templates/site/home_page.html:6
+#: blog/templates/site/security_page.html:6
+#: blog/templates/site/services.html:28
+msgid "Rousse"
+msgstr "Русе"
+
+#: blog/templates/site/cctv_page.html:6 blog/templates/site/gps_page.html:6
+#: blog/templates/site/security_page.html:6
+#: blog/templates/site/services.html:28
+msgid "repairs"
+msgstr "ремонти"
+
+#: blog/templates/site/cctv_page.html:14 blog/templates/site/gps_page.html:4
+#: blog/templates/site/gps_page.html:12
 msgid "Interesting Facts"
 msgstr "Интересни факти"
 
-#: .\blog\templates\site\cctv_page.html:11
+#: blog/templates/site/cctv_page.html:16
 msgid ""
 "\n"
 "\t<p>\n"
@@ -447,7 +492,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\cctv_page.html:23
+#: blog/templates/site/cctv_page.html:28
 msgid ""
 "\n"
 "\t\n"
@@ -489,7 +534,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\cctv_page.html:38
+#: blog/templates/site/cctv_page.html:43
 msgid ""
 "\n"
 "\t\n"
@@ -532,7 +577,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\cctv_page.html:55
+#: blog/templates/site/cctv_page.html:60
 msgid ""
 "\n"
 "\t<p>During the 1980s video surveillance began to spread across the country "
@@ -562,7 +607,7 @@ msgstr ""
 "\tучилища и публични паркове. \n"
 "\t"
 
-#: .\blog\templates\site\cctv_page.html:63
+#: blog/templates/site/cctv_page.html:68
 msgid ""
 "\n"
 "\tCCTV later become common in banks and stores to discourage theft, by "
@@ -586,7 +631,7 @@ msgstr ""
 "безопасното работно място и потребителските среди. \n"
 "\t"
 
-#: .\blog\templates\site\cctv_page.html:69
+#: blog/templates/site/cctv_page.html:74
 msgid ""
 "\n"
 "\tA nationwide survey of a wide verify of companies found that 75 percent "
@@ -610,7 +655,7 @@ msgstr ""
 "и др.</p>\n"
 "\t"
 
-#: .\blog\templates\site\cctv_page.html:78
+#: blog/templates/site/cctv_page.html:83
 msgid ""
 "\n"
 "\t\n"
@@ -648,7 +693,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\cctv_page.html:97
+#: blog/templates/site/cctv_page.html:102
 msgid ""
 "\n"
 "\t\n"
@@ -670,7 +715,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\gps_page.html:11
+#: blog/templates/site/gps_page.html:14
 msgid ""
 "\n"
 "\t\n"
@@ -692,7 +737,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\gps_page.html:18
+#: blog/templates/site/gps_page.html:21
 msgid ""
 "\n"
 "\t\n"
@@ -725,7 +770,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\gps_page.html:28
+#: blog/templates/site/gps_page.html:31
 msgid ""
 "\n"
 "\t\n"
@@ -750,7 +795,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\gps_page.html:36
+#: blog/templates/site/gps_page.html:39
 msgid ""
 "\n"
 "\t\n"
@@ -788,7 +833,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\gps_page.html:47
+#: blog/templates/site/gps_page.html:50
 msgid ""
 "\n"
 "\t\n"
@@ -818,7 +863,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\gps_page.html:56
+#: blog/templates/site/gps_page.html:59
 msgid ""
 "\n"
 "\t\n"
@@ -836,7 +881,7 @@ msgstr ""
 "\t\t\n"
 "\t"
 
-#: .\blog\templates\site\gps_page.html:63
+#: blog/templates/site/gps_page.html:66
 msgid ""
 "\n"
 "\t\n"
@@ -874,7 +919,7 @@ msgstr ""
 "\t\t\n"
 "\t\t"
 
-#: .\blog\templates\site\gps_page.html:74
+#: blog/templates/site/gps_page.html:77
 msgid ""
 "\n"
 "\t\n"
@@ -889,7 +934,7 @@ msgstr ""
 "\t\t\n"
 "\t\t"
 
-#: .\blog\templates\site\gps_page.html:79
+#: blog/templates/site/gps_page.html:82
 msgid ""
 "\n"
 "\n"
@@ -905,7 +950,7 @@ msgstr ""
 "\t\t\n"
 "\t\t"
 
-#: .\blog\templates\site\gps_page.html:84
+#: blog/templates/site/gps_page.html:87
 msgid ""
 "\n"
 "\n"
@@ -939,7 +984,7 @@ msgstr ""
 "\t\n"
 "\t\t"
 
-#: .\blog\templates\site\gps_page.html:94
+#: blog/templates/site/gps_page.html:97
 msgid ""
 "\n"
 "\t\t\n"
@@ -961,7 +1006,7 @@ msgstr ""
 "\n"
 "\t\t"
 
-#: .\blog\templates\site\gps_page.html:101
+#: blog/templates/site/gps_page.html:104
 msgid ""
 "\n"
 "\t\n"
@@ -979,7 +1024,7 @@ msgstr ""
 "\n"
 "\t\t"
 
-#: .\blog\templates\site\gps_page.html:107
+#: blog/templates/site/gps_page.html:110
 msgid ""
 "\n"
 "\t\n"
@@ -1003,7 +1048,7 @@ msgstr ""
 "\n"
 "\t\t"
 
-#: .\blog\templates\site\gps_page.html:114
+#: blog/templates/site/gps_page.html:117
 msgid ""
 "\n"
 "\t\n"
@@ -1017,7 +1062,7 @@ msgstr ""
 "скоростта и ориентацията.</li></br>\n"
 "\t\t"
 
-#: .\blog\templates\site\gps_page.html:119
+#: blog/templates/site/gps_page.html:122
 msgid ""
 "\n"
 "\t\t<li>Telematics: GPS technology integrated with computers and mobile "
@@ -1031,7 +1076,18 @@ msgstr ""
 "\t\tтехнологии в автомобилните навигационни системи.</li></br>\n"
 "\t\t"
 
-#: .\blog\templates\site\home_page.html:14
+#: blog/templates/site/home_page.html:6
+msgid "Elektra - Dimitar Dimitrov"
+msgstr ""
+
+#: blog/templates/site/home_page.html:7
+msgid ""
+"Autoelectronics Electra offers the following services for vehicles: Computer "
+"diagnostics and Repair of Petrol and Diesel Injection Systems, Repairs to "
+"the car's electrical system"
+msgstr ""
+
+#: blog/templates/site/home_page.html:20
 msgid ""
 "\n"
 "<p>\"Elektra - Dimitar Dimitrov\" company started its activity in 1990.\n"
@@ -1135,14 +1191,15 @@ msgstr ""
 "\t<li>Поддръжка и ремонт на климатичната система</li>\n"
 "\t<li>Монтаж на Car audio systems, CD, DVD, TV, Мултимедия</li>\n"
 "\t<li>Професионално озвучаване на автомобили</li>\n"
-"\t<li>Монтаж и актуализация на  навигационната система на "
-"превозното средство</li>\n"
+"\t<li>Монтаж и актуализация на  навигационната система на превозното "
+"средство</li>\n"
 "\t<li>Монтаж на GPS системи за проследяване</li>\n"
 "\t<li>Монтаж на алармени системи</li>\n"
 "\t<li>Монтаж и ремонт на всички видове имобилайзери, Bluetooth, парктроници</"
 "li>\n"
 "\t<li>Ремонт на компютри, модули и ел. платки на автомобилите</li>\n"
-"\t<li>Ремонт и монтаж на централно заключване, ел. стъкла, ел. огледала</li>\n"
+"\t<li>Ремонт и монтаж на централно заключване, ел. стъкла, ел. огледала</"
+"li>\n"
 "\t<li>Ремонт на ел. печки на бусове, камиони и автобуси</li>\n"
 "\t<li>Монтаж на kсенонови системи</li>\n"
 "\t<li>Ремонт на електрически превозни средства</li>\n"
@@ -1150,11 +1207,12 @@ msgstr ""
 "\t<li>Смяна на масла, филтри и др.</li>\n"
 "</ul>\n"
 
-#: .\blog\templates\site\security_page.html:9
+#: blog/templates/site/security_page.html:4
+#: blog/templates/site/security_page.html:12
 msgid "What Is a Security System and How Does it Work?"
 msgstr "Какво е охранителна система и как работи?"
 
-#: .\blog\templates\site\security_page.html:11
+#: blog/templates/site/security_page.html:14
 msgid ""
 "\n"
 "\t\n"
@@ -1184,7 +1242,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\security_page.html:20
+#: blog/templates/site/security_page.html:23
 msgid ""
 "\n"
 "\t\n"
@@ -1206,7 +1264,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\security_page.html:27
+#: blog/templates/site/security_page.html:30
 msgid ""
 "\n"
 "\t\n"
@@ -1230,7 +1288,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\security_page.html:35
+#: blog/templates/site/security_page.html:38
 msgid ""
 "\n"
 "\t\n"
@@ -1256,7 +1314,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\security_page.html:43
+#: blog/templates/site/security_page.html:46
 msgid ""
 "\n"
 "\t\n"
@@ -1274,7 +1332,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\security_page.html:50
+#: blog/templates/site/security_page.html:53
 msgid ""
 "\n"
 "\t\n"
@@ -1300,7 +1358,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\security_page.html:57
+#: blog/templates/site/security_page.html:60
 msgid ""
 "\n"
 "\t\n"
@@ -1325,7 +1383,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\security_page.html:64
+#: blog/templates/site/security_page.html:67
 msgid ""
 "\n"
 "\t\n"
@@ -1347,7 +1405,7 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\security_page.html:71
+#: blog/templates/site/security_page.html:74
 msgid ""
 "\n"
 "\t\n"
@@ -1367,960 +1425,957 @@ msgstr ""
 "\t\n"
 "\t"
 
-#: .\blog\templates\site\services.html:33
+#: blog/templates/site/services.html:38
 msgid "Vehicle diagnostics and inspection"
 msgstr "Диагностика и проверка"
 
-#: .\blog\templates\site\services.html:35
+#: blog/templates/site/services.html:40
 msgid "Initial Diagnostics Of The Vehicle And Locating The Damage"
 msgstr ""
 "Първоначална диагностика на превозното средство и определяне  на повредите"
 
-#: .\blog\templates\site\services.html:36
+#: blog/templates/site/services.html:41
 msgid "Computer Diagnostics"
 msgstr "Компютърна диагностика"
 
-#: .\blog\templates\site\services.html:37
+#: blog/templates/site/services.html:42
 msgid "Clearing Errors"
 msgstr "Изчистване на грешки"
 
-#: .\blog\templates\site\services.html:42
+#: blog/templates/site/services.html:47
 msgid "Automotive electrical system"
 msgstr "Електрическа система на автомобилите"
 
-#: .\blog\templates\site\services.html:44
+#: blog/templates/site/services.html:49
 msgid "Alternator Replacement"
 msgstr "Смяна на алтернатор"
 
-#: .\blog\templates\site\services.html:45
+#: blog/templates/site/services.html:50
 msgid "APS car system"
 msgstr "Ремонт на APS"
 
-#: .\blog\templates\site\services.html:46
+#: blog/templates/site/services.html:51
 msgid "Battery Charging Test"
 msgstr "Проверка на зареждането на акумулатора"
 
-#: .\blog\templates\site\services.html:47
+#: blog/templates/site/services.html:52
 msgid "Battery Load Test"
 msgstr "Товарен тест на акумулатора"
 
-#: .\blog\templates\site\services.html:48
+#: blog/templates/site/services.html:53
 msgid "Batery Replacement"
 msgstr "Смяна на акумулатор"
 
-#: .\blog\templates\site\services.html:49
+#: blog/templates/site/services.html:54
 msgid "Central Locking Servomotor Replacement"
 msgstr "Смяна на мотор нa централно заключване"
 
-#: .\blog\templates\site\services.html:50
+#: blog/templates/site/services.html:55
 msgid "Dashboard Gauges Replacement"
 msgstr "Смяна на  уреди на арматурното табло"
 
-#: .\blog\templates\site\services.html:51
+#: blog/templates/site/services.html:56
 msgid "Distributor Cap Replacement"
 msgstr "Смяна на капачка на разпределителя"
 
-#: .\blog\templates\site\services.html:52
+#: blog/templates/site/services.html:57
 msgid "Distributor Rotor Replacement"
 msgstr "Смяна на палец на разпределителя"
 
-#: .\blog\templates\site\services.html:53
+#: blog/templates/site/services.html:58
 msgid "Fuse Replacement"
 msgstr "Смяна на предпазители"
 
-#: .\blog\templates\site\services.html:54
+#: blog/templates/site/services.html:59
 msgid "Headlight Bulb Replacement"
 msgstr "Смяна крушка на фаровете"
 
-#: .\blog\templates\site\services.html:55
+#: blog/templates/site/services.html:60
 msgid "Ignition Coil Replacement"
 msgstr "Смяна на бобината"
 
-#: .\blog\templates\site\services.html:56
+#: blog/templates/site/services.html:61
 msgid "Ignition Loads Replacement"
 msgstr "Смяна на  кабели високо напрежение"
 
-#: .\blog\templates\site\services.html:57
+#: blog/templates/site/services.html:62
 msgid "Ignition Module Replacement"
 msgstr "Смяна на модул за запалване"
 
-#: .\blog\templates\site\services.html:58
+#: blog/templates/site/services.html:63
 msgid "Ignition Switch Replacement"
 msgstr "Смяна на контактен ключ"
 
-#: .\blog\templates\site\services.html:59
+#: blog/templates/site/services.html:64
 msgid "Indicator Breaker Replacement"
 msgstr "Смяна на  релето за мигачите"
 
-#: .\blog\templates\site\services.html:60
+#: blog/templates/site/services.html:65
 msgid "Installation of APS"
 msgstr "Монтаж на парктроник"
 
-#: .\blog\templates\site\services.html:61
+#: blog/templates/site/services.html:66
 msgid "Light Bulb Replacement(rear)"
 msgstr "Смяна на крушка(задна)"
 
-#: .\blog\templates\site\services.html:62
+#: blog/templates/site/services.html:67
 msgid "Light Level Regulation Motor Replacement"
 msgstr "Смяна на  мотор за регулиране на фаровете"
 
-#: .\blog\templates\site\services.html:63
+#: blog/templates/site/services.html:68
 msgid "Spark/glow Plugs Replacement"
 msgstr "Смяна на  запалително/подгревна свещ"
 
-#: .\blog\templates\site\services.html:64
+#: blog/templates/site/services.html:69
 msgid "Starter Replacement"
 msgstr "Смяна на стартера"
 
-#: .\blog\templates\site\services.html:65
+#: blog/templates/site/services.html:70
 msgid "Window Regulator Repair"
 msgstr "Ремонт на регулатора на прозорци"
 
-#: .\blog\templates\site\services.html:66
+#: blog/templates/site/services.html:71
 msgid "Windscreen Washer Pump Replacement"
 msgstr "Смяна на помпата за миене на предното стъкло"
 
-#: .\blog\templates\site\services.html:67
+#: blog/templates/site/services.html:72
 msgid "Wiper Blade Motor Replacement"
 msgstr "Смяна на мотора на чистачките"
 
-#: .\blog\templates\site\services.html:68
+#: blog/templates/site/services.html:73
 msgid "Wiper Tie Rod Replacement"
 msgstr "Смяна на рамото на чистачката"
 
-#: .\blog\templates\site\services.html:69
+#: blog/templates/site/services.html:74
 msgid "Xenon Bulbs Replacement"
 msgstr "Смяна на ксенонови крушки"
 
-#: .\blog\templates\site\services.html:74
+#: blog/templates/site/services.html:79
 msgid "Vehicle Sensors"
 msgstr "Датчици и сензори"
 
-#: .\blog\templates\site\services.html:76
+#: blog/templates/site/services.html:81
 msgid "A/C Sensor replasment"
 msgstr "Смяна на датчик на климатика"
 
-#: .\blog\templates\site\services.html:77
+#: blog/templates/site/services.html:82
 msgid "Accelerator pedal position sensor replasment"
 msgstr "Смяна на датчик на положение на педала на газта"
 
-#: .\blog\templates\site\services.html:78
+#: blog/templates/site/services.html:83
 msgid "Air pressure sensor replacement"
 msgstr "Смяна на сензор за въздушно налягяне"
 
-#: .\blog\templates\site\services.html:79
+#: blog/templates/site/services.html:84
 msgid "Brake fluid level sensor replacement"
 msgstr "Смяна на датчик за ниво на спирачната течност"
 
-#: .\blog\templates\site\services.html:80
+#: blog/templates/site/services.html:85
 msgid "Brake pad wear sensor replacement"
 msgstr "Смяна на датчик за износване на накладките"
 
-#: .\blog\templates\site\services.html:81
+#: blog/templates/site/services.html:86
 msgid "Brake position sensor replacement"
 msgstr "Смяна на датчик за положение на спирачния педал"
 
-#: .\blog\templates\site\services.html:82
+#: blog/templates/site/services.html:87
 msgid "Brake system pressure sensor replacement"
 msgstr "Смяна на датчик за налягане в спирачната система"
 
-#: .\blog\templates\site\services.html:83
+#: blog/templates/site/services.html:88
 msgid "Camshaft position sensor replacement"
 msgstr "Смяна на датчик за позиция на разпределителния вал"
 
-#: .\blog\templates\site\services.html:84
+#: blog/templates/site/services.html:89
 msgid "Clutch pedal position sensor replacement"
 msgstr "Смяна на датчик за положение на педала на съединителя"
 
-#: .\blog\templates\site\services.html:85
+#: blog/templates/site/services.html:90
 msgid "Coolant level sensor replacement"
 msgstr "Смяна на датчик за ниво на охладителна течност"
 
-#: .\blog\templates\site\services.html:86
+#: blog/templates/site/services.html:91
 msgid "Coolant temperature sensor replacement"
 msgstr "Смяна на датчик за температура на охладителната течност"
 
-#: .\blog\templates\site\services.html:87
+#: blog/templates/site/services.html:92
 msgid "Cooling system sensor replacement"
 msgstr "Смяна на датчик на охладителната система"
 
-#: .\blog\templates\site\services.html:88
+#: blog/templates/site/services.html:93
 msgid "Crankshaft sensor replacement"
 msgstr "Смяна на датчик на коляновия вал"
 
-#: .\blog\templates\site\services.html:89
+#: blog/templates/site/services.html:94
 msgid "DeNOx module pressure sensor replacement"
 msgstr "Смяна на датчик за налягане в DeNOx модула"
 
-#: .\blog\templates\site\services.html:90
+#: blog/templates/site/services.html:95
 msgid "Door sensor replacement"
 msgstr "Смяна на датчик на врата"
 
-#: .\blog\templates\site\services.html:91
+#: blog/templates/site/services.html:96
 msgid "Engine oil level sensor replacement"
 msgstr "Смяна на датчик за ниво на маслото в двигателя"
 
-#: .\blog\templates\site\services.html:92
+#: blog/templates/site/services.html:97
 msgid "Exhaust air temperature sensor replacement"
 msgstr "Смяна на датчик за температура на въздухa в ауспуха"
 
-#: .\blog\templates\site\services.html:93
+#: blog/templates/site/services.html:98
 msgid "Exhaust fumes pressure sensor replacement"
 msgstr "Смяна на датчик за налягане на изгорелите газове"
 
-#: .\blog\templates\site\services.html:94
+#: blog/templates/site/services.html:99
 msgid "Exhaust fumes temerature sensor replacement"
 msgstr "Смяна на датчик за температура на изгорелите газове"
 
-#: .\blog\templates\site\services.html:95
+#: blog/templates/site/services.html:100
 msgid "External temperature sensor replacement"
 msgstr "Смяна на датчик за външна температура"
 
-#: .\blog\templates\site\services.html:96
+#: blog/templates/site/services.html:101
 msgid "Fuel injection system sensor and transmitter replacement"
 msgstr "Смяна на датчик и трансмитер за впръскване на горивото"
 
-#: .\blog\templates\site\services.html:97
+#: blog/templates/site/services.html:102
 msgid "Fuel level sensor replacement"
 msgstr "Смяна на датчик за ниво на горивото"
 
-#: .\blog\templates\site\services.html:98
+#: blog/templates/site/services.html:103
 msgid "Fuel pressure sensor replacement"
 msgstr "Смяна на сензор за налягане на горивото"
 
-#: .\blog\templates\site\services.html:99
+#: blog/templates/site/services.html:104
 msgid "Fuel temperature sensor replacement"
 msgstr "Смяна на датчик за температура на горивото"
 
-#: .\blog\templates\site\services.html:100
+#: blog/templates/site/services.html:105
 msgid "Gauge sensor replacement"
 msgstr "Смяна на датчик на габаритите"
 
-#: .\blog\templates\site\services.html:101
+#: blog/templates/site/services.html:106
 msgid "Idle running sensor replacement"
 msgstr "Смяна на датчик за празен ход"
 
-#: .\blog\templates\site\services.html:102
+#: blog/templates/site/services.html:107
 msgid "Ignition Hall sensor replacement"
 msgstr "Смяна на датчик за запалване"
 
-#: .\blog\templates\site\services.html:103
+#: blog/templates/site/services.html:108
 msgid "Intake manifold pressure sensor replacement"
 msgstr "Смяна на датчик за налягане във всмукателния колектор"
 
-#: .\blog\templates\site\services.html:104
+#: blog/templates/site/services.html:109
 msgid "Knock sensor replacement"
 msgstr "Смяна на датчик за детонация"
 
-#: .\blog\templates\site\services.html:105
+#: blog/templates/site/services.html:110
 msgid "Mileage sensor replacement"
 msgstr "Смяна на датчик за пробег"
 
-#: .\blog\templates\site\services.html:106
+#: blog/templates/site/services.html:111
 msgid "NOx sensor replacement"
 msgstr "Смяна на  NOx датчик"
 
-#: .\blog\templates\site\services.html:107
+#: blog/templates/site/services.html:112
 msgid "Oil pressure sensor replacement"
 msgstr "Смяна на датчик за налягане на маслото"
 
-#: .\blog\templates\site\services.html:108
+#: blog/templates/site/services.html:113
 msgid "Oil sensor replacement"
 msgstr "Смяна на датчик за масло"
 
-#: .\blog\templates\site\services.html:109
+#: blog/templates/site/services.html:114
 msgid "Oil temperature sensor replacement"
 msgstr "Смяна на датчик за температура на маслото"
 
-#: .\blog\templates\site\services.html:110
+#: blog/templates/site/services.html:115
 msgid "Pressure sensor replacement"
 msgstr "Смяна на датчик за налягане"
 
-#: .\blog\templates\site\services.html:111
+#: blog/templates/site/services.html:116
 msgid "Pulse sensor/pulser  replacement"
 msgstr "Смяна на датчик за импулси"
 
-#: .\blog\templates\site\services.html:112
+#: blog/templates/site/services.html:117
 msgid "Rev counter sensor replacement"
 msgstr "Смяна на датчик на оборотмера"
 
-#: .\blog\templates\site\services.html:113
+#: blog/templates/site/services.html:118
 msgid "Sensor/relay replacement"
 msgstr "Смяна на датчик/реле"
 
-#: .\blog\templates\site\services.html:114
+#: blog/templates/site/services.html:119
 msgid "Speed sensor replacement"
 msgstr "Смяна на датчик за скорост"
 
-#: .\blog\templates\site\services.html:115
+#: blog/templates/site/services.html:120
 msgid "Steering wheel sensor replacement"
 msgstr "Смяна на датчик за завъртане на волана"
 
-#: .\blog\templates\site\services.html:116
+#: blog/templates/site/services.html:121
 msgid "Stoplights sensor replacement"
 msgstr "Смяна на датчик за стопсветлините"
 
-#: .\blog\templates\site\services.html:117
+#: blog/templates/site/services.html:122
 msgid "Throttle position sensor replacement"
 msgstr "Смяна на датчик за положение на дроселовата клапа"
 
-#: .\blog\templates\site\services.html:118
+#: blog/templates/site/services.html:123
 msgid "Transsmition sensor replacement"
 msgstr "Смяна на датчик на трансмисията"
 
-#: .\blog\templates\site\services.html:119
+#: blog/templates/site/services.html:124
 msgid "Windscreen washer fluid level sensor replacement"
 msgstr "Смяна на датчик за ниво на течността за чистачки"
 
-#: .\blog\templates\site\services.html:124
+#: blog/templates/site/services.html:129
 msgid "Air Conditioning System"
 msgstr "Климатична система"
 
-#: .\blog\templates\site\services.html:126
+#: blog/templates/site/services.html:131
 msgid "A/C System desinfection"
 msgstr "Дезинфекция  на климатика"
 
-#: .\blog\templates\site\services.html:127
+#: blog/templates/site/services.html:132
 msgid "A/C valve replacement"
 msgstr "Смяна на клапана на климатика"
 
-#: .\blog\templates\site\services.html:128
+#: blog/templates/site/services.html:133
 msgid "A/C compressor oil change"
 msgstr "Смяна на маслото на компресора на климатика"
 
-#: .\blog\templates\site\services.html:129
+#: blog/templates/site/services.html:134
 msgid "A/C compressor replacement"
 msgstr "Смяна на компресора на климатика"
 
-#: .\blog\templates\site\services.html:130
+#: blog/templates/site/services.html:135
 msgid "A/C dryer filter replacement"
 msgstr "Смяна на филтър на дехидратора  на климатика"
 
-#: .\blog\templates\site\services.html:131
+#: blog/templates/site/services.html:136
 msgid "A/C dryer replacement"
 msgstr "Смяна на дехидратора  на климатика"
 
-#: .\blog\templates\site\services.html:132
+#: blog/templates/site/services.html:137
 msgid "A/C heat exchanger replacement"
 msgstr "Смяна на топлообменника на климатика"
 
-#: .\blog\templates\site\services.html:133
+#: blog/templates/site/services.html:138
 msgid "A/C hoses/pipes replacement"
 msgstr "Смяна на тръби/маркучи на климатика"
 
-#: .\blog\templates\site\services.html:134
+#: blog/templates/site/services.html:139
 msgid "A/C ozone cleaning"
 msgstr "Почистване  на климатика с озон"
 
-#: .\blog\templates\site\services.html:135
+#: blog/templates/site/services.html:140
 msgid "A/C refill"
 msgstr "Зареждане  на климатика"
 
-#: .\blog\templates\site\services.html:136
+#: blog/templates/site/services.html:141
 msgid "A/C comprehensive servicing"
 msgstr "Пълно обслужване  на климатика"
 
-#: .\blog\templates\site\services.html:137
+#: blog/templates/site/services.html:142
 msgid "A/C evaporator replacement"
 msgstr "Смяна на изпарителя на климатика"
 
-#: .\blog\templates\site\services.html:138
+#: blog/templates/site/services.html:143
 msgid "A/C Condenser replacement"
 msgstr "Смяна на кондензатора на климатика"
 
-#: .\blog\templates\site\services.html:139
+#: blog/templates/site/services.html:144
 msgid "A/C system tightness check-ultraviolet"
 msgstr "Проверка на плътността  на климатика - с UV тестер"
 
-#: .\blog\templates\site\services.html:144
+#: blog/templates/site/services.html:149
 msgid "Vehicles Audio System"
 msgstr "Аудио система на автомобилите"
 
-#: .\blog\templates\site\services.html:146
+#: blog/templates/site/services.html:151
 msgid "Installation of Aerial"
 msgstr "Монтаж на антена"
 
-#: .\blog\templates\site\services.html:147
+#: blog/templates/site/services.html:152
 msgid "Installation of Speakers"
 msgstr "Монтаж на говорители"
 
-#: .\blog\templates\site\services.html:148
+#: blog/templates/site/services.html:153
 msgid "Installation of Car audio systems, CD, DVD, TV, Multimedia"
 msgstr "Монтаж на Car audio systems, CD, DVD, TV, Мултимедия"
 
-#: .\blog\templates\site\services.html:149
+#: blog/templates/site/services.html:154
 msgid "Installation of Subwoofer"
 msgstr "Монтаж на субуфер"
 
-#: .\blog\templates\site\services.html:150
+#: blog/templates/site/services.html:155
 msgid "Installation of Amplifier"
 msgstr "Монтаж на усилвател"
 
-#: .\blog\templates\site\services.html:151
+#: blog/templates/site/services.html:156
 msgid "Mounting a device Hands-free in the vehicle"
 msgstr "Монтиране на устройство Hands-free в автомобила"
 
-#: .\blog\templates\site\services.html:152
+#: blog/templates/site/services.html:157
 msgid "Installation of Professional Audio Systems in vehicles"
 msgstr "Професионално озвучаване на автомобили"
 
-#: .\blog\templates\site\services.html:157
+#: blog/templates/site/services.html:162
 msgid "Vehicle Navigation"
 msgstr "Навигация на превозното средство"
 
-#: .\blog\templates\site\services.html:159
+#: blog/templates/site/services.html:164
 msgid "Navigation system fitting"
 msgstr "Монтаж на навигация"
 
-#: .\blog\templates\site\services.html:160
+#: blog/templates/site/services.html:165
 msgid "Navigation maps update"
 msgstr "Опресняване на картите за навигация"
 
-#: .\blog\templates\site\services.html:165
+#: blog/templates/site/services.html:170
 msgid "Mounting GPS Tracking System"
 msgstr "Монтаж на GPS системи за проследяване"
 
-#: .\blog\templates\site\services.html:170
+#: blog/templates/site/services.html:175
 msgid "Mounting Alarm System"
 msgstr "Монтаж на алармени системи"
 
-#: .\blog\templates\site\services.html:175
+#: blog/templates/site/services.html:180
 msgid "Repair Of Computers, Modules And Electrical Circuit Boards Of Vehicles"
 msgstr "Ремонт на компютри, модули и ел. платки на автомобилите"
 
-#: .\blog\templates\site\services.html:180
+#: blog/templates/site/services.html:185
 msgid ""
 "Installation and repair of all types of immobilizers, Bluetooth, APS car "
 "systems"
 msgstr "Монтаж и ремонт на всички видове имобилайзери, Bluetooth, парктроници"
 
-#: .\blog\templates\site\services.html:185
+#: blog/templates/site/services.html:190
 msgid "Repair Of Electric Stoves On Vans, Trucks And Buses"
 msgstr "Ремонт на ел. печки на бусове, камиони и автобуси"
 
-#: .\blog\templates\site\services.html:190
+#: blog/templates/site/services.html:195
 msgid ""
 "Installation and repair of central locking of vehicles, electric windows, "
 "electric mirrors"
 msgstr "Ремонт и монтаж на централно заключване, ел.стъкла, ел. огледала"
 
-#: .\blog\templates\site\services.html:195
+#: blog/templates/site/services.html:200
 msgid "Installation Of Xenons Lights And Replacing Xenon Bulbs"
 msgstr "Монтиране на ксенонови светлини и смяна на ксенонови крушки"
 
-#: .\blog\templates\site\services.html:200
+#: blog/templates/site/services.html:205
 msgid "Sunroof Repair"
 msgstr "Ремонт на люк (шибидах)"
 
-#: .\blog\templates\site\services.html:202
+#: blog/templates/site/services.html:207
 msgid "Checking the problem of electrical or mechanical failure"
 msgstr "Проверка на проблема за електрически или механичен отказ"
 
-#: .\blog\templates\site\services.html:203
+#: blog/templates/site/services.html:208
 msgid "Sunroof repair"
 msgstr "Ремонт на люк ( шибидах )"
 
-#: .\blog\templates\site\services.html:204
+#: blog/templates/site/services.html:209
 msgid "Sunroof motor replacement"
 msgstr "Смяна на мотор на люк ( шибидах )"
 
-#: .\blog\templates\site\services.html:209
+#: blog/templates/site/services.html:214
 msgid "Mechanical Repairs"
 msgstr "Механични ремонти"
 
-#: .\blog\templates\site\services.html:211
+#: blog/templates/site/services.html:216
 msgid "ABS sensor replacement"
 msgstr "Смяна на ABS сензор"
 
-#: .\blog\templates\site\services.html:212
+#: blog/templates/site/services.html:217
 msgid "Accelerator cable replacement"
 msgstr "Смяна на жилото на газта"
 
-#: .\blog\templates\site\services.html:213
+#: blog/templates/site/services.html:218
 msgid "Air filter replacement"
 msgstr "Смяна на въздушен филтър"
 
-#: .\blog\templates\site\services.html:214
+#: blog/templates/site/services.html:219
 msgid "Air flowmeter replacement - mass sensor"
 msgstr "Смяна на дебитомер(MAF)"
 
-#: .\blog\templates\site\services.html:215
+#: blog/templates/site/services.html:220
 msgid "Axel shaft replacement"
 msgstr "Смяна на полуоска"
 
-#: .\blog\templates\site\services.html:216
+#: blog/templates/site/services.html:221
 msgid "Axel shaft sealer replacement"
 msgstr "Смяна на уплътнител на полуоска"
 
-#: .\blog\templates\site\services.html:217
+#: blog/templates/site/services.html:222
 msgid "Ball joint boot replacement"
 msgstr "Смяна на гумен маншон на шарнирен болт"
 
-#: .\blog\templates\site\services.html:218
+#: blog/templates/site/services.html:223
 msgid "Ball joint replacement"
 msgstr "Смяна на шарнирен болт"
 
-#: .\blog\templates\site\services.html:219
+#: blog/templates/site/services.html:224
 msgid "Brake adjuster replacement"
 msgstr "Смяна на регулатора на спирачните течности"
 
-#: .\blog\templates\site\services.html:220
+#: blog/templates/site/services.html:225
 msgid "Brake carrier replacement"
 msgstr "Смяна на спирачни апарати"
 
-#: .\blog\templates\site\services.html:221
+#: blog/templates/site/services.html:226
 msgid "Brake disk replacement"
 msgstr "Смяна на спирачни дискове"
 
-#: .\blog\templates\site\services.html:222
+#: blog/templates/site/services.html:227
 msgid "Brake disk replacement(front)"
 msgstr "Смяна на предни спирачни дискове"
 
-#: .\blog\templates\site\services.html:223
+#: blog/templates/site/services.html:228
 msgid "Brake disk replacement(rear)"
 msgstr "Смяна на задни спирачни дискове"
 
-#: .\blog\templates\site\services.html:224
+#: blog/templates/site/services.html:229
 msgid "Brake drum repair"
 msgstr "Ремонт на спирачни барабани"
 
-#: .\blog\templates\site\services.html:225
+#: blog/templates/site/services.html:230
 msgid "Brake drum replacement"
 msgstr "Смяна на спирачни  барабани"
 
-#: .\blog\templates\site\services.html:226
+#: blog/templates/site/services.html:231
 msgid "Brake fluid replacement"
 msgstr "Смяна на спирачна течност"
 
-#: .\blog\templates\site\services.html:227
+#: blog/templates/site/services.html:232
 msgid "Brake hose replacement"
 msgstr "Смяна на спирачни маркучи"
 
-#: .\blog\templates\site\services.html:228
+#: blog/templates/site/services.html:233
 msgid "Brake cylinders replacement"
 msgstr "Смяна на спирачни цилиндри"
 
-#: .\blog\templates\site\services.html:229
+#: blog/templates/site/services.html:234
 msgid "Brake master cylinder replacement"
 msgstr "Смяна на главен спирачен цилиндър"
 
-#: .\blog\templates\site\services.html:230
+#: blog/templates/site/services.html:235
 msgid "Brake pads replacement"
 msgstr "Смяна на накладки"
 
-#: .\blog\templates\site\services.html:231
+#: blog/templates/site/services.html:236
 msgid "Brake pads replacement(front)"
 msgstr "Смяна на предни накладки"
 
-#: .\blog\templates\site\services.html:232
+#: blog/templates/site/services.html:237
 msgid "Brake pads replacement(rear)"
 msgstr "Смяна на задни накладки"
 
-#: .\blog\templates\site\services.html:233
+#: blog/templates/site/services.html:238
 msgid "Brake shoe replacement"
 msgstr "Смяна на барабанни накладки"
 
-#: .\blog\templates\site\services.html:234
+#: blog/templates/site/services.html:239
 msgid "Brake system repair"
 msgstr "Ремонт на спирачната система"
 
-#: .\blog\templates\site\services.html:235
+#: blog/templates/site/services.html:240
 msgid "Brake tubes replacement"
 msgstr "Смяна на спирачни тръбички"
 
-#: .\blog\templates\site\services.html:236
+#: blog/templates/site/services.html:241
 msgid "Cabin filter replacement"
 msgstr "Смяна на филтър на купето"
 
-#: .\blog\templates\site\services.html:237
+#: blog/templates/site/services.html:242
 msgid "Camshaft replacement"
 msgstr "Смяна на разпределителен вал"
 
-#: .\blog\templates\site\services.html:238
+#: blog/templates/site/services.html:243
 msgid "Catalytic converter replacement"
 msgstr "Смяна на катализатор"
 
-#: .\blog\templates\site\services.html:239
+#: blog/templates/site/services.html:244
 msgid "Clutch cable replacement"
 msgstr "Смяна на жило на съединителя"
 
-#: .\blog\templates\site\services.html:240
+#: blog/templates/site/services.html:245
 msgid "Clutch cover replacement"
 msgstr "Смяна на кожух на съединителя"
 
-#: .\blog\templates\site\services.html:241
+#: blog/templates/site/services.html:246
 msgid "Clutch master cylinder replacement"
 msgstr "Смяна на главен цилиндър на съединителя"
 
-#: .\blog\templates\site\services.html:242
+#: blog/templates/site/services.html:247
 msgid "Clutch plate replacement"
 msgstr "Смяна на диск на съединителя"
 
-#: .\blog\templates\site\services.html:243
+#: blog/templates/site/services.html:248
 msgid "Clutch release bearing replacement"
 msgstr "Смяна на лагер на съединителя"
 
-#: .\blog\templates\site\services.html:244
+#: blog/templates/site/services.html:249
 msgid "Clutch slave cylinder replacement"
 msgstr "Смяна на изпълнителен цилиндър на съединителя"
 
-#: .\blog\templates\site\services.html:245
+#: blog/templates/site/services.html:250
 msgid "Complete clutch kit replacement"
 msgstr "Смяна на съединител комплект"
 
-#: .\blog\templates\site\services.html:246
+#: blog/templates/site/services.html:251
 msgid "Connecting rod bearing replacement"
 msgstr "Смяна на биелни лагери"
 
-#: .\blog\templates\site\services.html:247
+#: blog/templates/site/services.html:252
 msgid "Control arm replacement"
 msgstr "Смяна на носач"
 
-#: .\blog\templates\site\services.html:248
+#: blog/templates/site/services.html:253
 msgid "Coolant replacement"
 msgstr "Смяна на охладителна течност"
 
-#: .\blog\templates\site\services.html:249
+#: blog/templates/site/services.html:254
 msgid "Cooling system repair"
 msgstr "Ремонт на охлаждащата система"
 
-#: .\blog\templates\site\services.html:250
+#: blog/templates/site/services.html:255
 msgid "Crankshaft replacement"
 msgstr "Смяна на колянов вал"
 
-#: .\blog\templates\site\services.html:251
+#: blog/templates/site/services.html:256
 msgid "Diferential oil change"
 msgstr "Смяна на масло в диференциала"
 
-#: .\blog\templates\site\services.html:252
+#: blog/templates/site/services.html:257
 msgid "Drive shaft replacement"
 msgstr "Смяна на карданен вал"
 
-#: .\blog\templates\site\services.html:253
+#: blog/templates/site/services.html:258
 msgid "Driveshaft and diferential repair"
 msgstr "Ремонт на кардан и диференциал"
 
-#: .\blog\templates\site\services.html:254
+#: blog/templates/site/services.html:259
 msgid "Drive system repair"
 msgstr "Ремонт на системата за управление"
 
-#: .\blog\templates\site\services.html:255
+#: blog/templates/site/services.html:260
 msgid "EGR valve replacement"
 msgstr "Смяна на EGR клапан"
 
-#: .\blog\templates\site\services.html:256
+#: blog/templates/site/services.html:261
 msgid "Engine head gasket replacement"
 msgstr "Смяна на гарнитура на главата"
 
-#: .\blog\templates\site\services.html:257
+#: blog/templates/site/services.html:262
 msgid "Engine oil and oil filter replacement"
 msgstr "Смяна на масло и маслен филтър"
 
-#: .\blog\templates\site\services.html:258
+#: blog/templates/site/services.html:263
 msgid "Engine radiator replacement"
 msgstr "Смяна на радиатор"
 
-#: .\blog\templates\site\services.html:259
+#: blog/templates/site/services.html:264
 msgid "Engine repair"
 msgstr "Ремонт на двигателя"
 
-#: .\blog\templates\site\services.html:260
+#: blog/templates/site/services.html:265
 msgid "Engine valve replacement"
 msgstr "Смяна на клапан"
 
-#: .\blog\templates\site\services.html:261
+#: blog/templates/site/services.html:266
 msgid "Exhaust manifold gasket replacement"
 msgstr "Смяна на гарнитура на изпускателен колектор"
 
-#: .\blog\templates\site\services.html:262
+#: blog/templates/site/services.html:267
 msgid "Exhaust manifold replacement"
 msgstr "Смяна на изпускателен колектор"
 
-#: .\blog\templates\site\services.html:263
+#: blog/templates/site/services.html:268
 msgid "Exhaust suspension repair"
 msgstr "Ремонт на окачването на ауспух"
 
-#: .\blog\templates\site\services.html:264
+#: blog/templates/site/services.html:269
 msgid "Fan thermo/swith senzor replasement"
 msgstr "Смяна на термошалтер/датчик на вентилатора"
 
-#: .\blog\templates\site\services.html:265
+#: blog/templates/site/services.html:270
 msgid "Flywheel replacement"
 msgstr "Смяна на маховик"
 
-#: .\blog\templates\site\services.html:266
+#: blog/templates/site/services.html:271
 msgid "Fuel filter replacement"
 msgstr "Смяна на горивен филтър"
 
-#: .\blog\templates\site\services.html:267
+#: blog/templates/site/services.html:272
 msgid "Fuel hose replacement"
 msgstr "Смяна на горивни маркучи"
 
-#: .\blog\templates\site\services.html:268
+#: blog/templates/site/services.html:273
 msgid "Fuel injectors replacement"
 msgstr "Смяна горивни дюзи"
 
-#: .\blog\templates\site\services.html:269
+#: blog/templates/site/services.html:274
 msgid "Fuel pump replacement"
 msgstr "Смяна на горивна помпа"
 
-#: .\blog\templates\site\services.html:270
+#: blog/templates/site/services.html:275
 msgid "Fuel system repair"
 msgstr "Ремонт на горивната система"
 
-#: .\blog\templates\site\services.html:271
+#: blog/templates/site/services.html:276
 msgid "Fuel tank replacement"
 msgstr "Смяна на горивен резервоар"
 
-#: .\blog\templates\site\services.html:272
+#: blog/templates/site/services.html:277
 msgid "Guide roll replacement"
 msgstr "Смяна на паразитна ролка"
 
-#: .\blog\templates\site\services.html:273
+#: blog/templates/site/services.html:278
 msgid "Handbrake cable replacement"
 msgstr "Смяна на жилото на ръчната спирачка"
 
-#: .\blog\templates\site\services.html:274
+#: blog/templates/site/services.html:279
 msgid "Heater replacement"
 msgstr "Смяна на радиатор парно"
 
-#: .\blog\templates\site\services.html:275
+#: blog/templates/site/services.html:280
 msgid "Heater resistor replacement"
 msgstr "Смяна на съпротивление на вентилатор парно"
 
-#: .\blog\templates\site\services.html:276
+#: blog/templates/site/services.html:281
 msgid "Hood or boot lid air-spring replacement"
 msgstr "Смяна на газов амортисьор на преден или заден капак"
 
-#: .\blog\templates\site\services.html:277
+#: blog/templates/site/services.html:282
 msgid "Idle run regulator replacement"
 msgstr "Смяна на мотор за регулиране на празен ход"
 
-#: .\blog\templates\site\services.html:278
+#: blog/templates/site/services.html:283
 msgid "Injection pump replacement"
 msgstr "Смяна на инжекционна помпа"
 
-#: .\blog\templates\site\services.html:279
+#: blog/templates/site/services.html:284
 msgid "Intake hose gasket replacement"
 msgstr "Смяна на гарнитура на всмукателния маркуч"
 
-#: .\blog\templates\site\services.html:280
+#: blog/templates/site/services.html:285
 msgid "Intake hose replacement"
 msgstr "Смяна на всмукателен маркуч"
 
-#: .\blog\templates\site\services.html:281
+#: blog/templates/site/services.html:286
 msgid "Intake manifold gasket replacement"
 msgstr "Смяна на гарнитура на всмукателен колектор"
 
-#: .\blog\templates\site\services.html:282
+#: blog/templates/site/services.html:287
 msgid "Intake manifold replacement"
 msgstr "Смяна на всмукателния колектор"
 
-#: .\blog\templates\site\services.html:283
+#: blog/templates/site/services.html:288
 msgid "Intake system repair"
 msgstr "Ремонт на всмукателната система"
 
-#: .\blog\templates\site\services.html:284
+#: blog/templates/site/services.html:289
 msgid "Lambda probe replacement"
 msgstr "Смяна на ламбда сонда"
 
-#: .\blog\templates\site\services.html:285
+#: blog/templates/site/services.html:290
 msgid "MacPherson strut replacement"
 msgstr "Смяна на макферсон"
 
-#: .\blog\templates\site\services.html:286
+#: blog/templates/site/services.html:291
 msgid "Oil sump gasket replacement"
 msgstr "Смяна на гарнитура на картера"
 
-#: .\blog\templates\site\services.html:287
+#: blog/templates/site/services.html:292
 msgid "Piston pin replacement"
 msgstr "Смяна на бутален болт"
 
-#: .\blog\templates\site\services.html:288
+#: blog/templates/site/services.html:293
 msgid "Piston replacement"
 msgstr "Смяна на бутало"
 
-#: .\blog\templates\site\services.html:289
+#: blog/templates/site/services.html:294
 msgid "Piston rings replacement"
 msgstr "Смяна на сегменти"
 
-#: .\blog\templates\site\services.html:290
+#: blog/templates/site/services.html:295
 msgid "Power steering fluid change"
 msgstr "Смяна на течност на серво усилвател"
 
-#: .\blog\templates\site\services.html:291
+#: blog/templates/site/services.html:296
 msgid "Power steering pump replacement"
 msgstr "Смяна на помпа на сервоусилвател"
 
-#: .\blog\templates\site\services.html:292
+#: blog/templates/site/services.html:297
 msgid "Pulley replacement"
 msgstr "Смяна на ремъчна шайба"
 
-#: .\blog\templates\site\services.html:293
+#: blog/templates/site/services.html:298
 msgid "Pump injector units replacement"
 msgstr "Смяна на помпа-дюза елемент"
 
-#: .\blog\templates\site\services.html:294
+#: blog/templates/site/services.html:299
 msgid "Radiator fan replacement"
 msgstr "Смяна на вентилатор на радиатора"
 
-#: .\blog\templates\site\services.html:295
+#: blog/templates/site/services.html:300
 msgid "Replacement of cooling system hoses"
 msgstr "Смяна на маркучи от охладителната система"
 
-#: .\blog\templates\site\services.html:296
+#: blog/templates/site/services.html:301
 msgid "Rocker cover gasket replacement"
 msgstr "Смяна на гарнитура на капака на клапаните"
 
-#: .\blog\templates\site\services.html:297
+#: blog/templates/site/services.html:302
 msgid "Rubber boot replacement, steering knucle"
 msgstr "Смяна на гумен тампон на шенкела"
 
-#: .\blog\templates\site\services.html:298
+#: blog/templates/site/services.html:303
 msgid "Safety belt replacement"
 msgstr "Смяна на предпазен колан"
 
-#: .\blog\templates\site\services.html:299
+#: blog/templates/site/services.html:304
 msgid "Shock absorber bearing replacement"
 msgstr "Смяна на лагер на амортисьор"
 
-#: .\blog\templates\site\services.html:300
+#: blog/templates/site/services.html:305
 msgid "Shock absorber buffer replacement"
 msgstr "Смяна на тампон на амортисьора"
 
-#: .\blog\templates\site\services.html:301
+#: blog/templates/site/services.html:306
 msgid "Shock absorber replacement"
 msgstr "Смяна на амортисьор"
 
-#: .\blog\templates\site\services.html:302
+#: blog/templates/site/services.html:307
 msgid "Shock absorber rubber boot replacement"
 msgstr "Смяна на ударен тампон на амортисьор"
 
-#: .\blog\templates\site\services.html:303
+#: blog/templates/site/services.html:308
 msgid "Stabilizer bar replacement"
 msgstr "Смяна на стабилизираща щанга"
 
-#: .\blog\templates\site\services.html:304
+#: blog/templates/site/services.html:309
 msgid "Stabilizer replacement"
 msgstr "Смяна на биалетка"
 
-#: .\blog\templates\site\services.html:305
+#: blog/templates/site/services.html:310
 msgid "Stabilizer rubber sleeve replacement"
 msgstr "Смяна на втулка на стабилизираща щанга"
 
-#: .\blog\templates\site\services.html:306
+#: blog/templates/site/services.html:311
 msgid "Steering column joint replacement"
 msgstr "Смяна на шарнир на кормилния прът"
 
-#: .\blog\templates\site\services.html:307
+#: blog/templates/site/services.html:312
 msgid "Steering gear replacement"
 msgstr "Смяна на кормилна рейка"
 
-#: .\blog\templates\site\services.html:308
+#: blog/templates/site/services.html:313
 msgid "Steering system repair"
 msgstr "Ремонт на кормилна система"
 
-#: .\blog\templates\site\services.html:309
+#: blog/templates/site/services.html:314
 msgid "Sunspension spring replacement"
 msgstr "Смяна на пружина от окачването"
 
-#: .\blog\templates\site\services.html:310
+#: blog/templates/site/services.html:315
 msgid "Suspension repair"
 msgstr "Ремонт на окачване"
 
-#: .\blog\templates\site\services.html:311
+#: blog/templates/site/services.html:316
 msgid "Temperaure sensor replacement"
 msgstr "Смяна на температурен сензор"
 
-#: .\blog\templates\site\services.html:312
+#: blog/templates/site/services.html:317
 msgid "Tensioner roll replacement"
 msgstr "Смяна на обтягаща ролка"
 
-#: .\blog\templates\site\services.html:313
+#: blog/templates/site/services.html:318
 msgid "Termostat replacement"
 msgstr "Смяна на термостат"
 
-#: .\blog\templates\site\services.html:314
+#: blog/templates/site/services.html:319
 msgid "Tie rod end replacement"
 msgstr "Смяна на кормилен накрайник"
 
-#: .\blog\templates\site\services.html:315
+#: blog/templates/site/services.html:320
 msgid "Tie rod replacement"
 msgstr "Смяна на кормилна щанга"
 
-#: .\blog\templates\site\services.html:316
+#: blog/templates/site/services.html:321
 msgid "Timing belt replacement"
 msgstr "Смяна на ангренажен ремък"
 
-#: .\blog\templates\site\services.html:317
+#: blog/templates/site/services.html:322
 msgid "Timing chain replacement"
 msgstr "Смяна на ангранажна верига"
 
-#: .\blog\templates\site\services.html:318
+#: blog/templates/site/services.html:323
 msgid "Timing change"
 msgstr "Смяна на ангренажното задвижване"
 
-#: .\blog\templates\site\services.html:319
+#: blog/templates/site/services.html:324
 msgid "Towing tongue fitting"
 msgstr "Монтаж на теглич"
 
-#: .\blog\templates\site\services.html:320
+#: blog/templates/site/services.html:325
 msgid "Transission fluid and filter replacement in automatic transmission"
 msgstr "Смяна на масло и филтър за автоматична скоростна кутия"
 
-#: .\blog\templates\site\services.html:321
+#: blog/templates/site/services.html:326
 msgid "Transission fluid and filter replacement in manual transmission"
 msgstr "Смяна на масло и филтър за ръчна скоростна кутия"
 
-#: .\blog\templates\site\services.html:322
+#: blog/templates/site/services.html:327
 msgid "Turbocharger replacement"
 msgstr "Смяна на търбокомпресор"
 
-#: .\blog\templates\site\services.html:323
+#: blog/templates/site/services.html:328
 msgid "V-belt replacement"
 msgstr "Смяна на аксесоарен ремък"
 
-#: .\blog\templates\site\services.html:324
+#: blog/templates/site/services.html:329
 msgid "V-belt tensioner replacement"
 msgstr "Смяна на обтегача на аксесоарен ремък"
 
-#: .\blog\templates\site\services.html:325
+#: blog/templates/site/services.html:330
 msgid "Valve seals replacement"
 msgstr "Смяна на гумички на клапаните"
 
-#: .\blog\templates\site\services.html:326
+#: blog/templates/site/services.html:331
 msgid "Vibration damper replacement"
 msgstr "Смяна на мека връзка"
 
-#: .\blog\templates\site\services.html:327
+#: blog/templates/site/services.html:332
 msgid "Water pump replacement"
 msgstr "Смяна на водна помпа"
 
-#: .\blog\templates\site\services.html:328
+#: blog/templates/site/services.html:333
 msgid "Wheel bearing replacement"
 msgstr "Смяна на лагер на главина"
 
-#: .\blog\templates\site\services.html:329
+#: blog/templates/site/services.html:334
 msgid "Wheel hub replacement"
 msgstr "Смяна на главина"
 
-#: .\blog\templates\site\services.html:330
+#: blog/templates/site/services.html:335
 msgid "Wheel steering knuckle replacement"
 msgstr "Смяна на шенкел"
 
-#: .\blog\templates\site\services.html:331
+#: blog/templates/site/services.html:336
 msgid "Wiper blade replacement"
 msgstr "Смяна на чистачка"
 
-#: .\blog\templates\site\services.html:332
+#: blog/templates/site/services.html:337
 msgid "Wishbone silent block replacement"
 msgstr "Смяна на втулки на носача"
 
 #~ msgid "Notice:"
 #~ msgstr "Известия:"
-
-#~ msgid "Autoelectronics"
-#~ msgstr "Автоелектроника"
 
 #~ msgid "Periodic Inspections"
 #~ msgstr "Периодични проверки"

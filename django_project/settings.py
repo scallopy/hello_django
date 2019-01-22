@@ -55,7 +55,8 @@ INSTALLED_APPS = [
     'mptt',
     'flatpages_i18n',
     'fontawesome',
-    'robots'
+    'robots',
+    'cookielaw',
 ]
 
 MIDDLEWARE = [
@@ -129,8 +130,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
-	os.path.join(BASE_DIR, 'blog/locale'),
-	os.path.join(BASE_DIR, 'cadmin/locale'),
+    os.path.join(BASE_DIR, 'blog/locale'),
+    os.path.join(BASE_DIR, 'cadmin/locale'),
 ]
 
 LANGUAGE_CODE = 'en-us'

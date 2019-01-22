@@ -221,6 +221,9 @@ def services(request):
 
 def google(request):
     return render(request, 'blog/google9170e2a0ec62a1c0.html')
+
+def bing(request):
+    return render(request, 'blog/BingSiteAuth.xml')
     
 
 

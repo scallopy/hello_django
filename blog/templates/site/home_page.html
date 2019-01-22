@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 {% extends "blog/base_site.html" %}
 {% load i18n static %}
+{% block title %} | {% trans "About us"%}{% endblock %}
+{% block extrahead %}
+<meta name="keywords" content='{% trans "Autoelectronics"%}, {% trans "Autoservice"%}, {% trans "Autoelectronics Electra"%}, {% trans "Rousse"%}, {% trans "Elektra - Dimitar Dimitrov"%}'>
+<meta name="description" content='{% trans "Autoelectronics Electra offers the following services for vehicles: Computer diagnostics and Repair of Petrol and Diesel Injection Systems, Repairs to the car's electrical system"%}'>
+
+{% endblock %}
 
 {% block main %}
 
