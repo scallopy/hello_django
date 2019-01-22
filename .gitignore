@@ -8,6 +8,7 @@ reated by https://www.gitignore.io
 # Icon must end with two \r
 Icon
 
+static/**
 
 # Thumbnails
 ._*
@@ -88,7 +89,4 @@ local_settings.py
 .env
 db.sqlite3
 
-#My files
-.static
-ckeditor/
-mptt/
+
